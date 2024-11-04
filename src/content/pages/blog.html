@@ -1,88 +1,118 @@
 ---
-title: 'Blog | Code Stitch Web Designs'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/cabinets2.jpg'
-permalink: 'blog/'
+title: "Blog | BlackForest-WebCraft"
+description: "Beiträge zu Themen wie: Programmieren, Design, SEO, Webseitenerstellung, Planung, Prozess und vieles mehr."
+preloadImg: ""
+permalink: "Blog/"
 eleventyNavigation:
-    key: Blog
-    order: 500
+  key: Blog
+  order: 500
 ---
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/blog.css" />
+<script defer src="/assets/js/blog.js"></script>
 
-{% block head %}
-    <link rel="stylesheet" href="/assets/css/blog.css">
-{% endblock %}
+{% endblock %} {% block body %}
+<!-- ============================================ -->
+<!--                    LANDING                   -->
+<!-- ============================================ -->
 
-{% block body %}
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<section id="int-hero">
+  <div class="hero-header">
+    <h1 id="home-h">
+      <span class="home-animation">Willkommen auf meinem</span>
+      <span class="deco">Blog</span>
+    </h1>
+    <p class="blogP">
+      Auf meinem Blog teile ich regelmäßig Beiträge zu Themen wie
+      Programmierung, SEO, Design und persönlichen Erfahrungen. Hier erfährst
+      du, wie ich mir diese Fähigkeiten selbst angeeignet und in die Praxis
+      umgesetzt habe.
+    </p>
+  </div>
+</section>
 
-    <section id="int-hero">
-        <h1 id="home-h">Blog</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
+<!-- ============================================ -->
+<!--              Main Blog Content               -->
+<!-- ============================================ -->
+<div class="background">
+  <svg
+    preserveAspectRatio="xMidYMid slice"
+    viewBox="10 10 80 80"
+    class="background-animation"
+    style="filter: brightness(0.9)">
+    <defs></defs>
+
+    <path
+      fill="#f660029b"
+      class="out-top"
+      d="M37-5C25.1-14.7,5.7-19.1-9.2-10-28.5,1.8-32.7,31.1-19.8,49c15.5,21.5,52.6,22,67.2,2.3C59.4,35,53.7,8.5,37-5Z" />
+    <path
+      fill="#fbdf2dc7"
+      class="in-top"
+      d="M20.6,4.1C11.6,1.5-1.9,2.5-8,11.2-16.3,23.1-8.2,45.6,7.4,50S42.1,38.9,41,24.5C40.2,14.1,29.4,6.6,20.6,4.1Z" />
+    <path
+      fill="#a5a5a5"
+      class="out-bottom"
+      d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z" />
+    <path
+      fill="#1717179d"
+      class="in-bottom"
+      d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z" />
+  </svg>
+  <div class="blog-container main-content-wrapper">
+    <!--Main content -->
+    <div class="main-content grid">
+      <h2 class="Aktueller-Artikel ArtikelAnimation">Aktueller Artikel:</h2>
+      <!-- ============================================ -->
+      <!--                 Blog Articles                -->
+      <!-- ============================================ -->
+
+      {%- for post in collections.sanityPosts -%}
+      <article
+        class="{% if loop.first %}recent-articles large-item{% else %}recent-articles small-item{% endif %}">
+        <!--Main Article Image-->
+        <picture
+          class="{% if loop.first %}blog-mainImage large-img{% else %}blog-mainImage {% endif %}">
+          <img
+            src="{% if loop.first %}{{ post.mainImage.asset | urlForWidth(800) }}{% else %}{{ post.mainImage.asset | urlForWidth(500) }}{% endif %}"
+            alt="{{ post.mainImage.alt }}"
+            decoding="async" />
         </picture>
-    </section>
+        <!--Article Info-->
+        <div class="article-group">
+          <p class="blog-flag">{{post.categories}}</p>
+          <h2 class="blog-h1">{{ post.title }}</h2>
+          <p class="blog-desc">{{ post.description }}</p>
+          <div class="footer-group">
+            <a href="/blog/{{ post.slug.current }}/" class="blog-link"
+              >Weiterlesen
+            </a>
+            <div class="blog-author-date">
+              <div class="blog-authorGroup">
+                <!--Author Image-->
+                <picture class="blog-author-img">
+                  <img
+                    src="/assets/images/logo-small.webp"
+                    width="32"
+                    height="32"
+                    alt="author-img"
+                    decoding="async" />
+                </picture>
+                <span class="blog-author">{{ post.author }}</span>
+                <span aria-hidden="true" class="blog-dot"></span>
+              </div>
 
-    <!-- ============================================ -->
-    <!--              Main Blog Content               -->
-    <!-- ============================================ -->
-
-    <div class="blog-container main-content-wrapper">
-        <!--Main content -->
-        <div class="main-content">
-            <!-- ============================================ -->
-            <!--                 Blog Articles                -->
-            <!-- ============================================ -->
-
-            {% if collections.post | length == 0 %}
-                <h1>No Recent Posts</h1>
-            {% else %}
-                {%- for post in collections.post | reverse -%}
-                    <article class="recent-articles">
-                        <!--Main Article Image-->
-                        <picture class="blog-mainImage">
-                            <img
-                            src="{{ post.data.image }}"
-                            alt="{{ post.data.imageAlt }}"
-                            width="795"
-                            height="400"
-                            decoding="async"/>
-                        </picture>
-                        <!--Article Info-->
-                        <div class="article-group">
-                            <div class="blog-authorGroup">
-                                <!--Author Image-->
-                                <picture class="blog-author-img">
-                                    <img
-                                    src="/assets/svgs/profile.svg"
-                                    alt="house"
-                                    width="32"
-                                    height="32"
-                                    decoding="async"/>
-                                </picture>
-                                <span class="blog-author">{{ post.data.author }}</span>
-                                <span aria-hidden="true" class="blog-dot"></span>
-                                <!--Blog Date-->
-                                <span class="blog-date">{{ post.date | postDate }}</span>
-                            </div>
-                            <h2 class="blog-h1">
-                                {{ post.data.title }}
-                            </h2>
-                            <p class="blog-desc">
-                                {{ post.data.description }}
-                            </p>
-                            <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
-                        </div>
-                    </article>
-                {%- endfor -%}
-            {% endif %}
+              <!--Blog Date-->
+              <span class="blog-date">{{ post.releaseDate | formatDate}}</span>
+            </div>
+          </div>
         </div>
-
-        {% include 'components/featured-post.html' %}
+      </article>
+      {%- if loop.first -%}
+      <h2 class="Weitere-Artikel ArtikelAnimation">Weitere Artikel:</h2>
+      {%- endif -%} {%- endfor -%}
     </div>
+  </div>
+</div>
 {% endblock %}
