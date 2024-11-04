@@ -1,0 +1,12 @@
+---
+layout: layouts/post.html
+pagination:
+  data: collections.sanityPosts
+  size: 1
+  alias: post
+permalink: "/blog/{{ post.slug.current }}/index.html"
+eleventyComputed:
+  title: "{{ post.title }}"
+  description: "{{ post.description }}"
+  keywords: "{{ post.keywords}}"
+---
