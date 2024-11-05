@@ -4,9 +4,9 @@ const imageUrlBuilder = require("@sanity/image-url");
 
 // Sanity client initialisieren
 const client = createClient({
-  projectId: "", // Dein Sanity-Projekt-ID
-  dataset: "", // Dein Sanity-Datensatz
-  apiVersion: "", // oder dein bevorzugtes Datum
+  projectId: "tt3ok5h1", // Dein Sanity-Projekt-ID
+  dataset: "production", // Dein Sanity-Datensatz
+  apiVersion: "2024-11-05", // oder dein bevorzugtes Datum
   useCdn: false, // Optional: CDN für schnellere Ladezeiten
 });
 
