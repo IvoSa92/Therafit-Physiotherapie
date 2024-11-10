@@ -10,6 +10,7 @@ const configSitemap = require("./src/config/sitemap");
 const configServer = require("./src/config/server");
 
 //Sanity
+/*
 const { client, urlFor } = require("./src/sanityClient");
 const fetchSanityPosts = require("./src/sanityPosts");
 const { toHTML } = require("@portabletext/to-html");
@@ -33,7 +34,7 @@ function deleteFolderRecursive(folderPath) {
     fs.rmdirSync(folderPath);
   }
 }
-
+*/
 // Other
 const filterPostDate = require("./src/config/postDate");
 const isProduction = configServer.isProduction;
@@ -122,6 +123,8 @@ module.exports = function (eleventyConfig) {
   });
 
   //Sanity
+
+  /*
   eleventyConfig.addFilter("portableTextToHtml", (body) => {
     return portableTextSerializer(body);
   });
@@ -160,6 +163,8 @@ module.exports = function (eleventyConfig) {
     deleteFolderRecursive(outputDir);
     console.log(outputDir);
   });
+
+  */
 
   /**=====================================================================
                                     END FILTERS
