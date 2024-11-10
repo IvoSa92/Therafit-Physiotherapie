@@ -5,15 +5,15 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'Test Blog',
+  title: '', // Dein Titel
 
-  projectId: 'tt3ok5h1',
-  dataset: 'production',
+  projectId: '', // Deine Project-ID
+  dataset: '', // Dein Datensatz
 
   plugins: [structureTool(), visionTool()],
 
   schema: {
     types: schemaTypes,
   },
-  studioHost: 'meine-firma',
+  studioHost: '', // Deine Firmen-Domain
 })
