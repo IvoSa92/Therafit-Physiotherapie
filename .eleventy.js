@@ -8,6 +8,7 @@ const configCss = require("./src/config/css");
 const configJs = require("./src/config/javascript");
 const configSitemap = require("./src/config/sitemap");
 const configServer = require("./src/config/server");
+const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
 
 //Sanity
 /*
@@ -80,6 +81,12 @@ module.exports = function (eleventyConfig) {
    *  https://www.npmjs.com/package/@quasibit/eleventy-plugin-sitemap
    */
   eleventyConfig.addPlugin(pluginSitemap, configSitemap);
+
+  // SHARP IMAGES
+  eleventyConfig.addPlugin(eleventyPluginSharpImages, {
+    urlPath: "/assets/images",
+    outputDir: "public/assets/images",
+  });
 
   /**
    *  MINIFIER
