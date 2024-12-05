@@ -15,504 +15,717 @@ eleventyNavigation:
 <link rel="stylesheet" href="/assets/css/local.css" />
 <link rel="stylesheet" href="/assets/css/critical.css" />
 
+<script defer src="/assets/js/hero-video.js"></script>
+
 <!--Fonts-->
 <style></style>
 
 {% endblock %} {% block body %}
-
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
 
-<section id="hero">
+<section id="hero-2042">
   <div class="cs-container">
-    <div class="cs-flex-group">
-      <span class="cs-topper">mountain hiking society</span>
-      <h1 class="cs-title">Explore the World with Exciting People</h1>
+    <div class="cs-content">
+      <span class="cs-topper">Dental Care for Everyone</span>
+      <h1 class="cs-title">We Provide Dental Services & Surgery</h1>
       <p class="cs-text">
-        Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius.
-        Nibh tortor id aliquet lectus proin nibh condimentum.
+        From preventative care to restorative dentistry, our team is dedicated
+        to providing the best possible dental care for you.
       </p>
-      <a href="/about" class="cs-button-solid">Explore More</a>
-      <a href="/contact" class="cs-button-transparent">
-        <img
-          class="cs-img"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-          alt="play icon"
-          width="17"
-          height="17" />
-        Get in Touch
-      </a>
+      <div class="cs-button-group">
+        <a href="" class="cs-button-solid">Get Started</a>
+      </div>
     </div>
+    <button class="cs-play" aria-label="click to play video">
+      <img
+        class="cs-icon"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg"
+        alt="play icon"
+        width="24"
+        height="24"
+        aria-hidden="true"
+        decoding="async" />
+    </button>
   </div>
 
-  <!-- Background Image -->
-  <picture class="cs-picture">
-    <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp" />
-    <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg" />
-    <img
-      aria-hidden="true"
-      decoding="async"
-      src="/assets/images/landing.jpg"
-      alt="new home"
-      width="2500"
-      height="1667"
-      loading="eager" />
-  </picture>
+  <div class="cs-video-wrapper">
+    <video
+      loading="lazy"
+      src="https://pub-5f157156d0be42c3844650fd4becf69c.r2.dev/Physiotherapie%204K%20Video.mp4
+      "
+      muted></video>
+  </div>
+</section>
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-2170">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">WHY CHOOSE US</span>
+      <h2 class="cs-title">Your Wedding Memory will be More Memorable</h2>
+      <div class="cs-image-group">
+        <picture class="cs-picture">
+          <source
+            srcset="{% getUrl '/assets/images/team.png' | resize({ height: 200, width: 450 }) | webp %}"
+            media="(max-width: 600px)"
+            type="image/webp" />
+          <source
+            srcset="{% getUrl '/assets/images/team.png' | resize({ height: 300, width: 600 }) | webp %}"
+            media="(min-width: 601px) and (max-width: 1024px)"
+            type="image/webp" />
+          <source
+            srcset="{% getUrl '/assets/images/team.png' | resize({ height: 500, width: 800 }) | webp %}"
+            media="(min-width:1025px)"
+            type="image/webp" />
+          <img
+            src="{% getUrl '/assets/images/team.png' | resize({ height: 400, width: 400 }) | webp %}"
+            alt="Description of the image" />
+        </picture>
+      </div>
+    </div>
+    <div class="cs-wrapper">
+      <div class="cs-flex">
+        <p class="cs-text">
+          Our expert instructors give you the skills and knowledge to manage
+          process risks and show you how to continuously make your facilities
+          and operations more safe and reliable. PSRG training courses are
+          available online. We have courses on-demand and live instructors for
+          workshops and support. We also provide LIVE instructor-led training
+          courses and onsite training.
+        </p>
+        <p class="cs-text">
+          We have courses on-demand and live instructors for workshops and
+          support. We also provide LIVE instructor-led training courses and
+          onsite training.
+        </p>
+        <ul class="cs-ul">
+          <li class="cs-li">
+            <span class="cs-number">01</span>
+            <span class="cs-li-text">Formal Style</span>
+          </li>
+          <li class="cs-li">
+            <span class="cs-number">02</span>
+            <span class="cs-li-text">Formal Style</span>
+          </li>
+        </ul>
+        <a href="" class="cs-button-solid">Learn More</a>
+      </div>
+      <ul class="cs-stats-group">
+        <li class="cs-stat">
+          <span class="cs-stat-number">25</span>
+          <span class="cs-desc">Years</span>
+        </li>
+        <li class="cs-stat">
+          <span class="cs-stat-number">98</span>
+          <span class="cs-desc">Guests</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <img
+    class="cs-floater"
+    loading="lazy"
+    decoding="async"
+    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/flower-bg.png"
+    alt="flower"
+    width="320"
+    height="378"
+    aria-hidden="true" />
 </section>
 
 <!-- ============================================ -->
 <!--                  Services                    -->
 <!-- ============================================ -->
 
-<section id="services" class="services">
-  <!-- Get Icons From flaticon.com -->
-  <div class="card">
-    <picture>
-      <img
-        aria-hidden="true"
-        decoding="async"
-        src="/assets/svgs/service1.svg"
-        alt="appliance"
-        width="48"
-        height="48" />
-    </picture>
-    <h2>Service 1</h2>
-    <p>
-      Talk about the service with keywords people will be searching for it by.
-      Keep it 1-2 sentences.
-    </p>
-  </div>
-  <div class="card">
-    <picture>
-      <img
-        aria-hidden="true"
-        decoding="async"
-        src="/assets/svgs/service2.svg"
-        alt="appliance"
-        width="48"
-        height="48" />
-    </picture>
-    <h2>Service 2</h2>
-    <p>
-      Talk about the service with keywords people will be searching for it by.
-      Keep it 1-2 sentences.
-    </p>
-  </div>
-  <div class="card">
-    <picture>
-      <img
-        aria-hidden="true"
-        decoding="async"
-        src="/assets/svgs/service3.svg"
-        alt="appliance"
-        width="48"
-        height="48" />
-    </picture>
-    <h2>Service 3</h2>
-    <p>
-      Talk about the service with keywords people will be searching for it by.
-      Keep it 1-2 sentences.
-    </p>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!--                 Side By Side                 -->
-<!-- ============================================ -->
-
-<section id="sbs">
+<section id="services-1973">
   <div class="cs-container">
-    <!-- Left Image Section -->
-    <div class="cs-left">
-      <picture class="cs-picture cs-picture1">
-        <source
-          media="(max-width: 600px)"
-          srcset="/assets/images/cabinets2-m.jpg" />
-        <source
-          media="(min-width: 601px)"
-          srcset="/assets/images/cabinets2.jpg" />
-        <img
-          aria-hidden="true"
-          decoding="async"
-          src="/assets/images/cabinets2.jpg"
-          alt="cabinets"
-          loading="lazy"
-          width="400"
-          height="563" />
-      </picture>
-      <picture class="cs-picture cs-picture2">
-        <source
-          media="(max-width: 600px)"
-          srcset="/assets/images/construction-m.jpg" />
-        <source
-          media="(min-width: 601px)"
-          srcset="/assets/images/construction.jpg" />
-        <img
-          aria-hidden="true"
-          decoding="async"
-          src="/assets/images/construction.jpg"
-          alt="house"
-          loading="lazy"
-          width="400"
-          height="563" />
-      </picture>
-    </div>
-    <!-- Right Content Section-->
-    <div class="cs-right">
-      <span class="cs-topper">About Us</span>
-      <h2 class="cs-title">About Company Title</h2>
+    <div class="cs-content">
+      <span class="cs-topper">Dental Care For Everyone</span>
+      <h2 class="cs-title">Explore Our Services</h2>
       <p class="cs-text">
-        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-        officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-        et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-        nonatourean olei aptent taciti sociosqu ad litora torquent per.
+        From preventative care to restorative dentistry, our team is dedicated
+        to providing the best possible dental care.
       </p>
-      <p class="cs-text">
-        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-        officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-        et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-        nonatourean olei aptent taciti sociosqu ad litora torquent per.
-      </p>
-      <div class="cs-flex-group">
-        <p class="cs-flex-p">
-          In consequat tincidunt turpis sit amet imperdiet. Praesent Classei
-          consequat tincidunt turpis sit amet imperdiet for mind.
-        </p>
-        <span class="cs-name">Justin Time</span>
-        <span class="cs-job">CEO-Founder</span>
-        <img
-          class="cs-quote-icon"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-          alt="gavel"
-          width="136"
-          height="77" />
-      </div>
-      <a href="/about" class="cs-button-solid">More About Us</a>
     </div>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!--            Extra Content To Rank             -->
-<!-- ============================================ -->
-
-<section id="sbs-r">
-  <div class="cs-container">
-    <!-- Left Image Section -->
-    <div class="cs-left">
-      <picture class="cs-picture cs-picture1">
-        <source
-          media="(max-width: 600px)"
-          srcset="/assets/images/construction-m.jpg" />
-        <source
-          media="(min-width: 601px)"
-          srcset="/assets/images/construction.jpg" />
-        <img
-          aria-hidden="true"
-          decoding="async"
-          src="/assets/images/construction.jpg"
-          alt="house"
-          loading="lazy"
-          width="400"
-          height="560" />
-      </picture>
-      <picture class="cs-picture cs-picture2">
-        <source
-          media="(max-width: 600px)"
-          srcset="/assets/images/cabinets2-m.jpg" />
-        <source
-          media="(min-width: 601px)"
-          srcset="/assets/images/cabinets2.jpg" />
-        <img
-          aria-hidden="true"
-          decoding="async"
-          src="/assets/images/cabinets2.jpg"
-          alt="cabinets"
-          loading="lazy"
-          width="400"
-          height="560" />
-      </picture>
-    </div>
-    <!-- Right Content Section-->
-    <div class="cs-right">
-      <span class="cs-topper">SEO Ranking</span>
-      <h2 class="cs-title">Talk about a main service keyword</h2>
-      <p class="cs-text">
-        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
-        officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
-        et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
-        nonatourean olei aptent taciti sociosqu ad litora torquent per.
-      </p>
-      <p class="cs-text">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur,
-        iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi
-        fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores
-        ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo
-        quia neque est quas, in placeat. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Doloribus modi laudantium voluptatibus rem libero
-        error minus quia eligendi sapiente eos.
-      </p>
-      <a href="/blog" class="cs-button-solid">Read our Blog</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!--                   Gallery                    -->
-<!-- ============================================ -->
-
-<section id="gallery">
-  <div class="cs-container">
-    <span class="cs-topper">Our Portfolio</span>
-    <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-    <div class="cs-image-group">
-      <!-- Row 1-->
-      <div class="cs-row cs-row-1">
-        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-        <picture class="cs-picture cs-picture1">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/portfolio/port1-m.jpg" />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/portfolio/port1.jpg" />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/portfolio/port1.jpg"
-            alt="new hallway"
-            loading="lazy"
-            width="400"
-            height="560" />
-        </picture>
-        <picture class="cs-picture cs-picture2">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/portfolio/port4-m.jpg" />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/portfolio/port4.jpg" />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/portfolio/port4.jpg"
-            alt="new home construction"
-            loading="lazy"
-            width="400"
-            height="560" />
-        </picture>
-        <picture class="cs-picture cs-picture3">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/portfolio/port7-m.jpg" />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/portfolio/port7.jpg" />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/portfolio/port7.jpg"
-            alt="building a new wall"
-            loading="lazy"
-            width="400"
-            height="560" />
-        </picture>
-      </div>
-      <!-- Row 2 -->
-      <div class="cs-row cs-row-2">
-        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-        <picture class="cs-picture cs-picture1">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/portfolio/port2-m.jpg" />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/portfolio/port2.jpg" />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/portfolio/port2.jpg"
-            alt="new kitchen"
-            loading="lazy"
-            width="400"
-            height="560" />
-        </picture>
-        <picture class="cs-picture cs-picture2">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/portfolio/port5-m.jpg" />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/portfolio/port5.jpg" />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/portfolio/port5.jpg"
-            alt="apartment addition"
-            loading="lazy"
-            width="400"
-            height="560" />
-        </picture>
-        <picture class="cs-picture cs-picture3">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/portfolio/port8-m.jpg" />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/portfolio/port8.jpg" />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/portfolio/port8.jpg"
-            alt="kew kitchen cabinets"
-            loading="lazy"
-            width="400"
-            height="560" />
-        </picture>
-      </div>
-      <!-- Row 3 -->
-      <div class="cs-row cs-row-3">
-        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-        <picture class="cs-picture cs-picture1">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/portfolio/port3-m.jpg" />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/portfolio/port3.jpg" />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/portfolio/port3.jpg"
-            alt="new kitchen"
-            loading="lazy"
-            width="400"
-            height="560" />
-        </picture>
-        <picture class="cs-picture cs-picture2">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/portfolio/port6-m.jpg" />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/portfolio/port6.jpg" />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/portfolio/port6.jpg"
-            alt="apartment addition"
-            loading="lazy"
-            width="400"
-            height="560" />
-        </picture>
-        <picture class="cs-picture cs-picture3">
-          <source
-            media="(max-width: 600px)"
-            srcset="/assets/images/portfolio/port9-m.jpg" />
-          <source
-            media="(min-width: 601px)"
-            srcset="/assets/images/portfolio/port9.jpg" />
-          <img
-            aria-hidden="true"
-            decoding="async"
-            src="/assets/images/portfolio/port9.jpg"
-            alt="kew kitchen cabinets"
-            loading="lazy"
-            width="400"
-            height="560" />
-        </picture>
-      </div>
-    </div>
-    <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-  </div>
-</section>
-
-<!-- ============================================ -->
-<!--                   Reviews                    -->
-<!-- ============================================ -->
-
-<section id="reviews">
-  <div class="cs-container">
-    <span class="cs-topper">Our Reviews</span>
-    <h2 class="cs-title">Words From Our Customers</h2>
-    <p class="cs-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor
-      volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida
-      viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo,
-      ornare. Lorem ipsum dolor sit amet.
-    </p>
     <ul class="cs-card-group">
-      <!-- Review 1 -->
       <li class="cs-item">
-        <img
-          class="cs-item-img"
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-          alt="profile picture"
-          width="80"
-          height="80" />
-        <p class="cs-item-p">
-          Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor
-          habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed
-          ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat
-          viverra massa urna, volutpat orci imperdiet eget eget.
+        <h3 class="cs-h3">Gum Surgery</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
         </p>
-        <span class="cs-reviewer">
-          Jon Doe
-          <span class="cs-desc">Homeowner</span>
-        </span>
-        <img
-          class="cs-item-stars"
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-          alt="stars"
-          width="96"
-          height="16" />
+        <a href="" class="cs-link"> Learn More </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="assets/images/team.png"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
       </li>
-      <!-- Review 2 -->
       <li class="cs-item">
-        <img
-          class="cs-item-img"
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-          alt="profile picture"
-          width="80"
-          height="80" />
-        <p class="cs-item-p">
-          Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor
-          habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed
-          ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat
-          viverra massa urna, volutpat orci imperdiet eget eget.
+        <h3 class="cs-h3">Dental Implants</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
         </p>
-        <span class="cs-reviewer">
-          Jane Doe
-          <span class="cs-desc">Homeowner</span>
-        </span>
-        <img
-          class="cs-item-stars"
-          aria-hidden="true"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-          alt="stars"
-          width="96"
-          height="16" />
+        <a href="" class="cs-link"> Learn More </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/implant.png"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Dental Crowns</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
+        </p>
+        <a href="" class="cs-link"> Learn More </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/braces.png"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Gum Surgery</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
+        </p>
+        <a href="" class="cs-link"> Learn More </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/toothache.png"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Dental Implants</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
+        </p>
+        <a href="" class="cs-link"> Learn More </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/implant.png"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Dental Crowns</h3>
+        <p class="cs-item-text">
+          Dentitch provides the best service and has won many awards. Our
+          mission is to make everyone confident to give their best smile.
+        </p>
+        <a href="" class="cs-link"> Learn More </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/braces.png"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
       </li>
     </ul>
-    <a aria-label="read more reviews" href="/reviews" class="cs-button-solid"
-      >Our Reviews</a
-    >
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Meet The Team                 -->
+<!-- ============================================ -->
+
+<section id="meet-team-1704">
+  <div class="cs-container">
+    <div class="cs-content">
+      <div class="cs-flex">
+        <span class="cs-topper">Our Team</span>
+        <h2 class="cs-title">Our Expert Team</h2>
+        <p class="cs-text">
+          Aqestic recusandae laudantium optio amet a quisquam saepe aliquid,
+          voluptate praesentium dicta fuga dolor error.
+        </p>
+      </div>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <span class="cs-job">Web Developer</span>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson4.jpg
+            " />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson4.jpg
+            " />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson4.jpg"
+            alt="person"
+            width="305"
+            height="407" />
+        </picture>
+        <div class="cs-info">
+          <span class="cs-name">Esther Howard</span>
+          <div class="cs-social">
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/face-dark-grey.svg"
+                alt="facebook"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-dark-grey.svg"
+                alt="twitter"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-dark-grey.svg"
+                alt="instagram"
+                width="16"
+                height="16" />
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="cs-item">
+        <span class="cs-job">Web Developer</span>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson2.jpg
+            " />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson2.jpg
+            " />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson2.jpg"
+            alt="person"
+            width="305"
+            height="407" />
+        </picture>
+        <div class="cs-info">
+          <span class="cs-name">Leslie Alexander</span>
+          <div class="cs-social">
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/face-dark-grey.svg"
+                alt="facebook"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-dark-grey.svg"
+                alt="twitter"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-dark-grey.svg"
+                alt="instagram"
+                width="16"
+                height="16" />
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="cs-item">
+        <span class="cs-job">Web Developer</span>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson1.jpg
+            " />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson1.jpg
+            " />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson1.jpg"
+            alt="person"
+            width="305"
+            height="407" />
+        </picture>
+        <div class="cs-info">
+          <span class="cs-name">Wade Warren</span>
+          <div class="cs-social">
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/face-dark-grey.svg"
+                alt="facebook"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-dark-grey.svg"
+                alt="twitter"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-dark-grey.svg"
+                alt="instagram"
+                width="16"
+                height="16" />
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="cs-item">
+        <span class="cs-job">Web Developer</span>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/stylist2.jpg
+            " />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/stylist2.jpg
+            " />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/stylist2.jpg"
+            alt="person"
+            width="305"
+            height="407" />
+        </picture>
+        <div class="cs-info">
+          <span class="cs-name">Jenny Wilson</span>
+          <div class="cs-social">
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/face-dark-grey.svg"
+                alt="facebook"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-dark-grey.svg"
+                alt="twitter"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-dark-grey.svg"
+                alt="instagram"
+                width="16"
+                height="16" />
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="cs-item">
+        <span class="cs-job">Web Developer</span>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson3.jpg
+            " />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson3.jpg
+            " />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FPeople%2Fperson3.jpg"
+            alt="person"
+            width="305"
+            height="407" />
+        </picture>
+        <div class="cs-info">
+          <span class="cs-name">Devon Lane</span>
+          <div class="cs-social">
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/face-dark-grey.svg"
+                alt="facebook"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-dark-grey.svg"
+                alt="twitter"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-dark-grey.svg"
+                alt="instagram"
+                width="16"
+                height="16" />
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="cs-item">
+        <span class="cs-job">Web Developer</span>
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/stylist1.jpg
+            " />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/stylist1.jpg
+            " />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/stylist1.jpg"
+            alt="person"
+            width="305"
+            height="407" />
+        </picture>
+        <div class="cs-info">
+          <span class="cs-name">Arlene MacCoy</span>
+          <div class="cs-social">
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Facebook"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/face-dark-grey.svg"
+                alt="facebook"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Twitter"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-dark-grey.svg"
+                alt="twitter"
+                width="16"
+                height="16" />
+            </a>
+            <a
+              href=""
+              class="cs-link"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener">
+              <img
+                class="cs-link-icon"
+                loading="lazy"
+                decoding="async"
+                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-dark-grey.svg"
+                alt="instagram"
+                width="16"
+                height="16" />
+            </a>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </section>
 

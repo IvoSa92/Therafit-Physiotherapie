@@ -1,5 +1,5 @@
 module.exports = {
-  name: "Name der Firma",
+  name: "TheraFit-Physiotherapie",
   email: "Mail der Firma",
   phoneForTel: "Telefonnumer",
   address: {
