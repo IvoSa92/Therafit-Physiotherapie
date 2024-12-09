@@ -9,6 +9,7 @@
   // Website colors
   :root {
     --primary: #177b49;
+    --primaryLight: #1f965a;
     --primaryDark: #034a46;
     --secondary: #74c1d2;
     --secondaryLight: #ffba43;
@@ -258,58 +259,55 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode {
-    #dark-mode-toggle {
-      .cs-sun {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-      }
-
-      .cs-moon {
-        opacity: 0;
-        transform: translate(-50%, -150%);
-      }
-    }
+  .switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
   }
 
-  #dark-mode-toggle {
-    width: calc(48 / 16 * 1rem);
-    height: calc(48 / 16 * 1rem);
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    border: none;
-    display: block;
-    order: 4;
-    position: relative;
-    z-index: 1000;
-    overflow: hidden;
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
 
-    img,
-    svg {
-      width: calc(20 / 16 * 1rem);
-      height: calc(20 / 16 * 1rem);
-      //center image inside button
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
+  /* The slider */
+  .slider {
+    --background: #28096b;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #522ba7;
+    transition: 0.5s;
+    border-radius: 30px;
+  }
 
-    .cs-moon {
-      z-index: 2;
-      // Transition properties
-      transition: transform 0.3s, opacity 0.3s;
-    }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
+    background: var(--background);
+    transition: 0.5s;
+  }
 
-    .cs-sun {
-      opacity: 0;
-      z-index: 1;
-      // Transition property
-      transform: translate(-50%, 100%);
-      transition: transform 0.3s, opacity 0.3s;
-    }
+  input:checked + .slider {
+    background-color: var(--background);
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(0);
+    box-shadow: inset 8px -4px 0px 0px #fff000;
   }
 }
 
@@ -930,7 +928,7 @@
 
   #cs-navigation {
     width: 94%;
-    max-width: calc(1440 / 16 * 1rem);
+    max-width: calc(1200 / 16 * 1rem);
     height: calc(96 / 16 * 1rem);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
@@ -1101,14 +1099,14 @@
         display: block;
         width: 0;
         height: 2px;
-        background: var(--bodyTextColorWhite);
+        background: var(--primaryLight);
         transition: width 0.3s;
         left: 0;
         bottom: -5px;
       }
 
       &:hover {
-        color: var(--bodyTextColorWhite);
+        color: var(--primaryLight);
 
         &::after {
           width: 100%;
@@ -1194,10 +1192,10 @@
 
       .cs-li-link {
         &.cs-active {
-          color: var(--secondary);
+          color: var(--primaryLight);
         }
         &:hover {
-          color: var(--secondary);
+          color: var(--primaryLight);
         }
       }
     }
