@@ -7,7 +7,7 @@
   :root {
     --primary: #177b49;
     --primaryLight: #1f965a;
-    --primaryDark: #034a46;
+    --primaryDark: #286b6c;
     --secondary: #74c1d2;
     --secondaryLight: #ffba43;
     --headerColor: #1a1a1a;
@@ -360,7 +360,7 @@
     z-index: 10;
   }
   #cs-navigation .cs-logo img {
-    width: 100%;
+    width: 60%;
     height: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
@@ -809,7 +809,7 @@
     display: none;
   }
   #cs-navigation .cs-logo {
-    width: 18.4%;
+    width: auto;
     max-width: 21.875rem;
     height: 2rem;
     /* margin-right auto pushes everything away from it to the right */
@@ -818,11 +818,13 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    transform: translateY(-20%);
     z-index: 100;
   }
   #cs-navigation .cs-logo img {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: 6rem;
+    transform: translateY(10%);
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
   }
@@ -995,10 +997,6 @@
   body.dark-mode #cs-navigation {
     background-color: var(--dark);
   }
-  body.dark-mode #cs-navigation .cs-logo {
-    /* turns it white */
-    filter: grayscale(1) brightness(1000%);
-  }
   body.dark-mode #cs-navigation .cs-li-link,
   body.dark-mode #cs-navigation .cs-phone {
     color: var(--bodyTextColorWhite);
@@ -1007,10 +1005,10 @@
     filter: grayscale(1) brightness(10005);
   }
   body.dark-mode #cs-navigation .cs-li-link.cs-active {
-    color: var(--primaryLight);
+    color: var(--primaryDark);
   }
   body.dark-mode #cs-navigation .cs-li-link:hover {
-    color: var(--primaryLight);
+    color: var(--primaryDark);
   }
 }
 /*-- -------------------------- -->

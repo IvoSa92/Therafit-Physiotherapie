@@ -1,10 +1,14 @@
 // Helper functions to toggle dark mode
 function enableDarkMode() {
   document.body.classList.add("dark-mode");
+  // document.querySelector("#sbs-2170").style.display =
+  //   "url('../svgs/team-dark.svg')";
 }
 
 function disableDarkMode() {
   document.body.classList.remove("dark-mode");
+  // document.querySelector("#sbs-2170").style.backgroundImage =
+  //   "url('../svgs/team-svg.svg')";
 }
 
 // Function to detect and apply the saved theme

@@ -10,7 +10,7 @@
   :root {
     --primary: #177b49;
     --primaryLight: #1f965a;
-    --primaryDark: #034a46;
+    --primaryDark: #286b6c;
     --secondary: #74c1d2;
     --secondaryLight: #ffba43;
     --headerColor: #1a1a1a;
@@ -357,6 +357,7 @@
   #cs-navigation {
     width: 94%;
     max-width: calc(1280 / 16 * 1rem);
+
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     /* 12px - 24px */
@@ -430,7 +431,7 @@
       z-index: 10;
 
       img {
-        width: 100%;
+        width: 60%;
         height: 100%;
         /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
         object-fit: contain;
@@ -965,20 +966,22 @@
     }
 
     .cs-logo {
-      width: 18.4%;
+      width: auto;
       max-width: calc(350 / 16 * 1rem);
-      height: calc(32 / 16 * 1rem);
+      height: 2rem;
       /* margin-right auto pushes everything away from it to the right */
       margin: 0 auto 0 0;
       padding: 0;
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      transform: translateY(-20%);
       z-index: 100;
 
       img {
-        width: auto;
-        height: 100%;
+        width: 100%;
+        height: 6rem;
+        transform: translateY(10%);
         /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
         object-fit: contain;
       }
@@ -1176,11 +1179,6 @@
     #cs-navigation {
       background-color: var(--dark);
 
-      .cs-logo {
-        /* turns it white */
-        filter: grayscale(1) brightness(1000%);
-      }
-
       .cs-li-link,
       .cs-phone {
         color: var(--bodyTextColorWhite);
@@ -1192,10 +1190,10 @@
 
       .cs-li-link {
         &.cs-active {
-          color: var(--primaryLight);
+          color: var(--primaryDark);
         }
         &:hover {
-          color: var(--primaryLight);
+          color: var(--primaryDark);
         }
       }
     }

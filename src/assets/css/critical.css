@@ -173,6 +173,12 @@
     background: linear-gradient(270deg, rgba(0, 0, 0, 0) 51.02%, rgba(0, 0, 0, 0.64) 75.13%), linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
   }
 }
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #hero-2042 .cs-play {
+    background-color: var(--primaryDark);
+  }
+}
 /*-- -------------------------- -->
 <---        Side By Side        -->
 <--- -------------------------- -*/
@@ -451,10 +457,10 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #sbs-2170 {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-image: url("../svgs/team-dark.svg");
   }
   body.dark-mode #sbs-2170 .cs-picture {
-    border-color: var(--accent);
+    border-color: white;
   }
   body.dark-mode #sbs-2170 .cs-text,
   body.dark-mode #sbs-2170 .cs-li-text {

@@ -207,6 +207,18 @@
     }
   }
 }
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode {
+    #hero-2042 {
+      .cs-play {
+        background-color: var(--primaryDark);
+      }
+    }
+  }
+}
+
 /*-- -------------------------- -->
 <---        Side By Side        -->
 <--- -------------------------- -*/
@@ -529,10 +541,10 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
     #sbs-2170 {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-image: url("../svgs/team-dark.svg");
 
       .cs-picture {
-        border-color: var(--accent);
+        border-color: white;
       }
 
       .cs-text,
