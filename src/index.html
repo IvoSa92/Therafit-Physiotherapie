@@ -18,7 +18,12 @@ eleventyNavigation:
 <script defer src="/assets/js/hero-video.js"></script>
 
 <!--Fonts-->
-<style></style>
+<link rel="preload" href="/assets/fonts/SofiaSans-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+<link rel="preload" href="/assets/fonts/SofiaSans-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+<link rel="preload" href="/assets/fonts/SofiaSans-ExtraBold.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+<link rel="preload" href="/assets/fonts/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+
+
 
 {% endblock %} {% block body %}
 <!-- ============================================ -->
@@ -28,11 +33,11 @@ eleventyNavigation:
 <section id="hero-2042">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="cs-topper">Dental Care for Everyone</span>
-      <h1 class="cs-title">We Provide Dental Services & Surgery</h1>
+      <span class="cs-topper">Ihre Gesundheit in besten Händen
+      </span>
+      <h1 class="cs-title">Ganzheitliche Physiotherapie – auf <span class="text-animation">Sie</span>  abgestimmt</h1>
       <p class="cs-text">
-        From preventative care to restorative dentistry, our team is dedicated
-        to providing the best possible dental care for you.
+        Unser Team aus spezialisierten Therapeuten bietet Ihnen individuelle Behandlungen für Ihre Gesundheit. Vereinbaren Sie noch heute einen Termin und erleben Sie ganzheitliche Physiotherapie.
       </p>
        <button class="learn-more">
     <span class="circle" aria-hidden="true">
@@ -69,8 +74,9 @@ eleventyNavigation:
 <section id="sbs-2170">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="cs-topper">WHY CHOOSE US</span>
-      <h2 class="cs-title">Your Wedding Memory will be More Memorable</h2>
+      <span class="cs-topper">Ihr Weg zu mehr Wohlbefinden</span>
+      <h2 class="cs-title">Die Entstehung von TheraFit-Physiotherapie
+      </h2>
       <div class="cs-image-group">
         <picture class="cs-picture">
           <source
@@ -90,44 +96,33 @@ eleventyNavigation:
             alt="Description of the image" />
         </picture>
       </div>
-    </div>
-    <div class="cs-wrapper">
-      <div class="cs-flex">
-        <p class="cs-text">
-          Our expert instructors give you the skills and knowledge to manage
-          process risks and show you how to continuously make your facilities
-          and operations more safe and reliable. PSRG training courses are
-          available online. We have courses on-demand and live instructors for
-          workshops and support. We also provide LIVE instructor-led training
-          courses and onsite training.
-        </p>
-        <p class="cs-text">
-          We have courses on-demand and live instructors for workshops and
-          support. We also provide LIVE instructor-led training courses and
-          onsite training.
-        </p>
-        <ul class="cs-ul">
-          <li class="cs-li">
-            <span class="cs-number">01</span>
-            <span class="cs-li-text">Formal Style</span>
-          </li>
-          <li class="cs-li">
-            <span class="cs-number">02</span>
-            <span class="cs-li-text">Formal Style</span>
-          </li>
-        </ul>
-        <a href="" class="cs-button-solid">Learn More</a>
-      </div>
-      <ul class="cs-stats-group">
+
+      <ul class="cs-stats-group" style="display: flex; justify-content: center;">
         <li class="cs-stat">
-          <span class="cs-stat-number">25</span>
-          <span class="cs-desc">Years</span>
+          <span class="cs-stat-number">16</span>
+          <span class="cs-desc">Jahre Erfahrung</span>
         </li>
         <li class="cs-stat">
-          <span class="cs-stat-number">98</span>
-          <span class="cs-desc">Guests</span>
+          <span class="cs-stat-number">398</span>
+          <span class="cs-desc-2">zufriedene Patienten</span>
         </li>
       </ul>
+
+    </div>
+        <div class="cs-wrapper">
+      <div class="cs-flex">
+        <p class="cs-text">
+          TheraFit Physiotherapie wurde mit einer klaren Vision gegründet: <br><br> Menschen auf ihrem Weg zu Gesundheit und Wohlbefinden bestmöglich zu begleiten. Unser erfahrenes Team aus spezialisierten Physiotherapeuten bietet individuelle Behandlungen und kombiniert modernste Therapieansätze mit einer warmherzigen Betreuung. Vertrauen Sie auf unsere Expertise und lassen Sie uns gemeinsam Ihre Ziele erreichen.
+        </p>
+        <p class="cs-text">
+          „Unsere Praxis deckt mehr als fünf spezialisierte Therapiegebiete ab – von <strong>Sport</strong>- und <strong>Rehabilitationstherapie</strong> bis hin zur <strong>neurologischen</strong> und <strong>postnatalen</strong> Physiotherapie. Dadurch stellen wir sicher, dass immer ein Experte vor Ort ist, der Ihre individuellen Bedürfnisse optimal betreut.“
+        </p>
+        
+    
+        <button class="cs-button-solid"> <span>Über Uns</span>
+        </button>
+      </div>
+      
     </div>
   </div>
   <img
@@ -136,7 +131,7 @@ eleventyNavigation:
     decoding="async"
     src="assets/svgs/medical-cross.svg
     "
-    alt="flower"
+    alt="Medizinisches Symbol"
     width="320"
     height="378"
     aria-hidden="true" />

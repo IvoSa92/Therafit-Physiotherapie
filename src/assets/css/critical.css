@@ -40,6 +40,20 @@
     justify-content: center;
     align-items: center;
   }
+  #hero-2042 .cs-content .text-animation {
+    background: radial-gradient(circle at 100%, #b2a8fd, #8678f9 30%, #c7d2fe 75%, #9a8dfd 90%);
+    font-weight: 600;
+    background-size: 200% auto;
+    color: #000;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animatedTextGradient 5s linear infinite;
+  }
+  @keyframes animatedTextGradient {
+    to {
+      background-position: 200% center;
+    }
+  }
   #hero-2042 .cs-title {
     /* 39px - 61px */
     font-size: clamp(2.4375rem, 5vw, 3.8125rem);
@@ -122,6 +136,7 @@
     line-height: 1.6;
     text-align: center;
     text-transform: uppercase;
+    font-family: var(--sofiaExtraBold);
   }
   #hero-2042 button:hover .circle {
     width: 100%;
@@ -312,38 +327,50 @@
     margin-bottom: 2rem;
   }
   #sbs-2170 .cs-button-solid {
-    font-size: 1rem;
-    line-height: 3.5rem;
-    text-decoration: none;
-    font-weight: 700;
-    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    padding: 0.1rem 2rem;
     margin: 0;
-    color: #fff;
-    padding: 0 3rem;
-    background-color: var(--primary);
-    display: inline-block;
+    font-family: var(--sofiaExtraBold);
+    font-size: var(--bodyFontSize);
     position: relative;
-    z-index: 1;
-    transition: color 0.3s;
+    display: inline-block;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 2rem;
+    overflow: hidden;
+    background: var(--purple);
+    color: ghostwhite;
   }
-  #sbs-2170 .cs-button-solid:before {
-    content: "";
+  #sbs-2170 .cs-button-solid span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+  }
+  #sbs-2170 .cs-button-solid:hover span {
+    color: ghostwhite;
+  }
+  #sbs-2170 .cs-button-solid::before,
+  #sbs-2170 .cs-button-solid::after {
     position: absolute;
-    display: block;
-    height: 100%;
-    width: 0%;
-    background: #1a1a1a;
-    opacity: 1;
     top: 0;
     left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-  }
-  #sbs-2170 .cs-button-solid:hover {
-    color: var(--primary);
-  }
-  #sbs-2170 .cs-button-solid:hover:before {
     width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  #sbs-2170 .cs-button-solid::before {
+    content: "";
+    background: var(--primary);
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+  #sbs-2170 .cs-button-solid:hover::before {
+    transform: translate3d(100%, 0, 0);
   }
   #sbs-2170 .cs-ul {
     width: 100%;
@@ -385,11 +412,8 @@
   }
   #sbs-2170 .cs-stats-group {
     width: 100%;
-    /* 32px - 64px */
-    margin: clamp(2rem, 6vw, 4rem) 0 0;
     /* 24px - 100px */
     padding: 0.5rem clamp(1.5rem, 7vw, 7.52rem);
-    background-color: var(--secondary);
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -412,7 +436,7 @@
     font-size: clamp(6.25rem, 13vw, 7.5rem);
     font-weight: 700;
     line-height: 1.2em;
-    color: #fff;
+    color: var(--primaryLight);
     opacity: 0.2;
   }
   #sbs-2170 .cs-desc {
@@ -422,8 +446,18 @@
     color: #fff;
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 70%;
     transform: translate(-50%, -50%);
+  }
+  #sbs-2170 .cs-desc-2 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-80%, -50%);
   }
   #sbs-2170 .cs-image-group {
     width: 100%;
@@ -503,7 +537,6 @@
     content: "";
     width: clamp(5rem, 12vw, 6.875rem);
     height: 100%;
-    background: var(--secondary);
     opacity: 1;
     position: absolute;
     display: block;
@@ -546,6 +579,9 @@
   body.dark-mode #sbs-2170 .cs-li-text {
     color: var(--bodyTextColorWhite);
   }
+  body.dark-mode #sbs-2170 .cs-topper {
+    color: var(--secondary);
+  }
   body.dark-mode #sbs-2170 .cs-number {
     color: var(--primary);
   }
@@ -557,10 +593,13 @@
     border-color: rgba(255, 255, 255, 0.1);
   }
   body.dark-mode #sbs-2170 .cs-stats-group {
-    background-color: var(--dark);
+    background-color: transparent;
   }
   body.dark-mode #sbs-2170 .cs-stats-group:before {
-    background-color: var(--dark);
+    background-color: transparent;
+  }
+  body.dark-mode #sbs-2170 .cs-stats-group .cs-stat-number {
+    color: white;
   }
 }
 /* Desktop - 1024px */

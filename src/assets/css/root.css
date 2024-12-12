@@ -8,13 +8,19 @@
     --primary: #177b49;
     --primaryLight: #1f965a;
     --primaryDark: #286b6c;
+    --purple: #482592;
     --secondary: #74c1d2;
-    --secondaryLight: #ffba43;
+    --secondaryLight: #21c3e6;
     --headerColor: #1a1a1a;
     --bodyTextColor: #034a46;
     --bodyTextColorWhite: #fafbfc;
     --blueColor: #74c1d2;
     --backgroundColor: #a9cce6;
+    /*Fonts*/
+    --sofiaRegular: "SofiaSans-Regular";
+    --sofiaBold: "SofiaSans-Bold";
+    --sofiaExtraBold: "SofiaSans-ExtraBold";
+    --poppinsRegular: "Poppins-Regular";
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
     /* 31px - 49px */
@@ -37,6 +43,7 @@
     font-size: var(--topperFontSize);
     line-height: 1.2em;
     text-transform: uppercase;
+    font-family: var(--sofiaBold);
     text-align: inherit;
     letter-spacing: 0.1em;
     font-weight: 700;
@@ -46,7 +53,7 @@
   }
   .cs-title {
     font-size: var(--headerFontSize);
-    font-weight: 900;
+    font-family: var(--sofiaBold);
     line-height: 1.2em;
     text-align: inherit;
     max-width: 43.75rem;
@@ -56,6 +63,7 @@
   }
   .cs-text {
     font-size: var(--bodyFontSize);
+    font-family: var(--poppinsRegular);
     line-height: 1.5em;
     text-align: inherit;
     width: 100%;
@@ -64,6 +72,7 @@
     color: var(--bodyTextColor);
   }
   .cs-button-solid {
+    font-family: var(--sofiaExtraBold);
     z-index: 1;
     position: relative;
     display: inline-block;
@@ -119,7 +128,7 @@
     margin: 0;
     overflow-x: hidden;
     padding: 0;
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: "SofiaSans-Regular", Arial, sans-serif;
     font-size: 100%;
     color: var(--bodyTextColor);
   }
@@ -171,27 +180,32 @@
   }
   /* roboto-regular - latin */
   @font-face {
+    font-family: "SofiaSans-Regular";
     font-style: normal;
-    font-family: "Roboto";
     font-weight: 400;
     font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-regular.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: url("/assets/fonts/SofiaSans-Regular.ttf") format("truetype");
   }
-  /* roboto-700 - latin */
   @font-face {
+    font-family: "Poppins-Regular";
     font-style: normal;
-    font-family: "Roboto";
-    font-weight: 700;
+    font-weight: 400;
     font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-700.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: url("/assets/fonts/Poppins-Regular.ttf") format("truetype");
   }
-  /* roboto-900 - latin */
   @font-face {
-    font-style: normal;
-    font-family: "Roboto";
-    font-weight: 900;
+    font-family: "SofiaSans-Bold";
+    font-style: bold;
+    font-weight: 800;
     font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    src: url("/assets/fonts/SofiaSans-Bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "SofiaSans-ExtraBold";
+    font-style: bold;
+    font-weight: 1000;
+    font-display: swap;
+    src: url("/assets/fonts/SofiaSans-ExtraBold.ttf") format("truetype");
   }
 }
 /* Reset Margins */
@@ -305,6 +319,7 @@
     top: 2rem;
     left: 50%;
     z-index: 10000;
+    font-family: var(--sofiaExtraBold);
     transform: translateX(-50%);
     transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s;
   }
