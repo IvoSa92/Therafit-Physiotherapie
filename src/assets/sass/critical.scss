@@ -362,7 +362,7 @@
 
     .cs-content {
       /* set text align to left if content needs to be left aligned */
-      text-align: left;
+      text-align: center;
       width: 100%;
       max-width: calc(738 / 16 * 1rem);
       display: flex;
@@ -483,6 +483,9 @@
       font-weight: 700;
       color: var(--bodyTextColor);
     }
+    .stats {
+      width: 100%;
+    }
 
     .cs-stats-group {
       width: 100%;
@@ -594,12 +597,14 @@
       align-items: stretch;
       gap: 0;
       position: relative;
+
       z-index: 1;
     }
 
     .cs-content {
       width: 45vw;
       height: auto;
+      text-align: left;
     }
 
     .cs-wrapper {
@@ -620,11 +625,16 @@
       margin-bottom: calc(80 / 16 * 1rem);
     }
 
+    .stats {
+      width: 100%;
+    }
     .cs-stats-group {
+      display: block;
+      align-content: center;
       max-width: calc(522 / 16 * 1rem);
-      padding-left: 0;
-
-      justify-content: flex-start;
+      transition: all 0.3s ease-in-out;
+      margin: auto;
+      justify-content: center;
 
       &:before {
         /* extended box */
@@ -636,6 +646,17 @@
         display: block;
         top: 0;
         right: 99.5%;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+      }
+
+      &:hover .cs-stat-number {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
       }
     }
 
