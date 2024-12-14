@@ -53,6 +53,10 @@ eleventyNavigation:
         alt="play icon"
         width="24"
         height="24"
+        muted
+        autoplay
+        loop
+        playsinline
         aria-hidden="true"
         decoding="async" />
     </button>
@@ -138,77 +142,219 @@ eleventyNavigation:
 </section>
 
 <!-- ============================================ -->
-<!--                  Gallery                     -->
+<!--                   Gallery                    -->
 <!-- ============================================ -->
 
-<div id="gallery-1689">
-  <picture class="cs-picture">
-      <!--Mobile Image-->
-      <source media="(max-width: 600px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-1.png">
-      <!--Tablet and above Image-->
-      <source media="(min-width: 601px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-1.png">
-      <img loading="lazy" decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-1.png" alt="picture"
-              width="480" height="549">
-  </picture>
-  <picture class="cs-picture">
-      <!--Mobile Image-->
-      <source media="(max-width: 600px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-2.png">
-      <!--Tablet and above Image-->
-      <source media="(min-width: 601px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-2.png">
-      <img loading="lazy" decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-2.png" alt="picture"
-              width="480" height="549">
-  </picture>
-  <picture class="cs-picture">
-      <!--Mobile Image-->
-      <source media="(max-width: 600px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-3.png">
-      <!--Tablet and above Image-->
-      <source media="(min-width: 601px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-3.png">
-      <img loading="lazy" decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-3.png" alt="picture"
-              width="480" height="549">
-  </picture>
-  <picture class="cs-picture">
-      <!--Mobile Image-->
-      <source media="(max-width: 600px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-4.png">
-      <!--Tablet and above Image-->
-      <source media="(min-width: 601px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-4.png">
-      <img loading="lazy" decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-4.png" alt="picture"
-              width="480" height="549">
-  </picture>
-  <picture class="cs-picture">
-      <!--Mobile Image-->
-      <source media="(max-width: 600px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-5.png">
-      <!--Tablet and above Image-->
-      <source media="(min-width: 601px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-5.png">
-      <img loading="lazy" decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-5.png" alt="picture"
-              width="480" height="549">
-  </picture>
-  <picture class="cs-picture">
-      <!--Mobile Image-->
-      <source media="(max-width: 600px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-6.png">
-      <!--Tablet and above Image-->
-      <source media="(min-width: 601px)"
-              srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-6.png">
-      <img loading="lazy" decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/enterprise-gallery-6.png" alt="picture"
-              width="480" height="549">
-  </picture>
-</div>
+<section id="gallery-434">
+  <div class="cs-container">
+      <div class="cs-content">
+
+        <h2 class="cs-title highlight">Einblicke in die Praxis</h2>
+          </div>
+      <div class="cs-grid">
+   
+          <!--Picture 1-->
+          <picture class="cs-picture cs-picture1">
+            <source
+              srcset="{% getUrl '/assets/images/detail2.png' | resize({ height: 180, width: 260 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail2.png' | resize({ height: 136, width: 331 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail2.png' | resize({ height: 200, width: 550 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/detail2.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 2-->
+          <picture class="cs-picture cs-picture2">
+            <source
+              srcset="{% getUrl '/assets/images/rezeption.png' | resize({ height: 167, width: 260 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/rezeption.png' | resize({ height: 289, width: 331 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/rezeption.png' | resize({ height: 414, width: 528 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/rezeption.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 3-->
+          <picture class="cs-picture cs-picture3">
+            <source
+              srcset="{% getUrl '/assets/images/detail1.png' | resize({ height:78 , width: 142 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail1.png' | resize({ height: 136, width: 157 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail1.png' | resize({ height: 249, width: 528 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/detail1.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 4-->
+          <picture class="cs-picture cs-picture4">
+            <source
+              srcset="{% getUrl '/assets/images/detail4.png' | resize({ height:78 , width: 192 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail4.png' | resize({ height: 136, width: 157 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail4.png' | resize({ height: 249, width: 528 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/detail4.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 5-->
+          <picture class="cs-picture cs-picture5">
+            <source
+              srcset="{% getUrl '/assets/images/raum2.png' | resize({ height:168 , width: 193 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/raum2.png' | resize({ height: 136, width: 157 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/raum2.png' | resize({ height: 414, width: 249 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/raum2.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 6-->
+          <picture class="cs-picture cs-picture6">
+            <source
+              srcset="{% getUrl '/assets/images/raum3.png' | resize({ height:78 , width: 125 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/raum3.png' | resize({ height: 289, width: 331 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/raum3.png' | resize({ height: 420, width: 530 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/raum3.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 7-->
+          <picture class="cs-picture cs-picture7">
+            <source
+              srcset="{% getUrl '/assets/images/detail5.png' | resize({ height:78 , width: 125 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail5.png' | resize({ height: 136, width: 157 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail5.png' | resize({ height: 192, width: 249 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/detail5.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 8-->
+          <picture class="cs-picture cs-picture8">
+            <source
+              srcset="{% getUrl '/assets/images/detail6.png' | resize({ height:78 , width: 125 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail6.png' | resize({ height: 136, width: 157 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail6.png' | resize({ height: 192, width: 249 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/detail6.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 9-->
+          <picture class="cs-picture cs-picture9">
+            <source
+              srcset="{% getUrl '/assets/images/detail7.png' | resize({ height:168 , width: 125 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail7.png' | resize({ height: 136, width: 289 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail7.png' | resize({ height: 414, width: 249 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/detail7.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 10-->
+          <picture class="cs-picture cs-picture10">
+            <source
+              srcset="{% getUrl '/assets/images/detail8.png' | resize({ height:168 , width: 125 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail8.png' | resize({ height: 136, width: 289 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail8.png' | resize({ height: 414, width: 249 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/detail8.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 11-->
+          <picture class="cs-picture cs-picture11">
+            <source
+              srcset="{% getUrl '/assets/images/detail9.png' | resize({ height:168 , width: 193 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail9.png' | resize({ height: 136, width: 289 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/detail9.png' | resize({ height: 249, width: 414 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/detail9.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+      </div>
+  </div>
+</section>
+                              
                               
 
 <!-- ============================================ -->
