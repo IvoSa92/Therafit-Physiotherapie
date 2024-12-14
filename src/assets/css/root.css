@@ -53,7 +53,7 @@
   }
   .cs-title {
     font-size: var(--headerFontSize);
-    font-family: var(--sofiaBold);
+    font-family: var(--sofiaExtraBold);
     line-height: 1.2em;
     text-align: inherit;
     max-width: 43.75rem;
@@ -581,19 +581,8 @@
   body.dark-mode #cs-navigation:before {
     background-color: var(--dark);
   }
-  body.dark-mode #cs-navigation .cs-logo {
-    /* makes it white */
-    filter: grayscale(1) brightness(1000%);
-  }
   body.dark-mode #cs-navigation .cs-toggle {
     background-color: var(--secondary);
-  }
-  body.dark-mode #cs-navigation .cs-phone {
-    color: var(--bodyTextColorWhite);
-  }
-  body.dark-mode #cs-navigation .cs-phone-icon {
-    /* turns it white */
-    filter: grayscale(1) brightness(1000%);
   }
   body.dark-mode #cs-navigation .cs-line {
     background-color: #fff;

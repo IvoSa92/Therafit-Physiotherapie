@@ -1,12 +1,15 @@
 // Helper functions to toggle dark mode
 function enableDarkMode() {
   document.body.classList.add("dark-mode");
-  // document.querySelector("#sbs-2170").style.display =
-  //   "url('../svgs/team-dark.svg')";
+  const logo = document.querySelector(".cs-logo img");
+  logo.src = "assets/svgs/Therafit-Logo-Dark.svg";
 }
 
 function disableDarkMode() {
   document.body.classList.remove("dark-mode");
+  const logo = document.querySelector(".cs-logo img");
+  logo.src = "assets/svgs/Therafit-Logo.svg";
+
   // document.querySelector("#sbs-2170").style.backgroundImage =
   //   "url('../svgs/team-svg.svg')";
 }
@@ -21,6 +24,12 @@ function detectColorScheme() {
   } else {
     disableDarkMode();
   }
+}
+
+//function to change Logo Icon
+function changeLogoIcon() {
+  const logo = document.querySelector(".cs-logo img");
+  logo.src = "assets/svgs/Therafit-Logo-Dark.svg";
 }
 
 // Initialize theme on page load

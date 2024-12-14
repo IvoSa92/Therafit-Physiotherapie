@@ -59,7 +59,7 @@
 
   .cs-title {
     font-size: var(--headerFontSize);
-    font-family: var(--sofiaBold);
+    font-family: var(--sofiaExtraBold);
     line-height: 1.2em;
     text-align: inherit;
     max-width: 43.75rem;
@@ -675,22 +675,8 @@
         background-color: var(--dark);
       }
 
-      .cs-logo {
-        /* makes it white */
-        filter: grayscale(1) brightness(1000%);
-      }
-
       .cs-toggle {
         background-color: var(--secondary);
-      }
-
-      .cs-phone {
-        color: var(--bodyTextColorWhite);
-      }
-
-      .cs-phone-icon {
-        /* turns it white */
-        filter: grayscale(1) brightness(1000%);
       }
 
       .cs-line {
