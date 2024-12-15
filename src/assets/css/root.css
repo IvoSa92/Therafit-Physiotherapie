@@ -232,7 +232,7 @@
     font-size: 17px;
     position: relative;
     display: inline-block;
-    width: 3.5em;
+    width: 6em;
     height: 2em;
   }
   .switch input {
@@ -276,6 +276,9 @@
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
+  .switch {
+    width: 3.5em;
+  }
   #dark-mode-toggle {
     margin: 0;
     position: relative;
@@ -1244,10 +1247,6 @@
 @media only screen and (min-width: 0rem) {
   body.dark-mode #cs-footer-1763 {
     background-color: rgba(0, 0, 0, 0.2);
-  }
-  body.dark-mode #cs-footer-1763 .cs-logo {
-    /* turns logo white */
-    filter: grayscale(1) brightness(1000%);
   }
   body.dark-mode #cs-footer-1763 .cs-h3,
   body.dark-mode #cs-footer-1763 .cs-card-info,

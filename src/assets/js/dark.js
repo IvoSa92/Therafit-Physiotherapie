@@ -3,12 +3,18 @@ function enableDarkMode() {
   document.body.classList.add("dark-mode");
   const logo = document.querySelector(".cs-logo img");
   logo.src = "assets/svgs/Therafit-Logo-Dark.svg";
+
+  const footerLogo = document.querySelector(".footer-logo img");
+  footerLogo.src = "assets/svgs/Therafit-Logo-Dark.svg";
 }
 
 function disableDarkMode() {
   document.body.classList.remove("dark-mode");
   const logo = document.querySelector(".cs-logo img");
   logo.src = "assets/svgs/Therafit-Logo.svg";
+
+  const footerLogo = document.querySelector(".footer-logo img");
+  footerLogo.src = "assets/svgs/Therafit-Logo.svg";
 
   // document.querySelector("#sbs-2170").style.backgroundImage =
   //   "url('../svgs/team-svg.svg')";

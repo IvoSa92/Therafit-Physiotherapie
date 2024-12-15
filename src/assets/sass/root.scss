@@ -267,7 +267,7 @@
     font-size: 17px;
     position: relative;
     display: inline-block;
-    width: 3.5em;
+    width: 6em;
     height: 2em;
   }
 
@@ -317,6 +317,9 @@
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
+  .switch {
+    width: 3.5em;
+  }
   #dark-mode-toggle {
     margin: 0;
     position: relative;
@@ -1460,11 +1463,6 @@
   body.dark-mode {
     #cs-footer-1763 {
       background-color: rgba(0, 0, 0, 0.2);
-
-      .cs-logo {
-        /* turns logo white */
-        filter: grayscale(1) brightness(1000%);
-      }
 
       .cs-h3,
       .cs-card-info,

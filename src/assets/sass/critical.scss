@@ -80,7 +80,7 @@
       flex-wrap: wrap;
       gap: calc(8 / 16 * 1rem);
     }
-    /* From Uiverse.io by cssbuttons-io */
+
     button {
       position: relative;
       display: inline-block;
@@ -1133,7 +1133,11 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      transition: color 0.3s;
+      transition: color 0.3s, transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }
@@ -1172,10 +1176,12 @@
 
       .cs-title,
       .cs-text,
-      .cs-h3,
-      .cs-item-text,
-      .cs-link {
+      .cs-item-text {
         color: var(--bodyTextColorWhite);
+      }
+
+      .cs-h3 {
+        color: var(--primaryLight);
       }
 
       .cs-text,
@@ -1216,6 +1222,95 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+
+      button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        font-family: inherit;
+      }
+
+      button.learn-more {
+        width: 12rem;
+        height: auto;
+      }
+
+      button.learn-more .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background: var(--primary);
+        border-radius: 1.625rem;
+      }
+
+      button.learn-more .circle .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #fff;
+      }
+
+      button.learn-more .circle .icon.arrow {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+      }
+
+      button.learn-more .circle .icon.arrow::before {
+        position: absolute;
+        content: "";
+        top: -0.29rem;
+        right: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #fff;
+        border-right: 0.125rem solid #fff;
+        transform: rotate(45deg);
+      }
+
+      button.learn-more .button-text {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.75rem 0;
+        margin: 0 0 0 1.85rem;
+        color: var(--bodyTextColor);
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: var(--sofiaExtraBold);
+      }
+
+      button:hover .circle {
+        width: 100%;
+      }
+
+      button:hover .circle .icon.arrow {
+        background: #fff;
+        transform: translate(1rem, 0);
+      }
+
+      button:hover .button-text {
+        color: #fff;
+      }
     }
 
     .cs-flex-wrapper {
@@ -1382,11 +1477,10 @@
     .cs-picture {
       width: 100%;
       height: 100%;
-      /* removed at tablet */
+
       aspect-ratio: 328/260;
       background-color: #000;
-      /* clips the img corners */
-      /* clips img tag from overflowing it on hover */
+      border-radius: 0.7rem;
       display: block;
       position: relative;
       overflow: hidden;
@@ -1395,7 +1489,6 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
         object-position: top;
         position: absolute;
         top: 0;
@@ -1566,206 +1659,22 @@
     }
   }
 }
-
 /*-- -------------------------- -->
-<---            CTA             -->
+<---          Reviews           -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #cta-262 {
-    padding: var(--sectionPadding);
+  #reviews-704 {
+    background-color: #ffffff;
+    background-image: linear-gradient(180deg, #ffffff 0%, #31b6dc 100%);
 
-    .cs-container {
-      width: 100%;
-      max-width: calc(1280 / 16 * 1rem);
-      margin: auto;
-      /* 32px - 88px top & bottom */
-      /* 24px - 88px left & right */
-      padding: clamp(2em, 6.3vw, 5.5em) clamp(1.5em, 5.7vw, 5.5em);
-      border-radius: calc(16 / 16 * 1rem);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      gap: calc(32 / 16 * 1rem);
-      position: relative;
-      /* clips the corners for the border radius to show */
-      overflow: hidden;
-      z-index: 1;
-      /* prevents padding from adding to height and width */
-      box-sizing: border-box;
-    }
-
-    .cs-background {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      z-index: -1;
-
-      &:before {
-        /* black overlay */
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: #000;
-        opacity: 0.7;
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        z-index: 1;
-      }
-
-      &:after {
-        /* brown overlay */
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: var(--primaryLight);
-        opacity: 0.2;
-        position: absolute;
-        display: block;
-        top: 0;
-        left: 0;
-        z-index: 2;
-      }
-
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .cs-left-section {
-      max-width: calc(434 / 16 * 1rem);
-    }
-
-    .cs-title {
-      color: var(--bodyTextColorWhite);
-      margin-bottom: clamp(1.25rem, 4.2vw, 3rem);
-    }
-
-    .cs-button-solid {
-      font-size: calc(16 / 16 * 1rem);
-      /* 46px - 56px */
-      line-height: clamp(2.875em, 5.5vw, 3.5em);
-      text-decoration: none;
-      font-weight: 700;
-      text-align: center;
-      margin: auto;
-      color: #fff;
-      min-width: calc(150 / 16 * 1rem);
-      padding: 0 calc(24 / 16 * 1rem);
-      background-color: var(--primary);
-      border-radius: calc(4 / 16 * 1rem);
-      display: inline-block;
-      position: relative;
-      z-index: 1;
-      /* prevents padding from adding to the width */
-      box-sizing: border-box;
-
-      &:before {
-        content: "";
-        position: absolute;
-        height: 100%;
-        width: 0%;
-        background: #000;
-        opacity: 1;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        border-radius: calc(4 / 16 * 1rem);
-        transition: width 0.3s;
-      }
-
-      &:hover {
-        &:before {
-          width: 100%;
-        }
-      }
-    }
-
-    .cs-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      /* 12px - 20px */
-      gap: clamp(0.75rem, 1.6vw, 1.25rem);
-    }
-
-    .cs-header {
-      /* 20px - 25px */
-      font-size: clamp(1.25rem, 2.4vw, 1.5625rem);
-      font-weight: bold;
-      color: var(--primaryLight);
-      display: block;
-    }
-
-    .cs-p {
-      /* 14px - 20px */
-      font-size: clamp(0.875rem, 1.5vw, 1.25rem);
-      line-height: 1.5em;
-      margin: 0;
-      color: var(--bodyTextColorWhite);
-    }
-  }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  #cta-262 {
-    .cs-container {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    .cs-content {
-      align-items: flex-end;
-      text-align: right;
-      /* prevents flexbox from squishing it */
-      flex: none;
-    }
-  }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode {
-    #cta-262 {
-      .cs-background {
-        &:before {
-          opacity: 0.9;
-        }
-        &:after {
-          opacity: 0.1;
-        }
-      }
-    }
-  }
-}
-
-/*-- -------------------------- -->
-<---         Reviews            -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-  #reviews-1539 {
     padding: var(--sectionPadding);
     overflow: hidden;
     position: relative;
-    z-index: 1;
 
     .cs-container {
+      width: 100%;
       /* changes to 1280px at tablet */
       max-width: calc(550 / 16 * 1rem);
       margin: auto;
@@ -1773,241 +1682,171 @@
       flex-direction: column;
       align-items: center;
       /* 48px - 64px */
-      gap: clamp(3rem, 6.3vw, 4rem);
+      gap: clamp(3rem, 6vw, 4rem);
+      position: relative;
+      z-index: 1;
     }
 
     .cs-content {
       /* set text align to left if content needs to be left aligned */
       text-align: center;
       width: 100%;
-      max-width: calc(630 / 16 * 1rem);
       display: flex;
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
       align-items: center;
     }
 
-    .cs-review {
+    .cs-title {
+      max-width: 26ch;
+      margin: 0;
+    }
+
+    .cs-color {
+      color: var(--primary);
+    }
+
+    .cs-flex-group {
       width: 100%;
-      box-sizing: border-box;
-      /* 32px - 80px top & bottom, 24px to 70px sides*/
-      padding: clamp(2rem, 7vw, 5rem) clamp(1.5rem, 7vw, 4.375rem);
-      box-sizing: border-box;
-      border: 1px solid var(--secondary);
-      /* 32px - 100px */
-      border-radius: clamp(2rem, 5vw, 6.25rem);
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* 24px - 64px */
-      gap: clamp(1.5rem, 6vw, 4rem);
-      position: relative;
-      z-index: 1;
-
-      &:before {
-        /* background-color */
-        content: "";
-        width: 100%;
-        height: 100%;
-        background-color: var(--secondary);
-        /* 32px - 100px */
-        border-radius: clamp(2rem, 5vw, 6.25rem);
-        opacity: 0.1;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-      }
+      gap: calc(40 / 16 * 1rem);
     }
 
     .cs-image-group {
-      width: 100%;
-      height: auto;
-      margin: 0;
+      /* scales the whole section down and ties the font size to the vw and stops at 70% of the vale of 1em, changes at desktop */
+      font-size: min(2.22vw, 0.7em);
+      /* everything inside this box is in ems so we can scale it all down proportionally with a font size */
+      width: calc(657 / 16 * 1em);
+      height: calc(680 / 16 * 1em);
       position: relative;
-      z-index: 1;
-      aspect-ratio: 276/238;
+      z-index: -1;
     }
 
     .cs-picture {
-      width: 100%;
-      height: 100%;
-      display: block;
-      position: relative;
+      width: calc(570 / 16 * 1em);
+      height: calc(680 / 16 * 1em);
+      border-radius: calc(285 / 16 * 1em);
+      /* clips img tag corners */
       overflow: hidden;
-
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        /* makes it act like a background image */
         object-fit: cover;
         position: absolute;
         top: 0;
         left: 0;
-        z-index: -1;
+        /* flips the image to its original orientation */
+        transform: scaleX(-1);
       }
     }
 
-    .cs-flex {
-      max-width: calc(736 / 16 * 1rem);
+    .cs-heart {
+      width: calc(267 / 16 * 1em);
+      height: auto;
+      display: block;
+      position: absolute;
+      bottom: calc(20 / 16 * 1em);
+      right: calc(-48 / 16 * 1em);
+      z-index: -1;
+      opacity: 0.8;
+      transform: rotate(20deg);
     }
 
-    .cs-quote {
-      /* 14px - 20px */
-      font-size: clamp(0.875rem, 2vw, 1.25rem);
+    .cs-sense {
+      width: calc(80 / 16 * 1em);
+      height: auto;
+      position: absolute;
+      top: calc(-4 / 16 * 1em);
+      left: calc(4 / 16 * 1em);
+      transform: rotate(90deg);
+    }
+
+    .cs-review-group {
+      max-width: calc(541 / 16 * 1rem);
+    }
+
+    .cs-icon {
+      /* 56px - 96px */
+      width: clamp(3.5rem, 7vw, 6rem);
+      height: auto;
+      margin: 0 0 calc(24 / 16 * 1rem) 0;
+      display: block;
+    }
+
+    .cs-review-text {
+      /* 16px - 20px */
+      font-size: clamp(1rem, 2vw, 1.25rem);
       line-height: 1.5em;
-      font-weight: 400;
-      margin: 0 0 calc(24 / 16 * 1rem);
-      color: #4e4b66;
+      text-align: left;
+      margin: 0 0 calc(24 / 16 * 1rem) 0;
+      color: var(--bodyTextColor);
     }
 
     .cs-name {
-      font-size: calc(20 / 16 * 1rem);
-      font-weight: 700;
+      /* 20px - 23px */
+      font-size: clamp(1.25rem, 3vw, 1.5625rem);
       line-height: 1.2em;
-      margin-bottom: calc(4 / 16 * 1rem);
-      color: #1a1a1a;
+      font-weight: 700;
+      margin: 0 0 calc(8 / 16 * 1rem) 0;
+      color: var(--headerColor);
       display: block;
     }
 
     .cs-job {
       font-size: calc(16 / 16 * 1rem);
-      font-weight: 700;
-      line-height: 1.2em;
-      color: #ff6d41;
+      line-height: 1.5em;
+      text-align: left;
+      margin: 0;
+      color: var(--bodyTextColor);
       display: block;
     }
 
-    .cs-mask {
-      /* SVG Colors */
-      --maskBorder: #ffffff;
-      --maskBG: #fff0ec;
-      width: 101%;
-      height: 101%;
-
-      position: absolute;
-      top: -1px;
-      right: -1px;
-      bottom: -1px;
-      left: -1px;
-
-      path {
-        transition: stroke 0.3s;
-      }
-    }
-
-    .cs-blob-wrapper {
-      width: 100%;
-      height: 100%;
-      /* 32px - 100px */
-      border-radius: clamp(2rem, 5vw, 6.25rem);
-      overflow: hidden;
-      /* prevents the mouse from interacting with it */
-      //pointer-events: none;
+    .cs-waves {
+      width: 55vw;
+      /* 400px - 566px */
+      max-width: clamp(25rem, 40vw, 35.375rem);
+      height: auto;
+      opacity: 0.5;
       position: absolute;
       top: 0;
-      left: 0;
+      /* 100px - 160px */
+      right: calc(clamp(6.25rem, 17vw, 10rem) * -1);
       z-index: -1;
-    }
 
-    .cs-blob {
-      --blobColor: var(--secondary);
-    }
-
-    .cs-blob1 {
-      width: calc(100 / 16 * 1rem);
-      height: auto;
-
-      opacity: 0.25;
-      position: absolute;
-      top: calc(-5 / 16 * 1rem);
-      left: calc(-30 / 16 * 1rem);
-    }
-
-    .cs-blob2 {
-      /* 239px - 461px */
-      width: clamp(14.9375rem, 40vw, 28.8125rem);
-      height: auto;
-
-      opacity: 0.25;
-      position: absolute;
-      right: calc(-50 / 16 * 1rem);
-      bottom: calc(-15 / 16 * 1rem);
-    }
-
-    .cs-graphic {
-      position: absolute;
-      z-index: 1;
-    }
-
-    .cs-graphic-one {
-      /* 48px - 138px */
-      width: clamp(3rem, 10vw, 8.625rem);
-      height: auto;
-      top: calc(-20 / 16 * 1rem);
-      right: calc(-20 / 16 * 1rem);
-      transform: rotate(104deg);
-    }
-
-    .cs-graphic-two {
-      /* 88px - 197px */
-      width: clamp(5.5rem, 15vw, 12.3125rem);
-      height: auto;
-      bottom: calc(-20 / 16 * 1rem);
-      left: calc(-32 / 16 * 1rem);
+      img {
+        width: 100%;
+      }
     }
   }
 }
 
-/* Tablet - 500px */
-@media only screen and (min-width: 31.25rem) {
-  #reviews-1539 {
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-704 {
     .cs-container {
       max-width: calc(1280 / 16 * 1rem);
     }
 
-    .cs-review {
-      max-width: none;
-      flex-direction: row;
-    }
-
-    .cs-image-group,
-    .cs-flex {
-      flex: 1 0 0;
-    }
-
-    .cs-image-group {
-      max-width: calc(260 / 16 * 1rem);
-    }
-  }
-}
-
-/* Larger Desktop - 1300px */
-@media only screen and (min-width: 81.25rem) {
-  #reviews-1539 {
-    .cs-container {
+    .cs-flex-group {
       flex-direction: row;
       justify-content: space-between;
     }
 
-    .cs-content {
-      text-align: left;
-      width: calc(364 / 16 * 1rem);
-      align-items: flex-start;
+    .cs-image-group {
+      font-size: min(1.18vw, 1em);
       /* prevents flexbox from squishing it */
       flex: none;
-      /* sends it to the right ni the 2nd position */
-      order: 2;
     }
 
-    .cs-picture {
-      font-size: inherit;
-    }
-
-    .cs-blob1 {
-      width: calc(160 / 16 * 1rem);
-      left: calc(-20 / 16 * 1rem);
-      top: 0;
+    .cs-review-group {
+      width: 54%;
     }
   }
 }
@@ -2015,28 +1854,33 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
-    #reviews-1539 {
-      .cs-review {
-        &:before {
-          opacity: 1;
-          background-color: #061a28;
-        }
-      }
+    #reviews-704 {
+      background-color: #082031;
+      background-image: linear-gradient(180deg, #082031 34%, #31b6dc 100%);
 
-      .cs-mask {
-        --maskBorder: var(--accent);
-        --maskBG: #061a28;
+      .cs-topper,
+      .cs-color {
+        color: var(--primaryLight);
       }
-
       .cs-title,
       .cs-text,
+      .cs-review-text,
       .cs-name,
-      .cs-quote {
+      .cs-job {
         color: var(--bodyTextColorWhite);
       }
 
+      .cs-icon,
+      .cs-flower {
+        opacity: 0.5;
+      }
+
+      .cs-sense {
+        filter: brightness(150%);
+      }
+
       .cs-text,
-      .cs-quote {
+      .cs-review-text {
         opacity: 0.8;
       }
     }
