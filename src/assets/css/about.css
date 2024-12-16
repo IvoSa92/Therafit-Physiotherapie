@@ -578,21 +578,18 @@
   }
   #reviews-1894 .cs-container {
     width: 100%;
-    /* changes to 1280px at desktop */
     max-width: 36.5rem;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* 48px - 64px */
     gap: clamp(4rem, 8vw, 8rem);
   }
   #reviews-1894 .cs-title {
     font-weight: var(--sofiaExtraBold);
   }
   #reviews-1894 .cs-content {
-    /* set text align to left if content needs to be left aligned */
     text-align: center;
     width: 100%;
     display: flex;
@@ -609,7 +606,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* 48px - 60px */
     gap: clamp(3rem, 6vw, 3.75rem);
   }
   #reviews-1894 .cs-image-group {
@@ -658,8 +654,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* 24px - 48px */
     gap: clamp(1.5rem, 3vw, 2rem);
+  }
+  #reviews-1894 .cs-wrapper:nth-child(odd) {
+    flex-direction: column;
+  }
+  #reviews-1894 .cs-wrapper:nth-child(even) {
+    flex-direction: column-reverse;
   }
   #reviews-1894 .cs-item-stars {
     width: 6.9375rem;
@@ -668,7 +669,6 @@
     display: block;
   }
   #reviews-1894 .cs-review {
-    /* 16px - 20px */
     font-size: clamp(0.875rem, 1.5vw, 1.125rem);
     font-weight: 400;
     line-height: 1.5em;
@@ -690,12 +690,11 @@
     display: block;
   }
   #reviews-1894 .cs-flower {
-    /* 121px - 227px */
     width: clamp(6rem, 12vw, 12rem);
     height: auto;
     display: block;
     position: absolute;
-    top: 13%;
+    top: 3%;
     right: 10%;
     z-index: -1;
   }
@@ -707,9 +706,18 @@
     width: 80%;
     height: auto;
   }
+  #reviews-1894 .cs-flower {
+    top: 5%;
+  }
   #reviews-1894 .cs-wrapper {
     flex-direction: row;
     align-items: stretch;
+  }
+  #reviews-1894 .cs-wrapper:nth-child(odd) {
+    flex-direction: row;
+  }
+  #reviews-1894 .cs-wrapper:nth-child(even) {
+    flex-direction: row;
   }
   #reviews-1894 .cs-image-group {
     font-size: min(1.24vw, 1rem);

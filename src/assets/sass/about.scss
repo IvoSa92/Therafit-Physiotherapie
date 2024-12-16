@@ -653,7 +653,6 @@
 /*-- -------------------------- -->
 <---           Reviews          -->
 <--- -------------------------- -*/
-
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #reviews-1894 {
@@ -667,22 +666,20 @@
 
     .cs-container {
       width: 100%;
-      /* changes to 1280px at desktop */
       max-width: calc(584 / 16 * 1rem);
       margin: auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      /* 48px - 64px */
       gap: clamp(4rem, 8vw, 8rem);
     }
 
     .cs-title {
       font-weight: var(--sofiaExtraBold);
     }
+
     .cs-content {
-      /* set text align to left if content needs to be left aligned */
       text-align: center;
       width: 100%;
       display: flex;
@@ -702,7 +699,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* 48px - 60px */
       gap: clamp(3rem, 6vw, 3.75rem);
     }
 
@@ -719,7 +715,6 @@
       width: calc(300 / 16 * 1em);
       box-sizing: border-box;
       height: 70%;
-      // background-color: #dab692;
       overflow: hidden;
       border: 8px solid var(--secondaryLight);
       border-radius: calc(260 / 16 * 1rem);
@@ -758,8 +753,15 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      /* 24px - 48px */
       gap: clamp(1.5rem, 3vw, 2rem);
+    }
+
+    .cs-wrapper:nth-child(odd) {
+      flex-direction: column;
+    }
+
+    .cs-wrapper:nth-child(even) {
+      flex-direction: column-reverse;
     }
 
     .cs-item-stars {
@@ -770,7 +772,6 @@
     }
 
     .cs-review {
-      /* 16px - 20px */
       font-size: clamp(0.875rem, 1.5vw, 1.125rem);
       font-weight: 400;
       line-height: 1.5em;
@@ -795,12 +796,11 @@
     }
 
     .cs-flower {
-      /* 121px - 227px */
       width: clamp(6rem, 12vw, 12rem);
       height: auto;
       display: block;
       position: absolute;
-      top: 13%;
+      top: 3%;
       right: 10%;
       z-index: -1;
     }
@@ -816,11 +816,20 @@
       height: auto;
     }
 
+    .cs-flower {
+      top: 5%;
+    }
     .cs-wrapper {
       flex-direction: row;
       align-items: stretch;
     }
+    .cs-wrapper:nth-child(odd) {
+      flex-direction: row;
+    }
 
+    .cs-wrapper:nth-child(even) {
+      flex-direction: row;
+    }
     .cs-image-group {
       font-size: min(1.24vw, 1rem);
       height: auto;

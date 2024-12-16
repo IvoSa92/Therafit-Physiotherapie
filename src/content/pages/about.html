@@ -176,69 +176,292 @@ eleventyNavigation:
       <span class="cs-topper">Dürfen wir vorstellen:</span>
       <h2 class="cs-title">Unser Fachpersonal</h2>
     </div>
-    <div class="cs-wrapper">
-      <div class="cs-image-group">
-        <picture class="cs-picture">
-          <source
-            srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 310, width: 230 }) | webp %}"
-            media="(max-width: 600px)"
-            type="image/webp" />
-          <source
-            srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 320, width: 222 }) | webp %}"
-            media="(min-width: 601px) and (max-width: 1024px)"
-            type="image/webp" />
-          <source
-            srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 390, width: 290 }) | webp %}"
-            media="(min-width:1025px)"
-            type="image/webp" />
-          <img
-            src="{% getUrl '/assets/images/anna_2.png' | resize({ height: 400, width: 400 }) | webp %}"
-            alt="Description of the image" />
-        </picture>
+    <div class="slides">
+      <!-- Slide 1 -->
+      <div class="cs-wrapper">
+        <div class="cs-image-group">
+          <picture class="cs-picture">
+            <source
+              srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 310, width: 230 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 320, width: 222 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 390, width: 290 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/anna_2.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
 
-        <img
-          class="cs-graphic cs-beige"
-          loading="lazy"
-          decoding="async"
-          src="/assets/svgs/blob.svg"
-          alt="graphic"
-          width="300"
-          height="312"
-          aria-hidden="true" />
-      </div>
-      <div class="cs-item">
-        <div class="wrapper">
-          <p class="cs-review">
-            Anna Müller entdeckte ihre Leidenschaft für die Physiotherapie
-            bereits früh, als ein naher Verwandter nach einem Schlaganfall
-            intensive Betreuung benötigte. Sie studierte Physiotherapie mit
-            Schwerpunkt Neurologie und sammelte über die Jahre wertvolle
-            Erfahrungen in der Rehabilitation von Patienten mit Erkrankungen wie
-            Parkinson und Multipler Sklerose. Durch ihre einfühlsame und
-            geduldige Art hilft Anna ihren Patienten, verlorene Fähigkeiten
-            Schritt für Schritt zurückzugewinnen. <br />Zu TheraFit fand sie,
-            weil sie von der Vision beeindruckt war, individuelle Betreuung auf
-            höchstem Niveau zu bieten. Heute bringt Anna ihre Expertise ein, um
-            Menschen ein neues Stück Lebensqualität zu schenken.
-          </p>
+          <img
+            class="cs-graphic cs-beige"
+            loading="lazy"
+            decoding="async"
+            src="/assets/svgs/blob.svg"
+            alt="graphic"
+            width="300"
+            height="312"
+            aria-hidden="true" />
         </div>
-        <div class="cs-flex-group">
-          <span class="cs-name">
-            Anna Müller
-            <span class="cs-job">Neurologische Physiotherapie</span>
-          </span>
+        <div class="cs-item">
+          <div class="wrapper">
+            <p class="cs-review">
+              Anna Müller entdeckte ihre Leidenschaft für die Physiotherapie
+              bereits früh, als ein naher Verwandter nach einem Schlaganfall
+              intensive Betreuung benötigte. Sie studierte Physiotherapie mit
+              Schwerpunkt Neurologie und sammelte über die Jahre wertvolle
+              Erfahrungen in der Rehabilitation von Patienten mit Erkrankungen
+              wie Parkinson und Multipler Sklerose. Durch ihre einfühlsame und
+              geduldige Art hilft Anna ihren Patienten, verlorene Fähigkeiten
+              Schritt für Schritt zurückzugewinnen. <br />Zu TheraFit fand sie,
+              weil sie von der Vision beeindruckt war, individuelle Betreuung
+              auf höchstem Niveau zu bieten. Heute bringt Anna ihre Expertise
+              ein, um Menschen ein neues Stück Lebensqualität zu schenken.
+            </p>
+          </div>
+          <div class="cs-flex-group">
+            <span class="cs-name">
+              Anna Müller
+              <span class="cs-job">Neurologische Physiotherapie</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="cs-wrapper">
+        <div class="cs-item">
+          <div class="wrapper">
+            <p class="cs-review">
+              Anna Müller entdeckte ihre Leidenschaft für die Physiotherapie
+              bereits früh, als ein naher Verwandter nach einem Schlaganfall
+              intensive Betreuung benötigte. Sie studierte Physiotherapie mit
+              Schwerpunkt Neurologie und sammelte über die Jahre wertvolle
+              Erfahrungen in der Rehabilitation von Patienten mit Erkrankungen
+              wie Parkinson und Multipler Sklerose. Durch ihre einfühlsame und
+              geduldige Art hilft Anna ihren Patienten, verlorene Fähigkeiten
+              Schritt für Schritt zurückzugewinnen. <br />Zu TheraFit fand sie,
+              weil sie von der Vision beeindruckt war, individuelle Betreuung
+              auf höchstem Niveau zu bieten. Heute bringt Anna ihre Expertise
+              ein, um Menschen ein neues Stück Lebensqualität zu schenken.
+            </p>
+          </div>
+          <div class="cs-flex-group">
+            <span class="cs-name">
+              Anna Müller
+              <span class="cs-job">Neurologische Physiotherapie</span>
+            </span>
+          </div>
+        </div>
+        <div class="cs-image-group">
+          <picture class="cs-picture">
+            <source
+              srcset="{% getUrl '/assets/images/max.png' | resize({ height: 310, width: 230 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/max.png' | resize({ height: 320, width: 222 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/max.png' | resize({ height: 390, width: 290 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/max.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+
+          <img
+            class="cs-graphic cs-beige"
+            loading="lazy"
+            decoding="async"
+            src="/assets/svgs/blob.svg"
+            alt="graphic"
+            width="300"
+            height="312"
+            aria-hidden="true" />
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="cs-wrapper">
+        <div class="cs-image-group">
+          <picture class="cs-picture">
+            <source
+              srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 310, width: 230 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 320, width: 222 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 390, width: 290 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/anna_2.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+
+          <img
+            class="cs-graphic cs-beige"
+            loading="lazy"
+            decoding="async"
+            src="/assets/svgs/blob.svg"
+            alt="graphic"
+            width="300"
+            height="312"
+            aria-hidden="true" />
+        </div>
+        <div class="cs-item">
+          <div class="wrapper">
+            <p class="cs-review">
+              Anna Müller entdeckte ihre Leidenschaft für die Physiotherapie
+              bereits früh, als ein naher Verwandter nach einem Schlaganfall
+              intensive Betreuung benötigte. Sie studierte Physiotherapie mit
+              Schwerpunkt Neurologie und sammelte über die Jahre wertvolle
+              Erfahrungen in der Rehabilitation von Patienten mit Erkrankungen
+              wie Parkinson und Multipler Sklerose. Durch ihre einfühlsame und
+              geduldige Art hilft Anna ihren Patienten, verlorene Fähigkeiten
+              Schritt für Schritt zurückzugewinnen. <br />Zu TheraFit fand sie,
+              weil sie von der Vision beeindruckt war, individuelle Betreuung
+              auf höchstem Niveau zu bieten. Heute bringt Anna ihre Expertise
+              ein, um Menschen ein neues Stück Lebensqualität zu schenken.
+            </p>
+          </div>
+          <div class="cs-flex-group">
+            <span class="cs-name">
+              Anna Müller
+              <span class="cs-job">Neurologische Physiotherapie</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="cs-wrapper">
+        <div class="cs-item">
+          <div class="wrapper">
+            <p class="cs-review">
+              Anna Müller entdeckte ihre Leidenschaft für die Physiotherapie
+              bereits früh, als ein naher Verwandter nach einem Schlaganfall
+              intensive Betreuung benötigte. Sie studierte Physiotherapie mit
+              Schwerpunkt Neurologie und sammelte über die Jahre wertvolle
+              Erfahrungen in der Rehabilitation von Patienten mit Erkrankungen
+              wie Parkinson und Multipler Sklerose. Durch ihre einfühlsame und
+              geduldige Art hilft Anna ihren Patienten, verlorene Fähigkeiten
+              Schritt für Schritt zurückzugewinnen. <br />Zu TheraFit fand sie,
+              weil sie von der Vision beeindruckt war, individuelle Betreuung
+              auf höchstem Niveau zu bieten. Heute bringt Anna ihre Expertise
+              ein, um Menschen ein neues Stück Lebensqualität zu schenken.
+            </p>
+          </div>
+          <div class="cs-flex-group">
+            <span class="cs-name">
+              Anna Müller
+              <span class="cs-job">Neurologische Physiotherapie</span>
+            </span>
+          </div>
+        </div>
+        <div class="cs-image-group">
+          <picture class="cs-picture">
+            <source
+              srcset="{% getUrl '/assets/images/max.png' | resize({ height: 310, width: 230 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/max.png' | resize({ height: 320, width: 222 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/max.png' | resize({ height: 390, width: 290 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/max.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+
+          <img
+            class="cs-graphic cs-beige"
+            loading="lazy"
+            decoding="async"
+            src="/assets/svgs/blob.svg"
+            alt="graphic"
+            width="300"
+            height="312"
+            aria-hidden="true" />
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div class="cs-wrapper">
+        <div class="cs-image-group">
+          <picture class="cs-picture">
+            <source
+              srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 310, width: 230 }) | webp %}"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 320, width: 222 }) | webp %}"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="{% getUrl '/assets/images/anna_2.png' | resize({ height: 390, width: 290 }) | webp %}"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="{% getUrl '/assets/images/anna_2.png' | resize({ height: 400, width: 400 }) | webp %}"
+              alt="Description of the image" />
+          </picture>
+
+          <img
+            class="cs-graphic cs-beige"
+            loading="lazy"
+            decoding="async"
+            src="/assets/svgs/blob.svg"
+            alt="graphic"
+            width="300"
+            height="312"
+            aria-hidden="true" />
+        </div>
+        <div class="cs-item">
+          <div class="wrapper">
+            <p class="cs-review">
+              Anna Müller entdeckte ihre Leidenschaft für die Physiotherapie
+              bereits früh, als ein naher Verwandter nach einem Schlaganfall
+              intensive Betreuung benötigte. Sie studierte Physiotherapie mit
+              Schwerpunkt Neurologie und sammelte über die Jahre wertvolle
+              Erfahrungen in der Rehabilitation von Patienten mit Erkrankungen
+              wie Parkinson und Multipler Sklerose. Durch ihre einfühlsame und
+              geduldige Art hilft Anna ihren Patienten, verlorene Fähigkeiten
+              Schritt für Schritt zurückzugewinnen. <br />Zu TheraFit fand sie,
+              weil sie von der Vision beeindruckt war, individuelle Betreuung
+              auf höchstem Niveau zu bieten. Heute bringt Anna ihre Expertise
+              ein, um Menschen ein neues Stück Lebensqualität zu schenken.
+            </p>
+          </div>
+          <div class="cs-flex-group">
+            <span class="cs-name">
+              Anna Müller
+              <span class="cs-job">Neurologische Physiotherapie</span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
+    <img
+      class="cs-flower"
+      src="/assets/svgs/hello-icon.svg"
+      alt="graphic"
+      loading="lazy"
+      decoding="async"
+      height="143"
+      width="235" />
   </div>
-  <img
-    class="cs-flower"
-    src="/assets/svgs/hello-icon.svg"
-    alt="graphic"
-    loading="lazy"
-    decoding="async"
-    height="143"
-    width="235" />
 </section>
 
 <!-- ============================================ -->
