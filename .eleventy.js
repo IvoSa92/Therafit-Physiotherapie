@@ -41,6 +41,9 @@ const filterPostDate = require("./src/config/postDate");
 const isProduction = configServer.isProduction;
 
 module.exports = function (eleventyConfig) {
+  // Debug output
+  console.log("Asset paths:", eleventyConfig.dir);
+
   /**=====================================================================
           EXTENSIONS - Recognising non-default languages as templates 
     =======================================================================*/
@@ -110,6 +113,8 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy("./src/admin");
   eleventyConfig.addPassthroughCopy("./src/_redirects");
+  eleventyConfig.addPassthroughCopy("src/assets/svgs");
+  eleventyConfig.addPassthroughCopy("src/assets");
   /**=====================================================================
                               END PASSTHROUGHS
     =======================================================================*/
@@ -200,9 +205,10 @@ module.exports = function (eleventyConfig) {
     =======================================================================*/
 
   return {
+    pathPrefix: "/",
     dir: {
       input: "src",
-      output: "public",
+      output: "_site",
       includes: "_includes",
       data: "_data",
     },

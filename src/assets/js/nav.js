@@ -1,7 +1,8 @@
 // add classes for mobile navigation toggling
 var CSbody = document.querySelector("body");
-const CSnavbarMenu = document.querySelector("#cs-navigation");
-const CShamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
+const CSnavbarMenu = document.querySelector(".cs-ul");
+const CShamburgerMenu = document.querySelector(".cs-toggle");
+const CSnavLinks = document.querySelectorAll(".cs-li-link");
 
 CShamburgerMenu.addEventListener("click", function () {
   CShamburgerMenu.classList.toggle("cs-active");
@@ -46,3 +47,22 @@ for (const item of dropDowns) {
   };
   item.addEventListener("click", onClick);
 }
+
+// Add active state handling
+function setActiveNavItem() {
+  const currentPath = window.location.pathname;
+  CSnavLinks.forEach((link) => {
+    link.classList.remove("cs-active");
+    if (
+      link.getAttribute("href") === currentPath ||
+      (currentPath === "/" && link.getAttribute("href") === "/") ||
+      (link.getAttribute("href") !== "/" &&
+        currentPath.includes(link.getAttribute("href")))
+    ) {
+      link.classList.add("cs-active");
+    }
+  });
+}
+
+// Run on page load
+document.addEventListener("DOMContentLoaded", setActiveNavItem);

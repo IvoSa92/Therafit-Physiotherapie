@@ -1,0 +1,1119 @@
+<!-- A fully fleshed-out <head>, dynamically changing based on client.json and the page front matter -->
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <!-- Standard meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Meta Beschreibung" />
+
+    <!--Für Keyword Rednering der Blog Beiträge-->
+    
+    <meta
+      name="keywords"
+      content="Webseiten-Erstellung, Webdesign, SEO, Suchmaschinenoptimierung, BlackForest-WebCraft, individuelle Webseiten, maßgeschneiderte Webdesign, Logo-Design, Medienbearbeitung, Copywriting, Klettgau, professionelle Webdesign, Online-Präsenz optimieren, Responsive Design, Wartung, Hosting, Updates" />
+    
+
+    <link rel="canonical" href="https://www.example.com/" />
+
+    <!--Social Media Display-->
+    <meta property="og:title" content="Titel welche in der Meta vorkommt" />
+    <meta property="og:description" content="Meta Beschreibung" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.example.com/" />
+    <meta property="og:image" content="/assets/images/logo-small.png" />
+    <meta
+      property="og:image:secure_url"
+      content="/assets/images/logo-small.png" />
+
+    <!--Favicons-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicons/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicons/favicon-32x32.png?v1" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicons/favicon-16x16.png" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Preloads -->
+    <link rel="preload" as="image" href="/assets/svgs/logo-white.svg" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/assets/fonts/roboto-v29-latin-regular.woff2"
+      crossorigin />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/assets/fonts/roboto-v29-latin-700.woff2"
+      crossorigin />
+
+    <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
+    
+
+    <!-- Sitewide Stylesheets and Scripts -->
+    <link rel="stylesheet" href="/assets/css/root.css" />
+    <link rel="stylesheet" href="/assets/css/dark.css" />
+    <script defer src="/assets/js/dark.js"></script>
+    <script defer src="/assets/js/nav.js"></script>
+
+    
+<link rel="canonical" href="https://deine-domain.de/" />
+<!-- Einfügen der Canonical URL -->
+<link rel="stylesheet" href="/assets/css/local.css" />
+<link rel="stylesheet" href="/assets/css/critical.css" />
+
+<script defer src="/assets/js/hero-video.js"></script>
+
+<!--Fonts-->
+<link rel="preload" href="/assets/fonts/SofiaSans-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+<link rel="preload" href="/assets/fonts/SofiaSans-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+<link rel="preload" href="/assets/fonts/SofiaSans-ExtraBold.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+<link rel="preload" href="/assets/fonts/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous" />
+
+
+
+
+
+    <title>
+       Titel welche in der Meta vorkommt | TheraFit-Physiotherapie | Denver, 80206 
+    </title>
+  </head>
+  <body>
+    <!--Screen reader skip main nav-->
+    <a class="skip" aria-label="skip to main content" href="#main" tabindex="1"
+      >Click To Skip To Main Content</a
+    >
+
+    <!-- ============================================ -->
+<!--                 Navigation                   -->
+<!-- ============================================ -->
+
+<header id="cs-navigation">
+  <div class="cs-container">
+    <!--Nav Logo-->
+    <a href="/" class="cs-logo" aria-label="back to home">
+      <img
+        src="/assets/svgs/Therafit-Logo.svg"
+        alt="logo"
+        aria-hidden="true"
+        decoding="async" />
+    </a>
+    <!--Navigation List-->
+    <nav class="cs-nav" role="navigation">
+      <!--Mobile Nav Toggle-->
+      <button class="cs-toggle" aria-label="mobile menu toggle">
+        <div class="cs-box" aria-hidden="true">
+          <span class="cs-line cs-line1" aria-hidden="true"></span>
+          <span class="cs-line cs-line2" aria-hidden="true"></span>
+          <span class="cs-line cs-line3" aria-hidden="true"></span>
+        </div>
+      </button>
+      <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+      <div class="cs-ul-wrapper">
+        <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+          <li class="cs-li">
+            <a href="/" class="cs-li-link cs-active"> Home </a>
+          </li>
+          <li class="cs-li">
+            <a href="/about" class="cs-li-link"> Über Uns </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> Leistungen </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> Kontakt </a>
+          </li>
+          <li class="cs-li">
+            <a href="" class="cs-li-link"> Praxis-Hilfen </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <label class="switch" id="dark-mode-toggle" aria-label="dark mode toggle2">
+      <input type="checkbox" />
+      <span class="slider"></span>
+    </label>
+  </div>
+</header>
+
+    <main id="main">
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-2042">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Ihre Gesundheit in besten Händen
+      </span>
+      <h1 class="cs-title">Ganzheitliche Physiotherapie – auf <span class="text-animation">Sie</span>  abgestimmt</h1>
+      <p class="cs-text">
+        Unser Team aus spezialisierten Therapeuten bietet Ihnen individuelle Behandlungen für Ihre Gesundheit. Vereinbaren Sie noch heute einen Termin und erleben Sie ganzheitliche Physiotherapie.
+      </p>
+       <button class="learn-more">
+    <span class="circle" aria-hidden="true">
+    <span class="icon arrow"></span>
+    </span>
+    <span class="button-text">mehr Infos</span>
+  </button>
+    </div>
+    <button class="cs-play" aria-label="click to play video">
+      <img
+        class="cs-icon"
+        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg"
+        alt="play icon"
+        width="24"
+        height="24"
+        muted
+        autoplay
+        loop
+        playsinline
+        aria-hidden="true"
+        decoding="async" />
+    </button>
+  </div>
+
+ 
+  <div class="cs-video-wrapper">
+    <video
+      loading="lazy"
+      src="https://pub-5f157156d0be42c3844650fd4becf69c.r2.dev/Physiotherapie%204K%20Video.mp4
+      "
+      muted></video>
+  </div>
+</section>
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-2170">
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Ihr Weg zu mehr Wohlbefinden</span>
+      <h2 class="cs-title">Die Entstehung von TheraFit-Physiotherapie
+      </h2>
+      <div class="cs-image-group">
+        <picture class="cs-picture">
+          <source
+            srcset="/assets/images/team-38b9f42cb02cad785ab41c2b2d118a86.webp"
+            media="(max-width: 600px)"
+            type="image/webp" />
+          <source
+            srcset="/assets/images/team-1d6761b72f164f8b6cc81f32c9b313f8.webp"
+            media="(min-width: 601px) and (max-width: 1024px)"
+            type="image/webp" />
+          <source
+            srcset="/assets/images/team-4fcc1913f2f48ae175407d88d6e1c0f6.webp"
+            media="(min-width:1025px)"
+            type="image/webp" />
+          <img
+            src="/assets/images/team-abbf96c02931369f0a32b8b9791dc2a2.webp"
+            alt="Description of the image" />
+        </picture>
+      </div>
+<div class="stats">  <ul class="cs-stats-group" style="display: flex; justify-content: center;">
+        <li class="cs-stat">
+          <span class="cs-stat-number">16</span>
+          <span class="cs-desc">Jahre Erfahrung</span>
+        </li>
+        <li class="cs-stat">
+          <span class="cs-stat-number">398</span>
+          <span class="cs-desc-2">zufriedene Patienten</span>
+        </li>
+      </ul></div>
+    
+
+    </div>
+        <div class="cs-wrapper">
+      <div class="cs-flex">
+        <p class="cs-text">
+          TheraFit Physiotherapie wurde mit einer klaren Vision gegründet: <br><br> Menschen auf ihrem Weg zu Gesundheit und Wohlbefinden bestmöglich zu begleiten. Unser erfahrenes Team aus spezialisierten Physiotherapeuten bietet individuelle Behandlungen und kombiniert modernste Therapieansätze mit einer warmherzigen Betreuung. Vertrauen Sie auf unsere Expertise und lassen Sie uns gemeinsam Ihre Ziele erreichen.
+        </p>
+        <p class="cs-text">
+          „Unsere Praxis deckt mehr als fünf spezialisierte Therapiegebiete ab – von <strong>Sport</strong>- und <strong>Rehabilitationstherapie</strong> bis hin zur <strong>neurologischen</strong> und <strong>postnatalen</strong> Physiotherapie. Dadurch stellen wir sicher, dass immer ein Experte vor Ort ist, der Ihre individuellen Bedürfnisse optimal betreut.“
+        </p>
+        
+    
+        <button class="cs-button-solid"> <span>Über Uns</span>
+        </button>
+      </div>
+      
+    </div>
+  </div>
+  <img
+    class="cs-floater"
+    loading="lazy"
+    decoding="async"
+    src="assets/svgs/medical-cross.svg
+    "
+    alt="Medizinisches Symbol"
+    width="320"
+    height="378"
+    aria-hidden="true" />
+</section>
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-434">
+  <div class="cs-container">
+      <div class="cs-content">
+
+        <h2 class="cs-title highlight">Einblicke in die Praxis</h2>
+          </div>
+      <div class="cs-grid">
+   
+          <!--Picture 1-->
+          <picture class="cs-picture cs-picture1">
+            <source
+              srcset="/assets/images/detail2-4d81832007d76e71714df19827ace4d3.webp"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail2-2256ccfdb536c3ddbaee62e3195bb629.webp"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail2-562b923dce22dab8b3bcb941a179f23c.webp"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="/assets/images/detail2-86820fd91aa2fa7ccc1fad6d73c6671a.webp"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 2-->
+          <picture class="cs-picture cs-picture2">
+            <source
+              srcset="/assets/images/rezeption-1298bd4216ec9bce36b16bdbb799deef.webp"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/rezeption-9e4784d6285b758704d4597bfdc65061.webp"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/rezeption-1bbf57d057b1595716db793a032c8363.webp"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="/assets/images/rezeption-73cec44d19e00185e7f590eec2df81ed.webp"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 3-->
+          <picture class="cs-picture cs-picture3">
+            <source
+              srcset="/assets/images/detail1-88ee4178cbe122df70c2cd529b4ab318.webp"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail1-bc077bd32cee013d03cc505faf04dbf7.webp"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail1-eebd542679805b2c61299b3b5ecd00e5.webp"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="/assets/images/detail1-63c7755d2f935cb9fa2c0fc5345510b7.webp"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 4-->
+          <picture class="cs-picture cs-picture4">
+            <source
+              srcset="/assets/images/detail4-e8a84d3d90b398476a821cf00919ae34.webp"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail4-2baf431554ada1b504e2593a1aa7d597.webp"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail4-04131f027d80651255ef8b5f2209e957.webp"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="/assets/images/detail4-62f2e2f73349eb9cd1922c016adf6e18.webp"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 5-->
+          <picture class="cs-picture cs-picture5">
+            <source
+              srcset="/assets/images/raum2-4dc969df175b3ea0c7045bfc8668ecc5.webp"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/raum2-32843dc44d6289d53fc2c1d156322259.webp"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/raum2-88b3577bb930381d42a3fdb875298a27.webp"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="/assets/images/raum2-e3b0233d0186f4f745238ad1dd9bf5e6.webp"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 6-->
+          <picture class="cs-picture cs-picture6">
+            <source
+              srcset="/assets/images/raum3-8aa2dd61345fd86531ba11262e0ed29a.webp"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/raum3-6a769c7f5141e338551a6e50cbbc007b.webp"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/raum3-dfcf7cc80a0c4864044f4807e36c872e.webp"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="/assets/images/raum3-c467d7cd7468d33c810ad68bb738b544.webp"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 7-->
+          <picture class="cs-picture cs-picture7">
+            <source
+              srcset="/assets/images/detail5-8c03ae658846e2d5d86f0bf1cad83229.webp"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail5-38f5e5d244dccf0127c90e0076240827.webp"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail5-2bbdef5bbc5412f0f04ff4c2e1c19a08.webp"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="/assets/images/detail5-fb86680ad9d930f51fd888b1a9212870.webp"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 8-->
+          <picture class="cs-picture cs-picture8">
+            <source
+              srcset="/assets/images/detail6-592b6bd28a6a95a46201210fd7772410.webp"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail6-dddfa5b973c64be26deacd5a5eb9b0de.webp"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail6-82d405a71aa5cc943ab52330c0521fea.webp"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="/assets/images/detail6-a3eea4e55f521af5e83a75587acac74a.webp"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 9-->
+          <picture class="cs-picture cs-picture9">
+            <source
+              srcset="/assets/images/detail7-c8c97d08175b09a6a35f813b79383742.webp"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail7-8e8189a824a0d425d4cab28334707633.webp"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail7-7abd034f9495cc0bbcb6cb6ecfc30bdc.webp"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="/assets/images/detail7-f0238fdb2c6e6f17bf3f2d8713a0cd6d.webp"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 10-->
+          <picture class="cs-picture cs-picture10">
+            <source
+              srcset="/assets/images/detail8-4302c1fc692d235a49a0cd796bbb0436.webp"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail8-350858721a00cd754f21631f7abdda5a.webp"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail8-eb8ac75ffba401d020ed619fa12c9063.webp"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="/assets/images/detail8-7559b8a585c6168f15e480a559fff804.webp"
+              alt="Description of the image" />
+          </picture>
+          <!--Picture 11-->
+          <picture class="cs-picture cs-picture11">
+            <source
+              srcset="/assets/images/detail9-b0709e2b561058910158a0b41cc8c06a.webp"
+              media="(max-width: 600px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail9-643b65d8d09ab58872e46c0946ad2fb4.webp"
+              media="(min-width: 601px) and (max-width: 1024px)"
+              type="image/webp" />
+            <source
+              srcset="/assets/images/detail9-3633753b588cf8f154af51248f468f4c.webp"
+              media="(min-width:1025px)"
+              type="image/webp" />
+            <img
+              src="/assets/images/detail9-cc671ec8a938af3dca3fa5203c381830.webp"
+              alt="Description of the image" />
+          </picture>
+      </div>
+  </div>
+</section>
+                              
+                              
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1973">
+  <svg class="service-background" version="1.1" xmlns="http://www.w3.org/2000/svg"
+		xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice">
+		<defs>
+			<linearGradient id="bg">
+				<stop offset="0%" style="stop-color:rgba(71, 213, 226, 0.84)"></stop>
+				<stop offset="50%" style="stop-color:rgba(76, 190, 255, 0.6)"></stop>
+				<stop offset="100%" style="stop-color:rgba(106, 214, 120, 0.424)"></stop>
+			</linearGradient>
+			<path id="wave" fill="url(#bg)" d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+	s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z" />
+		</defs>
+		<g>
+			<use xlink:href='#wave' opacity=".3">
+				<animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="25s"
+          calcMode="spline"
+          values="270 230; -334 180; 270 230"
+          keyTimes="0; .5; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite" />
+			</use>
+			<use xlink:href='#wave' opacity=".6">
+				<animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="18s"
+          calcMode="spline"
+          values="-270 230;243 220;-270 230"
+          keyTimes="0; .6; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite" />
+			</use>
+			<use xlink:href='#wave' opacty=".9">
+				<animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="translate"
+          dur="12s"
+          calcMode="spline"
+          values="0 230;-140 200;0 230"
+          keyTimes="0; .4; 1"
+          keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+          repeatCount="indefinite" />
+			</use>
+		</g>
+	</svg>
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Individuelle Lösungen für Ihre Gesundheit</span>
+      <h2 class="cs-title">Mehr als Therapie – Ihre Gesundheit zählt</h2>
+      <p class="cs-text">
+        Unsere spezialisierten Physiotherapeuten arbeiten Hand in Hand, um eine auf Sie abgestimmte, ganzheitliche Behandlung anzubieten. Vereinbaren Sie noch heute einen Termin und erleben Sie die besten Therapien.
+      </p>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <h3 class="cs-h3">Manuelle Therapie
+        </h3>
+        <p class="cs-item-text">
+          Entdecken Sie gezielte, manuelle Techniken, die Schmerzen lindern und Ihre Beweglichkeit verbessern. Unsere Experten helfen Ihnen dabei, Ihre Mobilität wiederzuerlangen.
+        </p>
+        <a href="" class="cs-link"> Mehr erfahren </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="assets/images/manuelle-icon.webp"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Sportphysiotherapie</h3>
+        <p class="cs-item-text">
+          Optimieren Sie Ihre Leistung und erholen Sie sich effektiv von Verletzungen. Unsere maßgeschneiderten Programme bringen Sie sicher und schnell zurück in Bewegung.
+
+        </p>
+        <a href="" class="cs-link"> Mehr erfahren </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="assets/images/sport-icon.webp"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Neurologische Physiotherapie
+        </h3>
+        <p class="cs-item-text">
+          Spezialisierte Behandlung für neurologische Erkrankungen wie Schlaganfall, Parkinson oder Multiple Sklerose. Wir stärken Ihre Lebensqualität und fördern Ihre Selbstständigkeit.
+
+        </p>
+        <a href="" class="cs-link"> Mehr erfahren </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="assets/images/neurologische-icon.webp"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Rehabilitation
+        </h3>
+        <p class="cs-item-text">
+          Unterstützung auf Ihrem Weg zurück zur Gesundheit nach Operationen oder Verletzungen. Mit gezielten Übungen und individueller Betreuung erreichen Sie Ihre Ziele.
+
+        </p>
+        <a href="" class="cs-link"> Mehr erfahren </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="assets/images/rehabilitation-icon.webp"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Postnatale Physiotherapie
+
+        </h3>
+        <p class="cs-item-text">
+          Hilfe für junge Mütter: Stärken Sie Ihren Beckenboden und fördern Sie Ihre Regeneration nach der Geburt. Unser Team unterstützt Sie Schritt für Schritt.
+
+        </p>
+        <a href="" class="cs-link"> Mehr erfahren </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="assets/images/beckenboden-icon.webp"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
+      </li>
+      <li class="cs-item">
+        <h3 class="cs-h3">Pädiatrische Physiotherapie
+        </h3>
+        <p class="cs-item-text">
+          Einfühlsame Therapie für unsere kleinen Patienten. Wir fördern die motorische Entwicklung und unterstützen Kinder bei speziellen Herausforderungen.
+
+        </p>
+        <a href="" class="cs-link"> Mehr erfahren </a>
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            loading="lazy"
+            decoding="async"
+            src="assets/images/pädriatische-icon.webp"
+            alt="icon"
+            width="181"
+            height="102" />
+        </picture>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- ============================================ -->
+<!--                Meet The Team                 -->
+<!-- ============================================ -->
+
+<section id="meet-team-1766">
+  <div class="cs-container">
+      <div class="cs-content">
+          <div class="cs-flex-wrapper">
+              <div class="cs-flex">
+                  <span class="cs-topper">Unser Team </span>
+                  <h2 class="cs-title">Ihre Gesundheit in den besten Händen
+              </div>
+              <button class="learn-more">
+                <span class="circle" aria-hidden="true">
+                <span class="icon arrow"></span>
+                </span>
+                <span class="button-text">mehr Infos</span>
+              </button>
+          </div>
+          <div class="cs-wrapper">
+              <p class="cs-text">
+                Lernen Sie die Spezialisten kennen, die jeden Tag mit Engagement und Expertise an Ihrer Seite stehen. Jeder einzelne unserer Therapeuten bringt einzigartige Stärken mit, um Ihnen die bestmögliche Betreuung zu bieten.              </p>
+              <ul class="cs-ul">
+                  <li class="cs-li">
+                      <img class="cs-check-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-check.svg" alt="checkmark" width="20" height="20">
+                      Individuelle Behandlungsansätze
+                  </li>
+                  <li class="cs-li">
+                      <img class="cs-check-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-check.svg" alt="checkmark" width="20" height="20">
+                      Mehr als 5 Spezialgebiete
+                  </li>
+                  <li class="cs-li">
+                      <img class="cs-check-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-check.svg" alt="checkmark" width="20" height="20">
+                      Teamwork für Ihren Erfolg
+                  </li>
+                  <li class="cs-li">
+                      <img class="cs-check-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-check.svg" alt="checkmark" width="20" height="20">
+                      Über 16 Jahre Erfahrung
+                  </li>
+                  <li class="cs-li">
+                      <img class="cs-check-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-check.svg" alt="checkmark" width="20" height="20">
+                      Modernste Technologien 
+                  </li>
+                  <li class="cs-li">
+                    <img class="cs-check-icon" aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/orange-check.svg" alt="checkmark" width="20" height="20">
+                    Kontinuierliche Weiterentwicklung
+                </li>
+              </ul>
+          </div>
+      </div>
+      <ul class="cs-card-group">
+          <li class="cs-item">
+              <div class="cs-image-group">
+               
+
+   <picture class="cs-picture">
+    <source
+      srcset="/assets/images/anna-fe4d4c9875a7cb8b655767ecae355cce.webp"
+      media="(max-width: 600px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/anna-7abfdef826ac24f0f6985d0d413a88bb.webp"
+      media="(min-width: 601px) and (max-width: 1024px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/anna-fc3537e4d6b89f143b3e6412405dfc21.webp"
+      media="(min-width:1025px)"
+      type="image/webp" />
+    <img
+      src="/assets/images/anna-c0fd56b9fa580637b9b386cb3ed10c37.webp"
+      alt="Description of the image" />
+  </picture>
+
+                  <div class="cs-social">
+                      <a href="" class="cs-link" aria-label="Facebook" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-grey.svg" alt="facebook" width="20" height="20">
+                      </a>
+                      <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/x-grey.svg" alt="twitter" width="20" height="20">
+                      </a>
+                      <a href="" class="cs-link" aria-label="Instagram" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-grey.svg" alt="instagram" width="20" height="20">
+                      </a>
+                  </div>
+              </div>
+              <div class="cs-info">
+                  <span class="cs-name">Anna Müller</span>
+                  <span class="cs-job">Neurologische Physiotherapie</span>
+              </div>
+          </li>
+          <li class="cs-item">
+              <div class="cs-image-group">
+               
+
+   <picture class="cs-picture">
+    <source
+      srcset="/assets/images/maximilian-8a4a31e51dd77db9c637fc48d31b32f3.webp"
+      media="(max-width: 600px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/maximilian-473074ff5a86c91edbd470d741243c0b.webp"
+      media="(min-width: 601px) and (max-width: 1024px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/maximilian-98441d9f9fd51fba33acc2b13dc772a6.webp"
+      media="(min-width:1025px)"
+      type="image/webp" />
+    <img
+      src="/assets/images/maximilian-387821e8a8cfa4c293c01b26c502f7f5.webp"
+      alt="Description of the image" />
+  </picture>
+
+                  <div class="cs-social">
+                      <a href="" class="cs-link" aria-label="Facebook" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-grey.svg" alt="facebook" width="20" height="20">
+                      </a>
+                      <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/x-grey.svg" alt="twitter" width="20" height="20">
+                      </a>
+                      <a href="" class="cs-link" aria-label="Instagram" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-grey.svg" alt="instagram" width="20" height="20">
+                      </a>
+                  </div>
+              </div>
+              <div class="cs-info">
+                  <span class="cs-name">Maximilian Maeier</span>
+                  <span class="cs-job">Manuelle Therapie & Rehabilitation</span>
+              </div>
+          </li>
+          <li class="cs-item">
+              <div class="cs-image-group">
+             
+
+   <picture class="cs-picture">
+    <source
+      srcset="/assets/images/sophie-2a8008e4dde7546259946dda29c9e31a.webp"
+      media="(max-width: 600px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/sophie-696b56982500201cb230537008ebde2e.webp"
+      media="(min-width: 601px) and (max-width: 1024px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/sophie-4a2941d710150222132265672a34d5fa.webp"
+      media="(min-width:1025px)"
+      type="image/webp" />
+    <img
+      src="/assets/images/sophie-e130275b0330d98b7a39fd37452c5d90.webp"
+      alt="Description of the image" />
+  </picture>
+
+                  <div class="cs-social">
+                      <a href="" class="cs-link" aria-label="Facebook" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-grey.svg" alt="facebook" width="20" height="20">
+                      </a>
+                      <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/x-grey.svg" alt="twitter" width="20" height="20">
+                      </a>
+                      <a href="" class="cs-link" aria-label="Instagram" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-grey.svg" alt="instagram" width="20" height="20">
+                      </a>
+                  </div>
+              </div>
+              <div class="cs-info">
+                  <span class="cs-name">Sophie Becker</span>
+                  <span class="cs-job">Pädiatrische Therapie</span>
+              </div>
+          </li>
+          <li class="cs-item">
+              <div class="cs-image-group">
+                
+
+   <picture class="cs-picture">
+    <source
+      srcset="/assets/images/lukas-c43f3302061f0701026340eeb2a3afc2.webp"
+      media="(max-width: 600px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/lukas-45c09cc9fa61c79dbf60a9bd71a21bc9.webp"
+      media="(min-width: 601px) and (max-width: 1024px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/lukas-29e9fc8cbb34a8c28091774663fb316d.webp"
+      media="(min-width:1025px)"
+      type="image/webp" />
+    <img
+      src="/assets/images/lukas-fbc506be76d1a0dd85308c1acca7f19f.webp"
+      alt="Description of the image" />
+  </picture>
+
+                  <div class="cs-social">
+                      <a href="" class="cs-link" aria-label="Facebook" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-grey.svg" alt="facebook" width="20" height="20">
+                      </a>
+                      <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/x-grey.svg" alt="twitter" width="20" height="20">
+                      </a>
+                      <a href="" class="cs-link" aria-label="Instagram" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-grey.svg" alt="instagram" width="20" height="20">
+                      </a>
+                  </div>
+              </div>
+              <div class="cs-info">
+                  <span class="cs-name">Lukas Weber</span>
+                  <span class="cs-job">Sport Physiotherapie</span>
+              </div>
+          </li>
+          <li class="cs-item">
+              <div class="cs-image-group">
+                 
+
+   <picture class="cs-picture">
+    <source
+      srcset="/assets/images/lisa-fb18b97058ccd424a64e6dc8fb81670e.webp"
+      media="(max-width: 600px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/lisa-71d7380a2c37e44786b16b13828a6384.webp"
+      media="(min-width: 601px) and (max-width: 1024px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/lisa-27a26f4c80164e0067f4075df37ab1a4.webp"
+      media="(min-width:1025px)"
+      type="image/webp" />
+    <img
+      src="/assets/images/lisa-a411a61615da35bd11cc3586eba8ecf4.webp"
+      alt="Description of the image" />
+  </picture>
+
+                  <div class="cs-social">
+                      <a href="" class="cs-link" aria-label="Facebook" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-grey.svg" alt="facebook" width="20" height="20">
+                      </a>
+                      <a href="" class="cs-link" aria-label="Twitter" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/x-grey.svg" alt="twitter" width="20" height="20">
+                      </a>
+                      <a href="" class="cs-link" aria-label="Instagram" target="_blank" rel="noopener">
+                          <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-grey.svg" alt="instagram" width="20" height="20">
+                      </a>
+                  </div>
+              </div>
+              <div class="cs-info">
+                  <span class="cs-name">Lisa Lange</span>
+                  <span class="cs-job">Postnatale Physiotherapie</span>
+              </div>
+          </li>
+      </ul>
+  </div>
+</section>
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-704">
+  <div class="cs-container">
+      <div class="cs-content">
+        
+          <h2 class="cs-title">Was sagen  <span class="cs-color">unsere Patienten</span> über unsere Behandlungen</h2>
+      </div>
+      <div class="cs-flex-group">
+          <div class="cs-image-group">
+            <picture class="cs-picture">
+              <source
+                srcset="/assets/images/testimonial-fbcc1e8b1e6f8bde980c1246dbb8f6d6.webp"
+                media="(max-width: 600px)"
+                type="image/webp" />
+              <source
+                srcset="/assets/images/testimonial-6df401ebc9265463b4ea3e42232c4889.webp"
+                media="(min-width: 601px) and (max-width: 1024px)"
+                type="image/webp" />
+              <source
+                srcset="/assets/images/testimonial-114196bb92666b130834e2c4d801714f.webp"
+                media="(min-width:1025px)"
+                type="image/webp" />
+              <img
+                src="/assets/images/testimonial-0f726e38bdcc83ebd64c8b7cacda0f84.webp"
+                alt="Description of the image" />
+            </picture>
+  
+
+              <!--Flower Graphic-->
+              <img class="cs-heart" loading="lazy" decoding="async" src="assets/svgs/heart-icon.svg" alt="flower graphic" width="261" height="130" aria-hidden="true">
+
+              <!--Spidey Sense Graphic-->
+              <img class="cs-sense" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fspider-sense.svg" alt="spidey sense graphic" width="80" height="89" aria-hidden="true">
+          </div>
+          <div class="cs-review-group">
+              <!--Quote Block-->
+              <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpink-quote.svg" alt="spidey sense graphic" width="97" height="80" aria-hidden="true">
+              <p class="cs-review-text">
+                “TheraFit hat mir geholfen, mein Leben zurückzugewinnen! Die Experten hier sind nicht nur hochqualifiziert, sondern auch einfühlsam und motivierend. Dank der individuellen Betreuung fühle ich mich stärker, gesünder und bereit für alles, was kommt.”              </p>
+              <span class="cs-name">Diana Richter</span>
+              <span class="cs-job">Patientin bei TheraFit</span>
+          </div>
+      </div>
+  </div>
+  <!--Ripple Graphic-->
+  <picture class="cs-waves">
+      <!--Mobile Image-->
+      <source media="(max-width: 1023px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fripple3-m.svg">
+      <!--Tablet and above Image-->
+      <source media="(min-width: 1024px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fripple3.svg">
+      <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fripple3.svg" alt="person" width="566" height="309">
+  </picture>
+</section>
+                              
+                              
+
+
+                              
+                              
+
+ </main>
+    <!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<!--NOTE: Make sure the section above this footer has the same background color as the footer for a seamless trasition between them-->
+
+<footer id="cs-footer-1763">
+  <!--Contact Info-->
+  <div class="cs-card-group">
+    <div class="cs-card">
+      <picture class="cs-picture">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-footer-location-pin.svg"
+          alt="location"
+          loading="lazy"
+          decoding="async"
+          height="32"
+          width="32" />
+      </picture>
+      <div class="cs-flex">
+        <h3 class="cs-h3">Standort</h3>
+        <span class="cs-card-info">Zur Gesundheit 23, 79863 Fit-Town</span>
+      </div>
+    </div>
+    <div class="cs-card">
+      <picture class="cs-picture">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-footer-clock.svg"
+          alt="clock"
+          loading="lazy"
+          decoding="async"
+          height="32"
+          width="32" />
+      </picture>
+      <div class="cs-flex">
+        <h3 class="cs-h3">Öffnungszeiten</h3>
+        <span class="cs-card-info">Montag – Freitag: 08:00 – 19:00 Uhr </span>
+        <span class="cs-card-info">
+          Samstag: 09:00 – 13:00 Uhr <br />Sonntag: Geschlossen</span
+        >
+      </div>
+    </div>
+    <div class="cs-card">
+      <picture class="cs-picture">
+        <img
+          class="cs-icon"
+          src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-footer-call.svg"
+          alt="phone"
+          loading="lazy"
+          decoding="async"
+          height="32"
+          width="32" />
+      </picture>
+      <div class="cs-flex">
+        <h3 class="cs-h3">Kontakt</h3>
+        <a href="" class="cs-card-info">Telefon: +49 123 456 789 </a>
+        <a href="" class="cs-card-info">E-Mail: info@therafit.de</a>
+      </div>
+    </div>
+  </div>
+  <div class="cs-container">
+    <!-- Logo Group -->
+    <div class="cs-logo-group">
+      <a aria-label="go back to home" class="cs-logo footer-logo" href="">
+        <img
+          class="cs-logo-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="assets/svgs/Therafit-Logo.svg"
+          alt="logo"
+          width="240"
+          height="32" />
+      </a>
+      <p class="cs-text">
+        Willkommen bei TheraFit Physiotherapie! Unser Ziel ist es, Ihre
+        Gesundheit und Lebensqualität durch individuelle Betreuung und moderne
+        Therapieansätze zu fördern. Lassen Sie uns gemeinsam an Ihrer Zukunft
+        arbeiten.
+      </p>
+    </div>
+    <!-- Links -->
+    <div class="cs-ul-wrapper">
+      <span class="cs-header">Services</span>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <a class="cs-link" href="">Manuelle Therapie</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Sportphysiotherapie</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Neurologische Physiotherapie</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Rehabilitation</a>
+        </li>
+       <li class="cs-li">
+          <a class="cs-link" href="">Postnatale Physiotherapie</a>
+        </l>
+        <li class="cs-li">
+          <a class="cs-link" href="">Pädiatrische Physiotherapie</a>
+        </li>
+      </ul>
+    </div>
+    <div class="cs-ul-wrapper">
+      <span class="cs-header">Nützliche Links</span>
+      <ul class="cs-ul">
+        <li class="cs-li">
+          <a class="cs-link" href="">Über uns</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Leistungen</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Kontakt</a>
+        </li>
+        <li class="cs-li">
+          <a class="cs-link" href="">Praxis-Hilfen</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="cs-bottom">
+    <span class="cs-credit">
+      © Copyright 2024 -
+      <a href="" class="cs-credit-link" target="_blank">BlackForest-WebCraft</a>
+    </span>
+    <div class="cs-bottom-links">
+      <a href="" class="cs-bottom-link">Impressum</a>
+      <a href="" class="cs-bottom-link">Datenschutzerklärung</a>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
