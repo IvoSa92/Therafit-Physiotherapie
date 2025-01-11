@@ -41,9 +41,8 @@ const filterPostDate = require("./src/config/postDate");
 const isProduction = configServer.isProduction;
 
 module.exports = function (eleventyConfig) {
-  // Debug output
-  console.log("Asset paths:", eleventyConfig.dir);
-
+  eleventyConfig.addWatchTarget("./src/assets/images/");
+  eleventyConfig.addWatchTarget("./src/assets/css/");
   /**=====================================================================
           EXTENSIONS - Recognising non-default languages as templates 
     =======================================================================*/
@@ -88,7 +87,12 @@ module.exports = function (eleventyConfig) {
   // SHARP IMAGES
   eleventyConfig.addPlugin(eleventyPluginSharpImages, {
     urlPath: "/assets/images",
-    outputDir: "public/assets/images",
+    outputDir: "_site/assets/images/",
+
+    watch: {
+      paths: ["src/assets/images/**/*"],
+      ignores: ["_site/**/*"],
+    },
   });
 
   /**
@@ -200,6 +204,7 @@ module.exports = function (eleventyConfig) {
                                 SERVER SETTINGS
     =======================================================================*/
   eleventyConfig.setServerOptions(configServer);
+
   /**=====================================================================
                               END SERVER SETTINGS
     =======================================================================*/

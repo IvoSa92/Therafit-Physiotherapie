@@ -341,12 +341,13 @@ eleventyNavigation:
               Therapieansätze zu unterstützen. <br />Sophie legt großen Wert
               darauf, eine vertrauensvolle Atmosphäre zu schaffen, in der Kinder
               Spaß an der Bewegung entwickeln und neue Fähigkeiten spielerisch
-              erlernen können. Ihre einfühlsame Art hilft nicht nur den Kindern,
-              sondern gibt auch Eltern Sicherheit und Zuversicht. Zu TheraFit
-              kam sie, weil sie das familiäre und multidisziplinäre Team
-              überzeugte. Hier hat sie die Möglichkeit, sich voll und ganz auf
-              die Bedürfnisse der jungen Patienten zu konzentrieren und sie auf
-              ihrem Weg zu mehr Selbstständigkeit und Lebensfreude zu begleiten.
+              erlernen können. Ihref einfühlsame Art hilft nicht nur den
+              Kindern, sondern gibt auch Eltern Sicherheit und Zuversicht. Zu
+              TheraFit kam sie, weil sie das familiäre und multidisziplinäre
+              Team überzeugte. Hier hat sie die Möglichkeit, sich voll und ganz
+              auf die Bedürfnisse der jungen Patienten zu konzentrieren und sie
+              auf ihrem Weg zu mehr Selbstständigkeit und Lebensfreude zu
+              begleiten.
             </p>
           </div>
           <div class="cs-flex-group">
@@ -506,15 +507,17 @@ eleventyNavigation:
   <ul class="cs-card-group">
     <li class="cs-item">
       <picture class="cs-picture">
+        <source
+          srcset="{% getUrl '/assets/images/therapeuten.png' | resize({ height: 40, width: 40 }) | webp %}"
+          media="(min-width: 601px) and (max-width: 1024px)"
+          type="image/webp" />
+        <source
+          srcset="{% getUrl '/assets/images/therapeuten.png' | resize({ height: 45, width: 45 }) | webp %}"
+          media="(min-width:1025px)"
+          type="image/webp" />
         <img
-          class="cs-icon"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Stats/person2-gold.svg"
-          alt="icon"
-          width="35"
-          height="40"
-          loading="lazy"
-          decoding="async"
-          aria-hidden="true" />
+          src="{% getUrl '/assets/images/therapeuten.png' | resize({ height: 50, width: 50 }) | webp %}"
+          alt="Description of the image" />
       </picture>
       <div class="cs-flex-group">
         <span class="cs-number">5</span>
@@ -523,16 +526,19 @@ eleventyNavigation:
     </li>
     <li class="cs-item">
       <picture class="cs-picture">
+        <source
+          srcset="{% getUrl '/assets/images/zufriedene_kunden.png' | resize({ height: 40, width: 40 }) | webp %}"
+          media="(min-width: 601px) and (max-width: 1024px)"
+          type="image/webp" />
+        <source
+          srcset="{% getUrl '/assets/images/zufriedene_kunden.png' | resize({ height: 45, width: 45 }) | webp %}"
+          media="(min-width:1025px)"
+          type="image/webp" />
         <img
-          class="cs-icon"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Stats/mop-gold.svg"
-          alt="icon"
-          width="40"
-          height="35"
-          loading="lazy"
-          decoding="async"
-          aria-hidden="true" />
+          src="{% getUrl '/assets/images/zufriedene_kunden.png' | resize({ height: 50, width: 50 }) | webp %}"
+          alt="Description of the image" />
       </picture>
+
       <div class="cs-flex-group">
         <span class="cs-number">140</span>
         <span class="cs-desc">Zufriedene Kunden</span>
@@ -540,15 +546,17 @@ eleventyNavigation:
     </li>
     <li class="cs-item">
       <picture class="cs-picture">
+        <source
+          srcset="{% getUrl '/assets/images/fachgebiete.png' | resize({ height: 40, width: 40 }) | webp %}"
+          media="(min-width: 601px) and (max-width: 1024px)"
+          type="image/webp" />
+        <source
+          srcset="{% getUrl '/assets/images/fachgebiete.png' | resize({ height: 45, width: 45 }) | webp %}"
+          media="(min-width:1025px)"
+          type="image/webp" />
         <img
-          class="cs-icon"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Stats/thumbs-gold.svg"
-          alt="icon"
-          width="40"
-          height="40"
-          loading="lazy"
-          decoding="async"
-          aria-hidden="true" />
+          src="{% getUrl '/assets/images/fachgebiete.png' | resize({ height: 50, width: 50 }) | webp %}"
+          alt="Description of the image" />
       </picture>
       <div class="cs-flex-group">
         <span class="cs-number">6</span>
@@ -557,15 +565,17 @@ eleventyNavigation:
     </li>
     <li class="cs-item">
       <picture class="cs-picture">
+        <source
+          srcset="{% getUrl '/assets/images/erfahrung.png' | resize({ height: 40, width: 40 }) | webp %}"
+          media="(min-width: 601px) and (max-width: 1024px)"
+          type="image/webp" />
+        <source
+          srcset="{% getUrl '/assets/images/erfahrung.png' | resize({ height: 45, width: 45 }) | webp %}"
+          media="(min-width:1025px)"
+          type="image/webp" />
         <img
-          class="cs-icon"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Stats/award2-gold.svg"
-          alt="icon"
-          width="40"
-          height="40"
-          loading="lazy"
-          decoding="async"
-          aria-hidden="true" />
+          src="{% getUrl '/assets/images/erfahrung.png' | resize({ height: 50, width: 50 }) | webp %}"
+          alt="Description of the image" />
       </picture>
       <div class="cs-flex-group">
         <span class="cs-number">16</span>
@@ -596,180 +606,4 @@ eleventyNavigation:
   </picture>
 </div>
 
-<!-- ============================================ -->
-<!--                   Pricing                    -->
-<!-- ============================================ -->
-
-<section id="pricing-1103-1112">
-  <div class="cs-container">
-    <div class="cs-content">
-      <span class="cs-topper">Pricing</span>
-      <h2 class="cs-title">Affordable Pricing Plans</h2>
-      <p class="cs-text">
-        Our professionals will perform diagnostic tests, fluid flush and fills,
-        engine replacement, oil changes, and total vehicle overhauls. Busto
-        auctor lectus vitae conubia euismod nec.
-      </p>
-      <a href="" class="cs-button-solid">Book Appointment</a>
-    </div>
-    <ul class="cs-card-group">
-      <li class="cs-item">
-        <span class="cs-package">Basic Oil Change</span>
-        <span class="cs-price">$49.99</span>
-        <ul class="cs-ul">
-          <li class="cs-li">
-            All available starter feature
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-          <li class="cs-li">
-            Medical service 24/7
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-          <li class="cs-li">
-            Customer agent service
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-          <li class="cs-li">
-            Professional Service
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-          <li class="cs-li cs-disabled">
-            2 dedicated experts
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-          <li class="cs-li cs-disabled">
-            Consultation with a Senior experts
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-        </ul>
-      </li>
-      <li class="cs-item">
-        <span class="cs-package">Full Service Oil Change</span>
-        <span class="cs-price">$99.99</span>
-        <ul class="cs-ul">
-          <li class="cs-li">
-            All available starter feature
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-          <li class="cs-li">
-            Medical service 24/7
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-          <li class="cs-li">
-            Customer agent service
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-          <li class="cs-li">
-            Professional Service
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-          <li class="cs-li">
-            2 dedicated experts
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-          <li class="cs-li cs-disabled">
-            Consultation with a Senior experts
-            <img
-              class="cs-icon"
-              aria-hidden="true"
-              loading="lazy"
-              decoding="async"
-              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/mech-check.svg"
-              alt="checkmark"
-              width="18"
-              height="18" />
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</section>
 {% endblock %}
