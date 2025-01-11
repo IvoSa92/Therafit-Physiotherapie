@@ -1,0 +1,219 @@
+---
+title: "Project One | Code Stitch Web Designs"
+description: "Meta description for the page"
+preloadImg: ""
+permalink: "Leistungen/"
+eleventyNavigation:
+  key: Leistungen
+  order: 3100
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/Leistungen.css" />
+{% endblock %} {% block body %}
+
+<div id="banner-1106-1112">
+  <div class="cs-container">
+    <span class="cs-int-title">Unsere Leistungen</span>
+    <div class="cs-breadcrumbs">
+      <a href="/" class="cs-link">Home</a>
+      <a href="/Leistungen" class="cs-link cs-active">Leistungen</a>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      srcset="{% getUrl '/assets/images/rezeption.png' | resize({ height: 390, width: 448 }) | webp %}"
+      media="(max-width: 600px)"
+      type="image/webp" />
+    <source
+      srcset="{% getUrl '/assets/images/rezeption.png' | resize({ height: 474, width: 1024 }) | webp %}"
+      media="(min-width: 601px) and (max-width: 1024px)"
+      type="image/webp" />
+    <source
+      srcset="{% getUrl '/assets/images/rezeption.png' | resize({ height: 474, width: 1920 }) | webp %}"
+      media="(min-width:1025px)"
+      type="image/webp" />
+    <img
+      src="{% getUrl '/assets/images/rezeption.png' | resize({ height: 400, width: 400 }) | webp %}"
+      alt="Description of the image" />
+  </picture>
+</div>
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-1395">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">
+        Unsere <span class="text-animation">Leistungen</span> im Detail
+      </h2>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <!--Blue Quote-->
+
+        <h3 class="cs-h3 list-item">Manuelle Therapie/Orthopädie</h3>
+
+        <p class="cs-text">
+          Leiden Sie unter Rückenschmerzen, Gelenkblockaden oder Verspannungen?
+          Unsere manuelle Therapie bringt Bewegung zurück in Ihren Alltag! Mit
+          präzisen Grifftechniken lösen wir Blockaden, lindern Schmerzen und
+          fördern Ihre Mobilität. <br />
+          Ob akute Beschwerden oder chronische Probleme – wir helfen Ihnen, sich
+          wieder frei und unbeschwert zu bewegen. Erleben Sie, wie gut es sich
+          anfühlt, wenn Ihr Körper im Einklang ist!
+        </p>
+        <ul class="cs-list">
+          <li class="cs-li">Rückenschmerzen und Bandscheibenproblemen</li>
+          <li class="cs-li">Gelenkblockaden (z. B. Knie, Schulter, Hüfte)</li>
+          <li class="cs-li">Nacken- und Schulterverspannungen</li>
+          <li class="cs-li">Bewegungseinschränkungen</li>
+        </ul>
+
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Britney Allison
+            <span class="cs-job">Founder Of Yokoloko</span>
+          </span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <!--Blue Quote-->
+
+        <p class="cs-item-text">
+          I want to say a huge thank you to the Stitch team. The guys in a short
+          time and very efficiently helped me with the development of a website
+          for my new startup.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile3.png"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Jessica Jonson
+            <span class="cs-job">CTO Of Meriette</span>
+          </span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <!--Blue Quote-->
+
+        <p class="cs-item-text">
+          Small businesses are the heartbeat of communities, embodying the
+          spirit of entrepreneurship, determination, and local support.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Britney Allison
+            <span class="cs-job">Founder Of Yokoloko</span>
+          </span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <!--Blue Quote-->
+
+        <p class="cs-item-text">
+          I want to say a huge thank you to the Stitch team. The guys in a short
+          time and very efficiently helped me with the development of a website
+          for my new startup.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile3.png"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Jessica Jonson
+            <span class="cs-job">CTO Of Meriette</span>
+          </span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <!--Blue Quote-->
+
+        <p class="cs-item-text">
+          Small businesses are the heartbeat of communities, embodying the
+          spirit of entrepreneurship, determination, and local support.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Britney Allison
+            <span class="cs-job">Founder Of Yokoloko</span>
+          </span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <!--Blue Quote-->
+
+        <p class="cs-item-text">
+          I want to say a huge thank you to the Stitch team. The guys in a short
+          time and very efficiently helped me with the development of a website
+          for my new startup.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile3.png"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Jessica Jonson
+            <span class="cs-job">CTO Of Meriette</span>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+{% endblock %}

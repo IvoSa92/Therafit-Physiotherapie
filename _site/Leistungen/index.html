@@ -16,13 +16,13 @@
       content="Webseiten-Erstellung, Webdesign, SEO, Suchmaschinenoptimierung, BlackForest-WebCraft, individuelle Webseiten, maßgeschneiderte Webdesign, Logo-Design, Medienbearbeitung, Copywriting, Klettgau, professionelle Webdesign, Online-Präsenz optimieren, Responsive Design, Wartung, Hosting, Updates" />
     
 
-    <link rel="canonical" href="https://www.example.com/contact/" />
+    <link rel="canonical" href="https://www.example.com/Leistungen/" />
 
     <!--Social Media Display-->
-    <meta property="og:title" content="Contact | Code Stitch Web Designs" />
+    <meta property="og:title" content="Project One | Code Stitch Web Designs" />
     <meta property="og:description" content="Meta description for the page" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.example.com/contact/" />
+    <meta property="og:url" content="https://www.example.com/Leistungen/" />
     <meta property="og:image" content="/assets/images/logo-small.png" />
     <meta
       property="og:image:secure_url"
@@ -64,8 +64,6 @@
 
     <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
     
-    <link rel="preload" as="image" href="/assets/images/cabinets2.jpg" />
-    
 
     <!-- Sitewide Stylesheets and Scripts -->
     <link rel="stylesheet" href="/assets/css/root.css" />
@@ -74,11 +72,11 @@
     <script defer src="/assets/js/nav.js"></script>
 
     
-    <link rel="stylesheet" href="/assets/css/contact.css">
+<link rel="stylesheet" href="/assets/css/Leistungen.css" />
 
 
     <title>
-       Contact | Code Stitch Web Designs |
+       Project One | Code Stitch Web Designs |
       TheraFit-Physiotherapie 
     </title>
   </head>
@@ -143,85 +141,210 @@
 
     <main id="main">
 
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<div id="banner-1106-1112">
+  <div class="cs-container">
+    <span class="cs-int-title">Unsere Leistungen</span>
+    <div class="cs-breadcrumbs">
+      <a href="/" class="cs-link">Home</a>
+      <a href="/Leistungen" class="cs-link cs-active">Leistungen</a>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      srcset="/assets/images/rezeption-719c60d3087f7d9a6942d9c5df6c7bb8.webp"
+      media="(max-width: 600px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/rezeption-e330d66eeaa420d64d2fe33bac77f20b.webp"
+      media="(min-width: 601px) and (max-width: 1024px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/rezeption-8853286385fa49f84cbd1015453db673.webp"
+      media="(min-width:1025px)"
+      type="image/webp" />
+    <img
+      src="/assets/images/rezeption-73cec44d19e00185e7f590eec2df81ed.webp"
+      alt="Description of the image" />
+  </picture>
+</div>
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-    </section>
+<section id="reviews-1395">
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">
+        Unsere <span class="text-animation">Leistungen</span> im Detail
+      </h2>
+    </div>
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <!--Blue Quote-->
 
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
+        <h3 class="cs-h3 list-item">Manuelle Therapie/Orthopädie</h3>
 
-    <section id="cs-contact">
-        <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
-                </div>
-                <label>
-                    Name
-                    <input required type="text" id="name" name="name" placeholder="Name">
-                </label>
-                <label>
-                    Email
-                    <input required type="text" id="email" name="email" placeholder="Email">
-                </label>
-                <label>
-                    Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
-                </label>
-                <label class="cs-label-message">
-                    Message
-                    <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
-                </label>
-                <button class="cs-button-solid" type="submit">Submit Message</button>
-            </form>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:Mail der Firma">Mail der Firma</a>
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:Telefonnumer"></a>
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="google maps link falls benötigt">
-                    First Address Line,
-                    <br/>
-                    Second Address Line,
-                    <br/>
-                    <span class="cs-block">
-                        Denver
-                        CO
-                        80206
-                    </span>
-                </a>
+        <p class="cs-text">
+          Leiden Sie unter Rückenschmerzen, Gelenkblockaden oder Verspannungen?
+          Unsere manuelle Therapie bringt Bewegung zurück in Ihren Alltag! Mit
+          präzisen Grifftechniken lösen wir Blockaden, lindern Schmerzen und
+          fördern Ihre Mobilität. <br />
+          Ob akute Beschwerden oder chronische Probleme – wir helfen Ihnen, sich
+          wieder frei und unbeschwert zu bewegen. Erleben Sie, wie gut es sich
+          anfühlt, wenn Ihr Körper im Einklang ist!
+        </p>
+        <ul class="cs-list">
+          <li class="cs-li">Rückenschmerzen und Bandscheibenproblemen</li>
+          <li class="cs-li">Gelenkblockaden (z. B. Knie, Schulter, Hüfte)</li>
+          <li class="cs-li">Nacken- und Schulterverspannungen</li>
+          <li class="cs-li">Bewegungseinschränkungen</li>
+        </ul>
 
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
-                </picture>
-
-            </div>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Britney Allison
+            <span class="cs-job">Founder Of Yokoloko</span>
+          </span>
         </div>
-    </section>
+      </li>
+      <li class="cs-item">
+        <!--Blue Quote-->
+
+        <p class="cs-item-text">
+          I want to say a huge thank you to the Stitch team. The guys in a short
+          time and very efficiently helped me with the development of a website
+          for my new startup.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile3.png"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Jessica Jonson
+            <span class="cs-job">CTO Of Meriette</span>
+          </span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <!--Blue Quote-->
+
+        <p class="cs-item-text">
+          Small businesses are the heartbeat of communities, embodying the
+          spirit of entrepreneurship, determination, and local support.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Britney Allison
+            <span class="cs-job">Founder Of Yokoloko</span>
+          </span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <!--Blue Quote-->
+
+        <p class="cs-item-text">
+          I want to say a huge thank you to the Stitch team. The guys in a short
+          time and very efficiently helped me with the development of a website
+          for my new startup.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile3.png"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Jessica Jonson
+            <span class="cs-job">CTO Of Meriette</span>
+          </span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <!--Blue Quote-->
+
+        <p class="cs-item-text">
+          Small businesses are the heartbeat of communities, embodying the
+          spirit of entrepreneurship, determination, and local support.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile2.jpg"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Britney Allison
+            <span class="cs-job">Founder Of Yokoloko</span>
+          </span>
+        </div>
+      </li>
+      <li class="cs-item">
+        <!--Blue Quote-->
+
+        <p class="cs-item-text">
+          I want to say a huge thank you to the Stitch team. The guys in a short
+          time and very efficiently helped me with the development of a website
+          for my new startup.
+        </p>
+        <div class="cs-flex-group">
+          <picture class="cs-picture">
+            <img
+              class="cs-profile"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile3.png"
+              decoding="async"
+              alt="profile"
+              width="50"
+              height="50"
+              aria-hidden="true" />
+          </picture>
+          <span class="cs-name">
+            Jessica Jonson
+            <span class="cs-job">CTO Of Meriette</span>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
 </main>
     <!-- ============================================ -->
 <!--                   Footer                     -->
