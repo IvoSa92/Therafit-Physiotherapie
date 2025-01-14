@@ -474,6 +474,8 @@ body.dark-mode {
 @media only screen and (min-width: 0rem) {
   #reviews-1672 {
     padding: var(--sectionPadding);
+    background-color: #ffffff;
+    background-image: linear-gradient(180deg, #ffffff 0%, #91cddb 100%);
 
     .cs-container {
       width: 100%;
@@ -619,6 +621,9 @@ body.dark-mode {
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
     #reviews-1672 {
+      background-color: #082031;
+      background-image: linear-gradient(180deg, #082031 0%, #91cddb 100%);
+
       .cs-title,
       .cs-review,
       .cs-name {
