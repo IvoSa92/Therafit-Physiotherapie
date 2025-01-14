@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Meta description for the page" />
+    <meta name="description" content="Kontaktieren Sie uns für Ihre physiotherapeutische Behandlung" />
 
     <!--Für Keyword Rednering der Blog Beiträge-->
     
@@ -19,8 +19,8 @@
     <link rel="canonical" href="https://www.example.com/contact/" />
 
     <!--Social Media Display-->
-    <meta property="og:title" content="Contact | Code Stitch Web Designs" />
-    <meta property="og:description" content="Meta description for the page" />
+    <meta property="og:title" content="Kontakt | Therafit Physiotherapie" />
+    <meta property="og:description" content="Kontaktieren Sie uns für Ihre physiotherapeutische Behandlung" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.example.com/contact/" />
     <meta property="og:image" content="/assets/images/logo-small.png" />
@@ -64,7 +64,7 @@
 
     <!-- Preload an image - tag not rendered if preloadImg is blank to stop console errors -->
     
-    <link rel="preload" as="image" href="/assets/images/cabinets2.jpg" />
+    <link rel="preload" as="image" href="/assets/images/rezeption.png" />
     
 
     <!-- Sitewide Stylesheets and Scripts -->
@@ -74,11 +74,11 @@
     <script defer src="/assets/js/nav.js"></script>
 
     
-    <link rel="stylesheet" href="/assets/css/contact.css">
+<link rel="stylesheet" href="/assets/css/contact.css" />
 
 
     <title>
-       Contact | Code Stitch Web Designs |
+       Kontakt | Therafit Physiotherapie |
       TheraFit-Physiotherapie 
     </title>
   </head>
@@ -125,7 +125,7 @@
             <a href="/Leistungen" class="cs-li-link"> Leistungen </a>
           </li>
           <li class="cs-li">
-            <a href="" class="cs-li-link"> Kontakt </a>
+            <a href="/contact" class="cs-li-link"> Kontakt </a>
           </li>
           <li class="cs-li">
             <a href="" class="cs-li-link"> Praxis-Hilfen </a>
@@ -143,85 +143,121 @@
 
     <main id="main">
 
-    <!-- ============================================ -->
-    <!--                    LANDING                   -->
-    <!-- ============================================ -->
+<!--BANNER-->
 
-    <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="kitchen cabinets" loading="eager" width="2500" height="1667">
-        </picture>
-    </section>
+<div id="banner-1106-1112">
+  <div class="cs-container">
+    <span class="cs-int-title">Kontaktieren Sie uns</span>
+    <div class="cs-breadcrumbs">
+      <a href="/" class="cs-link">Home</a>
+      <a href="/contact" class="cs-link cs-active">Kontakt</a>
+    </div>
+  </div>
+  <!--Background Image-->
+  <picture class="cs-background">
+    <source
+      srcset="/assets/images/rezeption-719c60d3087f7d9a6942d9c5df6c7bb8.webp"
+      media="(max-width: 600px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/rezeption-e330d66eeaa420d64d2fe33bac77f20b.webp"
+      media="(min-width: 601px) and (max-width: 1024px)"
+      type="image/webp" />
+    <source
+      srcset="/assets/images/rezeption-8853286385fa49f84cbd1015453db673.webp"
+      media="(min-width:1025px)"
+      type="image/webp" />
+    <img
+      src="/assets/images/rezeption-73cec44d19e00185e7f590eec2df81ed.webp"
+      alt="Description of the image" />
+  </picture>
+</div>
+<!-- ============================================ -->
+<!--                Contact Form                  -->
+<!-- ============================================ -->
 
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
-
-    <section id="cs-contact">
-        <div class="cs-container">
-            <form id="cs-form" name="Contact Form" method="post">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
-                </div>
-                <label>
-                    Name
-                    <input required type="text" id="name" name="name" placeholder="Name">
-                </label>
-                <label>
-                    Email
-                    <input required type="text" id="email" name="email" placeholder="Email">
-                </label>
-                <label>
-                    Phone
-                    <input required type="text" id="phone" name="phone" placeholder="Phone">
-                </label>
-                <label>
-                    How Did You Find Us
-                    <input type="text" id="find" name="find-us" placeholder="How did you find us?">
-                </label>
-                <label class="cs-label-message">
-                    Message
-                    <textarea required name="Message" id="message" placeholder="Write message..."></textarea>
-                </label>
-                <button class="cs-button-solid" type="submit">Submit Message</button>
-            </form>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:Mail der Firma">Mail der Firma</a>
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:Telefonnumer"></a>
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="google maps link falls benötigt">
-                    First Address Line,
-                    <br/>
-                    Second Address Line,
-                    <br/>
-                    <span class="cs-block">
-                        Denver
-                        CO
-                        80206
-                    </span>
-                </a>
-
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <source media="(min-width: 601px)" srcset="/assets/images/skyscraper.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/skyscraper.jpg" alt="building" loading="lazy" width="2500" height="1667">
-                </picture>
-
-            </div>
+<section id="contact-2251">
+  <div class="cs-container">
+    <!--Copy and paste any iframe from Google Maps-->
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d655.3724443794923!2d8.83440077618549!3d47.76383244686317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a7d3e6f734c4f%3A0xaaa055a4715ede38!2sAlemannenstra%C3%9Fe%2C%2078224%20Singen%20(Hohentwiel)!5e0!3m2!1sde!2sde!4v1736884733433!5m2!1sde!2sde"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="cs-wrapper">
+      <div class="cs-content">
+        <span class="cs-topper">Kontakt</span>
+        <h2 class="cs-title">Ihre Gesundheit liegt uns am Herzen</h2>
+        <p class="cs-text">
+          Wir sind für Sie da! Kontaktieren Sie uns für einen Termin oder bei
+          Fragen zu unseren Behandlungen. Unser erfahrenes Team freut sich
+          darauf, Sie kennenzulernen und Ihnen auf dem Weg zur Genesung zu
+          helfen.
+        </p>
+      </div>
+      <form
+        class="cs-form"
+        id="cs-form-2147-2251"
+        name="Kontaktformular"
+        method="post">
+        <label class="cs-label">
+          <input
+            class="cs-input"
+            required
+            type="text"
+            id="name-2147-2251"
+            name="name"
+            placeholder="Name" />
+        </label>
+        <label class="cs-label">
+          <input
+            class="cs-input"
+            required
+            type="email"
+            id="email-2147-2251"
+            name="email"
+            placeholder="E-Mail" />
+        </label>
+        <label class="cs-label">
+          <input
+            class="cs-input"
+            type="tel"
+            id="phone-2147-2251"
+            name="phone"
+            placeholder="Telefon" />
+        </label>
+        <label class="cs-label">
+          <select
+            class="cs-select"
+            name="behandlung"
+            id="classes-2147-2251"
+            placeholder="Behandlung">
+            <option value="">Behandlung auswählen</option>
+            <option value="Physiotherapie">Physiotherapie</option>
+            <option value="Massage">Massage</option>
+            <option value="Manuelle Therapie">Manuelle Therapie</option>
+            <option value="Lymphdrainage">Lymphdrainage</option>
+          </select>
+        </label>
+        <label class="cs-label cs-message">
+          <textarea
+            class="cs-input cs-textarea"
+            required
+            name="Message"
+            id="message-2147-2251"
+            placeholder="Ihre Nachricht"></textarea>
+        </label>
+        <div class="cs-button-wrapper">
+          <button class="cs-button-solid"><span>Senden</span></button>
         </div>
-    </section>
+      </form>
+    </div>
+  </div>
+</section>
+
 </main>
     <!-- ============================================ -->
 <!--                   Footer                     -->
