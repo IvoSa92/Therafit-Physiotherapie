@@ -213,7 +213,7 @@ module.exports = function (eleventyConfig) {
     pathPrefix: "/",
     dir: {
       input: "src",
-      output: "_site",
+      output: "public",
       includes: "_includes",
       data: "_data",
     },
