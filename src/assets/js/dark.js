@@ -15,9 +15,6 @@ function disableDarkMode() {
 
   const footerLogo = document.querySelector(".footer-logo img");
   footerLogo.src = "assets/svgs/Therafit-Logo.svg";
-
-  // document.querySelector("#sbs-2170").style.backgroundImage =
-  //   "url('../svgs/team-svg.svg')";
 }
 
 // Function to detect and apply the saved theme
