@@ -1,6 +1,6 @@
 // add classes for mobile navigation toggling
 var CSbody = document.querySelector("body");
-const CSnavbarMenu = document.querySelector(".cs-ul");
+const CSnavbarMenu = document.querySelector("#cs-navigation");
 const CShamburgerMenu = document.querySelector(".cs-toggle");
 const CSnavLinks = document.querySelectorAll(".cs-li-link");
 

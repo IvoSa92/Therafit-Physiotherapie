@@ -482,7 +482,7 @@
     width: 100%;
     height: auto;
     padding-bottom: 2.4em;
-    background-color: #fff;
+    background-color: #a9cce6;
     border-radius: 0 0 1.5rem 1.5rem;
     position: absolute;
     top: 85%;
@@ -1090,6 +1090,10 @@
     display: block;
   }
   #cs-footer-1763 .cs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     /* reset on tablet */
     max-width: 34.375rem;
@@ -1249,15 +1253,22 @@
     max-width: 80rem;
   }
   #cs-footer-1763 .cs-container {
+    display: flex;
+    flex-direction: row;
     padding: var(--sectionPadding);
     padding-left: 0;
     padding-right: 0;
+    gap: 10rem;
     padding-bottom: 0;
     max-width: 80rem;
     grid-template-columns: repeat(12, 1fr);
   }
   #cs-footer-1763 .cs-logo-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     grid-column: span 12;
+    max-width: 35rem;
   }
   #cs-footer-1763 .cs-ul-wrapper {
     grid-column: span 4;

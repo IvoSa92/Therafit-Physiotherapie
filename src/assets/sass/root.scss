@@ -562,7 +562,7 @@
       width: 100%;
       height: auto;
       padding-bottom: calc(48 / 20 * 1em);
-      background-color: #fff;
+      background-color: #a9cce6;
       border-radius: 0 0 calc(24 / 16 * 1rem) calc(24 / 16 * 1rem);
       position: absolute;
       top: 85%;
@@ -1270,6 +1270,10 @@
     }
 
     .cs-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100%;
       /* reset on tablet */
       max-width: calc(550 / 16 * 1rem);
@@ -1459,16 +1463,23 @@
     }
 
     .cs-container {
+      display: flex;
+      flex-direction: row;
       padding: var(--sectionPadding);
       padding-left: 0;
       padding-right: 0;
+      gap: 10rem;
       padding-bottom: 0;
       max-width: calc(1280 / 16 * 1rem);
       grid-template-columns: repeat(12, 1fr);
     }
 
     .cs-logo-group {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       grid-column: span 12;
+      max-width: 35rem;
     }
 
     .cs-ul-wrapper {
