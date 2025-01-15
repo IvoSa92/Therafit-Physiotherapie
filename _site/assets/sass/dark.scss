@@ -6,39 +6,76 @@
 
 /* Mobile */
 @media only screen and (min-width: 0rem) {
-    // Dark Mode Color Scheme
-    :root {
-        --dark: #082032;
-        --medium: #2c394b;
-        --accent: #334756;
+  // Dark Mode Color Scheme
+  :root {
+    --dark: #082032;
+    --medium: #2c394b;
+    --accent: #334756;
+    --transition-timing: 1s ease-in-out;
+  }
+
+  // Global transition styles
+  body,
+  body *,
+  body *:before,
+  body *:after {
+    transition: background-color var(--transition-timing),
+      color var(--transition-timing), border-color var(--transition-timing),
+      opacity var(--transition-timing);
+  }
+
+  // Spezielle Transition nur für Hintergründe
+  .cs-background,
+  [class*="cs-background"] {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--dark);
+      opacity: 0;
+      transition: opacity var(--transition-timing);
+      z-index: 1;
+    }
+  }
+
+  body.dark-mode {
+    background-color: var(--dark);
+
+    .cs-background,
+    [class*="cs-background"] {
+      &::before {
+        opacity: 0.7;
+      }
     }
 
-    body.dark-mode {
-        background-color: var(--dark);
-
-        p,
-        li,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: #fff;
-        }
-
-        // hide all light classes
-        .light {
-            display: none;
-        }
-
-        // show all dark classes
-        .dark {
-            display: block !important;
-        }
+    p,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #fff;
     }
 
+    // hide all light classes
+    .light {
+      display: none;
+    }
+
+    // show all dark classes
     .dark {
-        display: none;
+      display: block !important;
     }
+  }
+
+  .dark {
+    display: none;
+  }
 }
