@@ -15,8 +15,5 @@ async function convertFonts() {
       const outputPath = path.join(fontsDir, file.replace(".ttf", ".woff2"));
 
       fs.writeFileSync(outputPath, output);
-      console.log(`Converted ${file} to ${file.replace(".ttf", ".woff2")}`);
     });
 }
-
-convertFonts().catch(console.error);
