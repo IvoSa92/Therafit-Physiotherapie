@@ -34,3 +34,12 @@ function toggleVideoPlayback() {
 
 // Call the function to activate the event listener
 toggleVideoPlayback();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.querySelector(".cs-video-wrapper video");
+  if (video) {
+    video.play().catch(function (error) {
+      console.log("Video Autoplay failed:", error);
+    });
+  }
+});
