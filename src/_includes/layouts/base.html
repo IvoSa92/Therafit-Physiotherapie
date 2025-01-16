@@ -32,18 +32,18 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/assets/favicons/apple-touch-icon.png" />
+      href="/assets/svgs/TheraFit-Logo.svg" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/assets/favicons/favicon-32x32.png?v1" />
+      href="/assets/svgs/TheraFit-Logo.svg" />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/assets/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+      href="/assets/svgs/TheraFit-Logo.svg" />
+    <link rel="manifest" href="/assets/svgs/TheraFit-Logo.svg" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
@@ -66,15 +66,13 @@
     {% if preloadImg != '' %}
     <link rel="preload" as="image" href="{{ preloadImg }}" />
     {% endif %}
-
+    <!-- Theme Detector - Muss vor allen anderen Styles geladen werden -->
+    <script defer src="/assets/js/theme-detector.js"></script>
     <!-- Sitewide Stylesheets and Scripts -->
     <link rel="stylesheet" href="/assets/css/root.css" />
     <link rel="stylesheet" href="/assets/css/dark.css" />
     <script defer src="/assets/js/dark.js"></script>
     <script defer src="/assets/js/nav.js"></script>
-
-    <!-- Theme Detector - Muss vor allen anderen Styles geladen werden -->
-    <script defer src="/assets/js/theme-detector.js"></script>
 
     {% block head %}{% endblock %}
 
