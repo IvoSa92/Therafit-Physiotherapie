@@ -116,6 +116,7 @@ module.exports = function (eleventyConfig) {
     "src/assets/js": "assets/js",
     "src/assets/svgs": "assets/svgs",
     "src/assets/images": "assets/images",
+    "src/assets/fonts": "assets/fonts",
   });
   eleventyConfig.addPassthroughCopy("src/admin/");
   eleventyConfig.addPassthroughCopy("src/_redirects");
