@@ -13,10 +13,18 @@ eleventyNavigation:
 <!-- Einfügen der Canonical URL -->
 <link rel="stylesheet" href="/assets/css/local.css" />
 <link rel="stylesheet" href="/assets/css/critical.css" />
-
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 <script defer src="/assets/js/hero-video.js"></script>
-
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+  });
+</script>
 
 {% endblock %} {% block body %}
 <!-- ============================================ -->
@@ -26,33 +34,27 @@ eleventyNavigation:
 <section id="hero-2042">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="cs-topper">Ihre Gesundheit in besten Händen
-      </span>
-      <h1 class="cs-title">Ganzheitliche Physiotherapie – auf <span class="text-animation">Sie</span>  abgestimmt</h1>
-      <p class="cs-text">
+      <span class="cs-topper" data-aos="fade-up" data-aos-delay="0">Ihre Gesundheit in besten Händen</span>
+      <h1 class="cs-title" data-aos="fade-up" data-aos-delay="100">Ganzheitliche Physiotherapie – auf <span class="text-animation">Sie</span>  abgestimmt</h1>
+      <p class="cs-text" data-aos="fade-up" data-aos-delay="200">
         Unser Team aus spezialisierten Therapeuten bietet Ihnen individuelle Behandlungen für Ihre Gesundheit. Vereinbaren Sie noch heute einen Termin und erleben Sie ganzheitliche Physiotherapie.
       </p>
-       <button class="learn-more" onclick="window.location.href='/Leistungen'">
+       <button class="learn-more" data-aos="fade-up" data-aos-delay="300" onclick="window.location.href='/Leistungen'">
     <span class="circle" aria-hidden="true">
     <span class="icon arrow"></span>
     </span>
     <span class="button-text">mehr Infos</span>
   </button>
     </div>
-    <button class="cs-play cs-hide" aria-label="click to play video">
-      <img
-        class="cs-icon"
-        src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg"
-        alt="play icon"
-        width="24"
-        height="24"
+    <div class="cs-video-wrapper" data-aos="fade" data-aos-duration="1500">
+      <video
+        loading="lazy"
+        src="https://pub-5f157156d0be42c3844650fd4becf69c.r2.dev/Physiotherapie%204K%20Video.mp4"
         muted
-        autoplay="true"
-        loop="true"
-        playsinline="true"
-        aria-hidden="true"
-        decoding="async" />
-    </button>
+        autoplay
+        playsinline
+        loop></video>
+    </div>
   </div>
 
  
@@ -73,11 +75,11 @@ eleventyNavigation:
 <section id="sbs-2170">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="cs-topper">Ihr Weg zu mehr Wohlbefinden</span>
-      <h2 class="cs-title">Die Entstehung von TheraFit-Physiotherapie
+      <span class="cs-topper" data-aos="fade-up" data-aos-delay="0">Ihr Weg zu mehr Wohlbefinden</span>
+      <h2 class="cs-title" data-aos="fade-up" data-aos-delay="100">Die Entstehung von TheraFit-Physiotherapie
       </h2>
       <div class="cs-image-group">
-        <picture class="cs-picture">
+        <picture class="cs-picture" data-aos="fade-up" data-aos-delay="200">
           <source
             srcset="{% getUrl '/assets/images/team.png' | resize({ height: 200, width: 450 }) | webp %}"
             media="(max-width: 600px)"
@@ -96,11 +98,11 @@ eleventyNavigation:
         </picture>
       </div>
 <div class="stats">  <ul class="cs-stats-group" style="display: flex; justify-content: center;">
-        <li class="cs-stat">
+        <li class="cs-stat" data-aos="fade-up" data-aos-delay="300">
           <span class="cs-stat-number">16</span>
           <span class="cs-desc">Jahre Erfahrung</span>
         </li>
-        <li class="cs-stat">
+        <li class="cs-stat" data-aos="fade-up" data-aos-delay="400">
           <span class="cs-stat-number">398</span>
           <span class="cs-desc-2">zufriedene Patienten</span>
         </li>
@@ -110,15 +112,15 @@ eleventyNavigation:
     </div>
         <div class="cs-wrapper">
       <div class="cs-flex">
-        <p class="cs-text">
+        <p class="cs-text" data-aos="fade-up" data-aos-delay="100">
           TheraFit Physiotherapie wurde mit einer klaren Vision gegründet: <br><br> Menschen auf ihrem Weg zu Gesundheit und Wohlbefinden bestmöglich zu begleiten. Unser erfahrenes Team aus spezialisierten Physiotherapeuten bietet individuelle Behandlungen und kombiniert modernste Therapieansätze mit einer warmherzigen Betreuung. Vertrauen Sie auf unsere Expertise und lassen Sie uns gemeinsam Ihre Ziele erreichen.
         </p>
-        <p class="cs-text">
+        <p class="cs-text" data-aos="fade-up" data-aos-delay="200">
           „Unsere Praxis deckt mehr als fünf spezialisierte Therapiegebiete ab – von <strong>Sport</strong>- und <strong>Rehabilitationstherapie</strong> bis hin zur <strong>neurologischen</strong> und <strong>postnatalen</strong> Physiotherapie. Dadurch stellen wir sicher, dass immer ein Experte vor Ort ist, der Ihre individuellen Bedürfnisse optimal betreut.“
         </p>
         
     
-        <button class="cs-button-solid" onclick="window.location.href='/about'"> <span>Über Uns</span>
+        <button class="cs-button-solid" onclick="window.location.href='/about'" data-aos="fade-up" data-aos-delay="300"> <span>Über Uns</span>
         </button>
       </div>
       
@@ -144,12 +146,12 @@ eleventyNavigation:
   <div class="cs-container">
       <div class="cs-content">
 
-        <h2 class="cs-title highlight">Einblicke in die Praxis</h2>
+        <h2 class="cs-title highlight" data-aos="fade-up" data-aos-delay="0">Einblicke in die Praxis</h2>
           </div>
       <div class="cs-grid">
    
           <!--Picture 1-->
-          <picture class="cs-picture cs-picture1">
+          <picture class="cs-picture cs-picture1" data-aos="fade-up" data-aos-delay="100">
             <source
               srcset="{% getUrl '/assets/images/detail2.png' | resize({ height: 180, width: 260 }) | webp %}"
               media="(max-width: 600px)"
@@ -167,7 +169,7 @@ eleventyNavigation:
               alt="Description of the image" />
           </picture>
           <!--Picture 2-->
-          <picture class="cs-picture cs-picture2">
+          <picture class="cs-picture cs-picture2" data-aos="fade-up" data-aos-delay="200">
             <source
               srcset="{% getUrl '/assets/images/rezeption.png' | resize({ height: 167, width: 260 }) | webp %}"
               media="(max-width: 600px)"
@@ -185,7 +187,7 @@ eleventyNavigation:
               alt="Description of the image" />
           </picture>
           <!--Picture 3-->
-          <picture class="cs-picture cs-picture3">
+          <picture class="cs-picture cs-picture3" data-aos="fade-up" data-aos-delay="300">
             <source
               srcset="{% getUrl '/assets/images/detail1.png' | resize({ height:78 , width: 142 }) | webp %}"
               media="(max-width: 600px)"
@@ -203,7 +205,7 @@ eleventyNavigation:
               alt="Description of the image" />
           </picture>
           <!--Picture 4-->
-          <picture class="cs-picture cs-picture4">
+            <picture class="cs-picture cs-picture4" data-aos="fade-up" data-aos-delay="400"  >
             <source
               srcset="{% getUrl '/assets/images/detail4.png' | resize({ height:78 , width: 192 }) | webp %}"
               media="(max-width: 600px)"
@@ -221,7 +223,7 @@ eleventyNavigation:
               alt="Description of the image" />
           </picture>
           <!--Picture 5-->
-          <picture class="cs-picture cs-picture5">
+          <picture class="cs-picture cs-picture5" data-aos="fade-up" data-aos-delay="500">
             <source
               srcset="{% getUrl '/assets/images/raum2.png' | resize({ height:168 , width: 193 }) | webp %}"
               media="(max-width: 600px)"
@@ -239,7 +241,7 @@ eleventyNavigation:
               alt="Description of the image" />
           </picture>
           <!--Picture 6-->
-          <picture class="cs-picture cs-picture6">
+          <picture class="cs-picture cs-picture6" data-aos="fade-up" data-aos-delay="600">
             <source
               srcset="{% getUrl '/assets/images/raum3.png' | resize({ height:78 , width: 125 }) | webp %}"
               media="(max-width: 600px)"
@@ -257,7 +259,7 @@ eleventyNavigation:
               alt="Description of the image" />
           </picture>
           <!--Picture 7-->
-          <picture class="cs-picture cs-picture7">
+          <picture class="cs-picture cs-picture7 " data-aos="fade-up" data-aos-delay="700">
             <source
               srcset="{% getUrl '/assets/images/detail5.png' | resize({ height:78 , width: 125 }) | webp %}"
               media="(max-width: 600px)"
@@ -275,7 +277,7 @@ eleventyNavigation:
               alt="Description of the image" />
           </picture>
           <!--Picture 8-->
-          <picture class="cs-picture cs-picture8">
+          <picture class="cs-picture cs-picture8" data-aos="fade-up" data-aos-delay="800">
             <source
               srcset="{% getUrl '/assets/images/detail6.png' | resize({ height:78 , width: 125 }) | webp %}"
               media="(max-width: 600px)"
@@ -416,7 +418,7 @@ eleventyNavigation:
       </p>
     </div>
     <ul class="cs-card-group">
-      <li class="cs-item">
+      <li class="cs-item" data-aos="fade-up" data-aos-delay="0">
         <h3 class="cs-h3">Manuelle Therapie
         </h3>
         <p class="cs-item-text">
@@ -434,7 +436,7 @@ eleventyNavigation:
             height="102" />
         </picture>
       </li>
-      <li class="cs-item">
+      <li class="cs-item" data-aos="fade-up" data-aos-delay="100">
         <h3 class="cs-h3">Sportphysiotherapie</h3>
         <p class="cs-item-text">
           Optimieren Sie Ihre Leistung und erholen Sie sich effektiv von Verletzungen. Unsere maßgeschneiderten Programme bringen Sie sicher und schnell zurück in Bewegung.
@@ -452,7 +454,7 @@ eleventyNavigation:
             height="102" />
         </picture>
       </li>
-      <li class="cs-item">
+      <li class="cs-item" data-aos="fade-up" data-aos-delay="200">
         <h3 class="cs-h3">Neurologische Physiotherapie
         </h3>
         <p class="cs-item-text">
@@ -471,7 +473,7 @@ eleventyNavigation:
             height="102" />
         </picture>
       </li>
-      <li class="cs-item">
+      <li class="cs-item" data-aos="fade-up" data-aos-delay="300">
         <h3 class="cs-h3">Rehabilitation
         </h3>
         <p class="cs-item-text">
@@ -490,7 +492,7 @@ eleventyNavigation:
             height="102" />
         </picture>
       </li>
-      <li class="cs-item">
+      <li class="cs-item" data-aos="fade-up" data-aos-delay="400">
         <h3 class="cs-h3">Postnatale Physiotherapie
 
         </h3>
@@ -510,7 +512,7 @@ eleventyNavigation:
             height="102" />
         </picture>
       </li>
-      <li class="cs-item">
+      <li class="cs-item" data-aos="fade-up" data-aos-delay="500">
         <h3 class="cs-h3">Pädiatrische Physiotherapie
         </h3>
         <p class="cs-item-text">
@@ -583,7 +585,7 @@ eleventyNavigation:
           </div>
       </div>
       <ul class="cs-card-group">
-          <li class="cs-item">
+          <li class="cs-item" data-aos="fade-up" data-aos-delay="0">
               <div class="cs-image-group">
                
 
@@ -622,7 +624,7 @@ eleventyNavigation:
                   <span class="cs-job">Neurologische Physiotherapie</span>
               </div>
           </li>
-          <li class="cs-item">
+          <li class="cs-item" data-aos="fade-up" data-aos-delay="100">
               <div class="cs-image-group">
                
 
@@ -661,7 +663,7 @@ eleventyNavigation:
                   <span class="cs-job">Manuelle Therapie & Rehabilitation</span>
               </div>
           </li>
-          <li class="cs-item">
+          <li class="cs-item" data-aos="fade-up" data-aos-delay="200">
               <div class="cs-image-group">
              
 
@@ -700,7 +702,7 @@ eleventyNavigation:
                   <span class="cs-job">Pädiatrische Therapie</span>
               </div>
           </li>
-          <li class="cs-item">
+          <li class="cs-item" data-aos="fade-up" data-aos-delay="300">
               <div class="cs-image-group">
                 
 
@@ -739,7 +741,7 @@ eleventyNavigation:
                   <span class="cs-job">Sport Physiotherapie</span>
               </div>
           </li>
-          <li class="cs-item">
+          <li class="cs-item" data-aos="fade-up" data-aos-delay="400">
               <div class="cs-image-group">
                  
 
@@ -792,7 +794,7 @@ eleventyNavigation:
           <h2 class="cs-title">Was sagen  <span class="cs-color">unsere Patienten</span> über unsere Behandlungen</h2>
       </div>
       <div class="cs-flex-group">
-          <div class="cs-image-group">
+          <div class="cs-image-group" data-aos="fade-right" data-aos-delay="0">
             <picture class="cs-picture">
               <source
                 srcset="{% getUrl '/assets/images/testimonial.png' | resize({ height: 600, width: 400 }) | webp %}"
@@ -818,7 +820,7 @@ eleventyNavigation:
               <!--Spidey Sense Graphic-->
               <img class="cs-sense" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images%2FGraphics%2Fspider-sense.svg" alt="spidey sense graphic" width="80" height="89" aria-hidden="true">
           </div>
-          <div class="cs-review-group">
+          <div class="cs-review-group" data-aos="fade-left" data-aos-delay="200">
               <!--Quote Block-->
               <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fpink-quote.svg" alt="spidey sense graphic" width="97" height="80" aria-hidden="true">
               <p class="cs-review-text">

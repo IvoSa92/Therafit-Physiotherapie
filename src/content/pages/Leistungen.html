@@ -13,16 +13,18 @@ eleventyNavigation:
 <link rel="stylesheet" href="/assets/css/Leistungen.css" />
 {% endblock %} {% block body %}
 
-<div id="banner-1106-1112">
+<div id="banner-1106-1112" data-aos="fade">
   <div class="cs-container">
-    <span class="cs-int-title">Ihr Weg zur Gesundheit</span>
-    <div class="cs-breadcrumbs">
+    <span class="cs-int-title" data-aos="fade-right" data-aos-delay="100"
+      >Ihr Weg zur Gesundheit</span
+    >
+    <div class="cs-breadcrumbs" data-aos="fade-right" data-aos-delay="200">
       <a href="/" class="cs-link">Home</a>
       <a href="/Leistungen" class="cs-link cs-active">Leistungen</a>
     </div>
   </div>
   <!--Background Image-->
-  <picture class="cs-background">
+  <picture class="cs-background" data-aos="fade" data-aos-duration="1500">
     <source
       srcset="{% getUrl '/assets/images/rezeption.png' | resize({ height: 390, width: 448 }) | webp %}"
       media="(max-width: 600px)"
@@ -47,10 +49,10 @@ eleventyNavigation:
 <section id="careers-2065">
   <div class="cs-container">
     <div class="cs-content">
-      <h2 class="cs-title">
+      <h2 class="cs-title" data-aos="fade-up">
         Unsere <span class="text-animation">Leistungen</span>
       </h2>
-      <p class="cs-text">
+      <p class="cs-text" data-aos="fade-up" data-aos-delay="100">
         In unserer modern ausgestatteten Physiotherapiepraxis bieten wir Ihnen
         ein breites Spektrum therapeutischer Behandlungen. Mit individuellen
         Therapiekonzepten und jahrelanger Erfahrung helfen wir Ihnen dabei, Ihre
@@ -58,7 +60,10 @@ eleventyNavigation:
       </p>
     </div>
     <div class="cs-wrapper">
-      <div class="image-container">
+      <div
+        class="image-container"
+        data-aos="fade-right"
+        data-aos-duration="1000">
         <picture class="cs-picture">
           <!--Mobile Image-->
           <source
@@ -99,7 +104,7 @@ eleventyNavigation:
 
       <div class="cs-events">
         <ul class="cs-card-group">
-          <li class="cs-item">
+          <li class="cs-item" data-aos="fade-up" data-aos-delay="100">
             <div class="cs-info-wrapper">
               <div class="cs-info">
                 <h3 class="cs-h3">Manuelle Therapie</h3>
@@ -120,7 +125,7 @@ eleventyNavigation:
             </div>
           </li>
 
-          <li class="cs-item">
+          <li class="cs-item" data-aos="fade-up" data-aos-delay="200">
             <div class="cs-info-wrapper">
               <div class="cs-info">
                 <h3 class="cs-h3">Sportphysiotherapie</h3>
@@ -141,7 +146,7 @@ eleventyNavigation:
             </div>
           </li>
 
-          <li class="cs-item">
+          <li class="cs-item" data-aos="fade-up" data-aos-delay="300">
             <div class="cs-info-wrapper">
               <div class="cs-info">
                 <h3 class="cs-h3">Neurologische Physiotherapie</h3>
@@ -161,7 +166,7 @@ eleventyNavigation:
             </div>
           </li>
 
-          <li class="cs-item">
+          <li class="cs-item" data-aos="fade-up" data-aos-delay="400">
             <div class="cs-info-wrapper">
               <div class="cs-info">
                 <h3 class="cs-h3">Rehabilitation</h3>
@@ -182,7 +187,7 @@ eleventyNavigation:
             </div>
           </li>
 
-          <li class="cs-item">
+          <li class="cs-item" data-aos="fade-up" data-aos-delay="500">
             <div class="cs-info-wrapper">
               <div class="cs-info">
                 <h3 class="cs-h3">Postnatale Physiotherapie</h3>
@@ -203,7 +208,7 @@ eleventyNavigation:
             </div>
           </li>
 
-          <li class="cs-item">
+          <li class="cs-item" data-aos="fade-up" data-aos-delay="600">
             <div class="cs-info-wrapper">
               <div class="cs-info">
                 <h3 class="cs-h3">Pädiatrische Physiotherapie</h3>
@@ -235,11 +240,13 @@ eleventyNavigation:
 <section id="reviews-1672">
   <div class="cs-container">
     <div class="cs-content">
-      <span class="cs-topper">Bewertungen</span>
-      <h2 class="cs-title">Das sagen unsere Patienten</h2>
+      <span class="cs-topper" data-aos="fade-right">Bewertungen</span>
+      <h2 class="cs-title" data-aos="fade-right" data-aos-delay="100">
+        Das sagen unsere Patienten
+      </h2>
     </div>
     <ul class="cs-card-group">
-      <li class="cs-item">
+      <li class="cs-item" data-aos="fade-up" data-aos-delay="100">
         <div class="cs-flex-group">
           <picture class="cs-picture">
             <img
@@ -284,7 +291,7 @@ eleventyNavigation:
           width="120"
           height="99" />
       </li>
-      <li class="cs-item">
+      <li class="cs-item" data-aos="fade-up" data-aos-delay="300">
         <div class="cs-flex-group">
           <picture class="cs-picture">
             <img
@@ -329,7 +336,7 @@ eleventyNavigation:
           width="120"
           height="99" />
       </li>
-      <li class="cs-item">
+      <li class="cs-item" data-aos="fade-up" data-aos-delay="500">
         <div class="cs-flex-group">
           <picture class="cs-picture">
             <img
