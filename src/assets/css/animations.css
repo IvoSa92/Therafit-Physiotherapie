@@ -1,0 +1,53 @@
+.will-animate {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.is-animated {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.will-animate:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.will-animate:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.will-animate:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.will-animate:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.will-animate:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.cs-title.will-animate {
+  transform: scale(0.92) translateY(20px);
+}
+
+.cs-image.will-animate,
+.cs-picture.will-animate {
+  transform: scale(0.98);
+}
+
+.cs-card.is-animated {
+  transition: transform 0.3s ease;
+}
+.cs-card.is-animated:hover {
+  transform: translateY(-5px);
+}
+
+#hero .will-animate {
+  transition-duration: 0.8s;
+}
+
+/*# sourceMappingURL=animations.css.map */
