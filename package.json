@@ -13,10 +13,6 @@
     "watch:sass": "sass --watch src/assets/sass:./src/assets/css",
     "watch:eleventy": "cross-env ELEVENTY_ENV=DEV eleventy --serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CodeStitchOfficial/Intermediate-Website-Kit-SASS.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",

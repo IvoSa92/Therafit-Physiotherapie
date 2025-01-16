@@ -109,12 +109,15 @@ module.exports = function (eleventyConfig) {
     ========================================================================*/
   /** https://www.11ty.dev/docs/copy/ */
 
-  eleventyConfig.addPassthroughCopy({
-    "src/assets/js": "assets/js",
-    "src/assets/svgs": "assets/svgs",
-    "src/assets/images": "assets/images",
-    "src/assets/fonts": "assets/fonts",
-  });
+  eleventyConfig.addPassthroughCopy("./src/assets/css");
+  eleventyConfig.addPassthroughCopy("./src/assets/favicons");
+  eleventyConfig.addPassthroughCopy("./src/assets/fonts");
+  eleventyConfig.addPassthroughCopy("./src/assets/images");
+  eleventyConfig.addPassthroughCopy("./src/assets/svgs");
+  eleventyConfig.addPassthroughCopy("./src/assets/js");
+  eleventyConfig.addPassthroughCopy("./src/admin");
+  eleventyConfig.addPassthroughCopy("./src/_redirects");
+  eleventyConfig.addPassthroughCopy({ "./src/robots.txt": "/robots.txt" });
   eleventyConfig.addPassthroughCopy("src/admin/");
   eleventyConfig.addPassthroughCopy("src/_redirects");
   /**=====================================================================
@@ -208,7 +211,6 @@ module.exports = function (eleventyConfig) {
     =======================================================================*/
 
   return {
-    pathPrefix: "/",
     dir: {
       input: "src",
       output: "public",
