@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   elements.forEach((element) => {
-    element.classList.add(WILL_ANIMATE);
+    element.classList.add(ANIMATE_CLASS);
     observer.observe(element);
   });
 });
