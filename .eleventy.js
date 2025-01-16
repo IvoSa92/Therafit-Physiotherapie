@@ -86,13 +86,10 @@ module.exports = function (eleventyConfig) {
 
   // SHARP IMAGES
   eleventyConfig.addPlugin(eleventyPluginSharpImages, {
-    urlPath: "/assets/images",
-    outputDir: "_site/assets/images/",
-
-    watch: {
-      paths: ["src/assets/images/**/*"],
-      ignores: ["_site/**/*"],
-    },
+    urlPath: "/assets/images/",
+    outputDir: "./public/assets/images/",
+    formats: ["webp", "jpeg"],
+    createCommonJs: true,
   });
 
   /**
