@@ -1,0 +1,39 @@
+<!-- ============================================ -->
+<!--                        Hero                       -->
+<!-- ============================================ -->
+<section id="hero">
+  <div class="cs-container">
+    <div class="cs-flex-group">
+      <span class="cs-topper" data-aos="fade-down" data-aos-delay="100">
+        {{ hero.topper }}
+      </span>
+      <h1 class="cs-title" data-aos="fade-up" data-aos-delay="200">
+        {{ hero.title }}
+      </h1>
+      <p class="cs-text" data-aos="fade-up" data-aos-delay="400">
+        {{ hero.text }}
+      </p>
+      <a
+        href="{{ hero.button.link }}"
+        class="cs-button-solid"
+        data-aos="zoom-in"
+        data-aos-delay="600">
+        {{ hero.button.text }}
+      </a>
+    </div>
+  </div>
+
+  <!--Background Image-->
+  <picture class="cs-background" data-aos="fade" data-aos-duration="2000">
+    <source media="(max-width: 600px)" srcset="{{ hero.background.small }}" />
+    <source media="(min-width: 601px)" srcset="{{ hero.background.large }}" />
+    <img
+      loading="lazy"
+      decoding="async"
+      src="{{ hero.background.large }}"
+      alt="{{ hero.background.alt }}"
+      width="2250"
+      height="1500"
+      aria-hidden="true" />
+  </picture>
+</section>

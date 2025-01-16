@@ -95,12 +95,16 @@
     <!-- Theme Detector - Muss vor allen anderen Styles geladen werden -->
     <script defer src="/assets/js/theme-detector.js"></script>
 
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet" />
+
     <!-- Sitewide Stylesheets and Scripts -->
     <link rel="stylesheet" href="/assets/css/root.css" />
     <link rel="stylesheet" href="/assets/css/dark.css" />
     <script defer src="/assets/js/dark.js"></script>
     <script defer src="/assets/js/nav.js"></script>
-    <link rel="stylesheet" href="/assets/css/animations.css" />
 
     {% block head %}{% endblock %}
 
@@ -119,6 +123,19 @@
     {% include "components/header.html" %}
     <main id="main">{% block body %}{% endblock %}</main>
     {% include "components/footer.html" %}
-    <script defer src="/assets/js/animations.js"></script>
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // AOS Initialisierung
+      AOS.init({
+        duration: 1000, // Animations-Dauer
+        easing: "ease-out-back", // Animations-Kurve
+        delay: 0, // Basis-Verzögerung
+        once: true, // Animation nur einmal abspielen
+        offset: 120, // Offset (wann Animation startet)
+        anchorPlacement: "top-bottom", // Position des Triggers
+      });
+    </script>
   </body>
 </html>
