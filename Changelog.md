@@ -6,6 +6,8 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 ## [Unreleased]
 
+## [1.1.1] - 2024-01-23
+
 ### Added
 
 - AOS-Animationen zur Kontaktseite hinzugefügt (Banner, Karte, Formular und FAQ-Bereich)
