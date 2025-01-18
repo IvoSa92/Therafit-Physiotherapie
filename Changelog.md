@@ -6,7 +6,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 ## [Unreleased]
 
-## [1.1.0] - 2024-01-23
+## [1.1.0] - 2025-01-18
 
 ### Added
 
@@ -22,7 +22,7 @@ The format is based on Keep a Changelog, and this project adheres to Semantic Ve
 
 - Placeholder for future fixes.
 
-## [1.0.0] - 2025-01-20
+## [1.0.0] - 2025-01-18
 
 ### Added
 
