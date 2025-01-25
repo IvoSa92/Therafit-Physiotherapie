@@ -53,6 +53,11 @@
       }
     }
 
+    // Neue Ausnahme für About-Seite hinzufügen
+    &.about-page .cs-background::before {
+      opacity: 0 !important;
+    }
+
     p,
     li,
     h1,

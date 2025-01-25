@@ -19,9 +19,11 @@ eleventyNavigation:
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     AOS.init({
-      duration: 800,
+      duration: 1000,
       once: true,
-      offset: 100
+      offset: 120,
+      easing: 'ease-in-out-quad',
+      anchorPlacement: 'top-bottom'
     });
   });
 </script>
@@ -138,9 +140,8 @@ eleventyNavigation:
 <section id="gallery-434">
   <div class="cs-container">
       <div class="cs-content">
-
         <h2 class="cs-title highlight" data-aos="fade-up" data-aos-delay="0">Einblicke in die Praxis</h2>
-          </div>
+      </div>
       <div class="cs-grid">
    
           <!--Picture 1-->
@@ -288,7 +289,7 @@ eleventyNavigation:
               alt="Description of the image" />
           </picture>
           <!--Picture 9-->
-          <picture class="cs-picture cs-picture9">
+          <picture class="cs-picture cs-picture9" data-aos="fade-up" data-aos-delay="900">
             <source
               srcset="{% getUrl '/assets/images/detail7.png' | resize({ height:168 , width: 125 }) | webp %}"
               media="(max-width: 600px)"
@@ -297,16 +298,16 @@ eleventyNavigation:
               srcset="{% getUrl '/assets/images/detail7.png' | resize({ height: 136, width: 289 }) | webp %}"
               media="(min-width: 601px) and (max-width: 1024px)"
               type="image/webp" />
-            <source
-              srcset="{% getUrl '/assets/images/detail7.png' | resize({ height: 414, width: 249 }) | webp %}"
-              media="(min-width:1025px)"
-              type="image/webp" />
-            <img
-              src="{% getUrl '/assets/images/detail7.png' | resize({ height: 400, width: 400 }) | webp %}"
-              alt="Description of the image" />
+              <source
+                srcset="{% getUrl '/assets/images/detail7.png' | resize({ height: 414, width: 249 }) | webp %}"
+                media="(min-width:1025px)"
+                type="image/webp" />
+              <img
+                src="{% getUrl '/assets/images/detail7.png' | resize({ height: 400, width: 400 }) | webp %}"
+                alt="Description of the image" />
           </picture>
           <!--Picture 10-->
-          <picture class="cs-picture cs-picture10">
+          <picture class="cs-picture cs-picture10" data-aos="fade-up" data-aos-delay="1000">
             <source
               srcset="{% getUrl '/assets/images/detail8.png' | resize({ height:168 , width: 125 }) | webp %}"
               media="(max-width: 600px)"
@@ -324,7 +325,7 @@ eleventyNavigation:
               alt="Description of the image" />
           </picture>
           <!--Picture 11-->
-          <picture class="cs-picture cs-picture11">
+          <picture class="cs-picture cs-picture11" data-aos="fade-up" data-aos-delay="1100">
             <source
               srcset="{% getUrl '/assets/images/detail9.png' | resize({ height:168 , width: 193 }) | webp %}"
               media="(max-width: 600px)"
