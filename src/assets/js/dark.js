@@ -55,10 +55,8 @@ function darkModeTogglePosition() {
   const darkModeToggle = document.querySelector(".dark-mode-toggle-input");
   let currentTheme = getTheme();
   if (currentTheme === "dark") {
-    console.log("dark mode toggle position", currentTheme);
     darkModeToggle.checked = true;
   } else {
-    console.log("dark mode toggle position", currentTheme);
     darkModeToggle.checked = false;
   }
 }
