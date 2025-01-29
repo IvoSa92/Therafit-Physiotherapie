@@ -1,0 +1,61 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cs-navigation {
+    // Reduzierte Breite des Headers
+    .cs-container {
+      max-width: 1020px; // Vorher war es vermutlich 1280px
+      padding: 0 1rem;
+      gap: 1rem; // Reduzierter Abstand zwischen den Elementen
+    }
+
+    .cs-logo {
+      // Optimierte Logo-Größe
+      width: auto;
+      max-width: 200px; // Anpassen nach Bedarf
+      height: auto;
+      padding: 0;
+    }
+
+    .cs-nav {
+      gap: 1.5rem; // Reduzierter Abstand zwischen Nav-Links
+    }
+
+    // Dark Mode Toggle Anpassungen
+    .dark-mode-toggle {
+      margin: 0 0.5rem; // Reduzierter Margin
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cs-navigation {
+    .cs-container {
+      padding: 0 1.5rem;
+    }
+
+    .cs-nav {
+      gap: 2rem; // Etwas mehr Abstand auf größeren Bildschirmen
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #cs-navigation {
+    .cs-container {
+      max-width: 1020px; // Konsistente maximale Breite
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .cs-nav {
+      gap: 2.5rem; // Optimaler Abstand für Desktop
+    }
+
+    // Feinabstimmung für große Bildschirme
+    .cs-ul {
+      gap: 1.5rem; // Reduzierter Abstand zwischen Nav-Items
+    }
+  }
+}

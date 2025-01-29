@@ -211,6 +211,8 @@ module.exports = function (eleventyConfig) {
                               END SERVER SETTINGS
     =======================================================================*/
 
+  eleventyConfig.addGlobalData("buildTime", () => Date.now());
+
   return {
     dir: {
       input: "src",

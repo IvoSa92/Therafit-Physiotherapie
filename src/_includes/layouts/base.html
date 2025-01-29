@@ -102,9 +102,18 @@
 
     <!-- Sitewide Stylesheets and Scripts -->
     <link rel="stylesheet" href="/assets/css/root.css" />
-    <link rel="stylesheet" href="/assets/css/dark.css" />
-    <script defer src="/assets/js/dark.js"></script>
-    <script defer src="/assets/js/nav.js"></script>
+    <link rel="stylesheet" href="/assets/css/dark.css?v={{ buildTime }}" />
+    <link rel="stylesheet" href="/assets/css/critical.css?v={{ buildTime }}" />
+    <link rel="stylesheet" href="/assets/css/local.css?v={{ buildTime }}" />
+    <script defer src="/assets/js/dark.js?v={{ buildTime }}"></script>
+    <script defer src="/assets/js/nav.js?v={{ buildTime }}"></script>
+
+    <!-- Bestehende Meta-Tags -->
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
 
     {% block head %}{% endblock %}
 

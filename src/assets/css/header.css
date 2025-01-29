@@ -1,0 +1,45 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cs-navigation .cs-container {
+    max-width: 1020px;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  #cs-navigation .cs-logo {
+    width: auto;
+    max-width: 200px;
+    height: auto;
+    padding: 0;
+  }
+  #cs-navigation .cs-nav {
+    gap: 1.5rem;
+  }
+  #cs-navigation .dark-mode-toggle {
+    margin: 0 0.5rem;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cs-navigation .cs-container {
+    padding: 0 1.5rem;
+  }
+  #cs-navigation .cs-nav {
+    gap: 2rem;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #cs-navigation .cs-container {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  #cs-navigation .cs-nav {
+    gap: 2.5rem;
+  }
+  #cs-navigation .cs-ul {
+    gap: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */
