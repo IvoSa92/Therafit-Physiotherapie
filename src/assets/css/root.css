@@ -234,6 +234,7 @@
     font-size: 17px;
     position: relative;
     display: inline-block;
+    min-width: 3.5em;
     width: 3.5em;
     height: 2em;
   }
