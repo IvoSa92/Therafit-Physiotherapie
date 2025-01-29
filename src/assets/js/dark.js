@@ -37,7 +37,6 @@ function detectColorScheme() {
 // save theme to local storage
 function saveTheme(theme) {
   localStorage.setItem("theme", theme);
-  console.log("theme saved to local storage", theme);
 }
 // get theme from local storage
 function getTheme() {

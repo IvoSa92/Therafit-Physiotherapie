@@ -270,7 +270,7 @@
     font-size: 17px;
     position: relative;
     display: inline-block;
-    width: 6em;
+    width: 3.5em;
     height: 2em;
   }
 
@@ -318,20 +318,29 @@
   }
 }
 
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
+/* media für ipad */
+@media only screen and (min-width: 768px) {
   .switch {
     width: 3.5em;
   }
-  #dark-mode-toggle {
-    margin: 0;
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
+}
 
-    &:hover {
-      cursor: pointer;
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .cs-container {
+    .switch {
+      width: 3.5em;
+    }
+    #dark-mode-toggle {
+      margin: 0;
+      position: relative;
+      top: auto;
+      right: auto;
+      transform: none;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }

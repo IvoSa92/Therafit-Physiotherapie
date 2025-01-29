@@ -87,11 +87,12 @@
   // Dark Mode Toggle Styles
   .dark-mode-toggle {
     position: relative;
-    width: 52px; // Feste Breite für mobile Geräte
-    height: 26px;
-    margin: 0 10px;
+    width: 45px; // Reduzierte Breite
+    height: 24px; // Reduzierte Höhe
+    margin: 0 5px; // Reduzierter Margin
     display: flex;
     align-items: center;
+    flex-shrink: 0; // Verhindert das Zusammendrücken
 
     // Toggle Input
     .dark-mode-toggle-input {
@@ -104,7 +105,7 @@
         background: #6b21a8;
 
         &:before {
-          transform: translateX(26px);
+          transform: translateX(21px); // Angepasst an neue Breite
           background: #f9d71c;
         }
       }
@@ -114,8 +115,8 @@
     .dark-mode-toggle-label {
       position: absolute;
       cursor: pointer;
-      width: 52px; // Feste Breite
-      height: 26px;
+      width: 45px; // Muss mit der Breite des Containers übereinstimmen
+      height: 24px; // Muss mit der Höhe des Containers übereinstimmen
       background: #6b21a8;
       border-radius: 100px;
       transition: background-color 0.2s;
@@ -125,8 +126,8 @@
         position: absolute;
         top: 2px;
         left: 2px;
-        width: 22px; // Feste Breite für den Kreis
-        height: 22px; // Feste Höhe für den Kreis
+        width: 20px; // Reduzierte Größe des Kreises
+        height: 20px; // Reduzierte Größe des Kreises
         border-radius: 50%;
         transition: transform 0.2s, background-color 0.2s;
         background: #f9d71c;
@@ -134,11 +135,39 @@
     }
   }
 
-  // Spezifische Styles für mobile Geräte
-  @media only screen and (max-width: 768px) {
+  // Noch spezifischere Styles für sehr kleine Bildschirme
+  @media only screen and (max-width: 480px) {
     .dark-mode-toggle {
-      transform: scale(0.9); // Leicht verkleinern auf mobilen Geräten
-      margin: 0 5px; // Weniger Margin auf mobilen Geräten
+      width: 40px; // Noch kleiner für sehr kleine Bildschirme
+      height: 22px;
+      transform: scale(0.85);
+
+      .dark-mode-toggle-label {
+        width: 40px;
+        height: 22px;
+
+        &:before {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      .dark-mode-toggle-input:checked + .dark-mode-toggle-label:before {
+        transform: translateX(18px);
+      }
+    }
+  }
+
+  // Spezifische iOS Fixes
+  @supports (-webkit-touch-callout: none) {
+    .dark-mode-toggle {
+      width: 40px !important;
+      max-width: 40px !important;
+
+      .dark-mode-toggle-label {
+        width: 40px !important;
+        max-width: 40px !important;
+      }
     }
   }
 }

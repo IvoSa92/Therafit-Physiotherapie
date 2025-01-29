@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* CODESTITCH STYLES, RESET, HEADER/NAVIGATION AND FOOTER */
 /*-- -------------------------- -->
 <---        Core Styles         -->
@@ -233,7 +234,7 @@
     font-size: 17px;
     position: relative;
     display: inline-block;
-    width: 6em;
+    width: 3.5em;
     height: 2em;
   }
   .switch input {
@@ -275,19 +276,25 @@
     box-shadow: inset 8px -4px 0px 0px #fff000;
   }
 }
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
+/* media für ipad */
+@media only screen and (min-width: 768px) {
   .switch {
     width: 3.5em;
   }
-  #dark-mode-toggle {
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .cs-container .switch {
+    width: 3.5em;
+  }
+  .cs-container #dark-mode-toggle {
     margin: 0;
     position: relative;
     top: auto;
     right: auto;
     transform: none;
   }
-  #dark-mode-toggle:hover {
+  .cs-container #dark-mode-toggle:hover {
     cursor: pointer;
   }
 }
