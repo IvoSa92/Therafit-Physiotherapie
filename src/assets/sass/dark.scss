@@ -83,4 +83,62 @@
   .dark {
     display: none;
   }
+
+  // Dark Mode Toggle Styles
+  .dark-mode-toggle {
+    position: relative;
+    width: 52px; // Feste Breite für mobile Geräte
+    height: 26px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+
+    // Toggle Input
+    .dark-mode-toggle-input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+
+      &:checked + .dark-mode-toggle-label {
+        background: #6b21a8;
+
+        &:before {
+          transform: translateX(26px);
+          background: #f9d71c;
+        }
+      }
+    }
+
+    // Toggle Label
+    .dark-mode-toggle-label {
+      position: absolute;
+      cursor: pointer;
+      width: 52px; // Feste Breite
+      height: 26px;
+      background: #6b21a8;
+      border-radius: 100px;
+      transition: background-color 0.2s;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 22px; // Feste Breite für den Kreis
+        height: 22px; // Feste Höhe für den Kreis
+        border-radius: 50%;
+        transition: transform 0.2s, background-color 0.2s;
+        background: #f9d71c;
+      }
+    }
+  }
+
+  // Spezifische Styles für mobile Geräte
+  @media only screen and (max-width: 768px) {
+    .dark-mode-toggle {
+      transform: scale(0.9); // Leicht verkleinern auf mobilen Geräten
+      margin: 0 5px; // Weniger Margin auf mobilen Geräten
+    }
+  }
 }
