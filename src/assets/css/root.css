@@ -237,6 +237,15 @@
     min-width: 3.5em;
     width: 3.5em;
     height: 2em;
+    flex-shrink: 0;
+  }
+  @supports (-webkit-touch-callout: none) {
+    .switch {
+      width: 45px;
+      min-width: 45px;
+      height: 24px;
+      transform: scale(0.9);
+    }
   }
   .switch input {
     opacity: 0;
@@ -275,6 +284,19 @@
   input:checked + .slider:before {
     transform: translateX(0);
     box-shadow: inset 8px -4px 0px 0px #fff000;
+  }
+}
+@media only screen and (min-width: 0rem) and (max-width: 480px) {
+  .switch {
+    transform: scale(0.85);
+    margin: 0 5px;
+  }
+  @supports (-webkit-touch-callout: none) {
+    .switch {
+      transform: scale(0.8);
+      width: 42px;
+      min-width: 42px;
+    }
   }
 }
 /* media für ipad */
