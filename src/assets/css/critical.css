@@ -309,12 +309,12 @@
     display: flex;
     flex-direction: column;
     /* centers content horizontally, set to flex-start to left align */
-    align-items: flex-start;
+    align-items: center;
     position: relative;
     z-index: 10;
   }
   #sbs-2170 .cs-flex {
-    padding-left: 3rem;
+    padding-left: 0.75rem;
   }
   #sbs-2170 .cs-title {
     margin: 0 0 2.5rem 0;
