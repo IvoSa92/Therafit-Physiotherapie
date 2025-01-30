@@ -273,14 +273,6 @@
     min-width: 3.5em;
     width: 3.5em;
     height: 2em;
-    flex-shrink: 0;
-
-    @supports (-webkit-touch-callout: none) {
-      width: 45px;
-      min-width: 45px;
-      height: 24px;
-      transform: scale(0.9);
-    }
   }
 
   .switch input {
@@ -324,19 +316,6 @@
   input:checked + .slider:before {
     transform: translateX(0);
     box-shadow: inset 8px -4px 0px 0px #fff000;
-  }
-
-  @media screen and (max-width: 480px) {
-    .switch {
-      transform: scale(0.85);
-      margin: 0 5px;
-
-      @supports (-webkit-touch-callout: none) {
-        transform: scale(0.8);
-        width: 42px;
-        min-width: 42px;
-      }
-    }
   }
 }
 
