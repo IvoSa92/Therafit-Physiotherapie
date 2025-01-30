@@ -676,6 +676,7 @@
 
     .cs-content {
       width: clamp(47vw, 48vw, 55vw);
+      align-items: flex-start;
     }
 
     .cs-floater {

@@ -1353,5 +1353,34 @@
     display: block;
   }
 }
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #meet-team-1766 .cs-flex-wrapper .cs-flex {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #meet-team-1766 .cs-flex-wrapper .learn-more {
+    order: 3;
+    margin-top: 2rem;
+  }
+  #meet-team-1766 .cs-wrapper {
+    order: 2;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #meet-team-1766 .cs-flex-wrapper .cs-flex {
+    align-items: flex-start;
+  }
+  #meet-team-1766 .cs-flex-wrapper .learn-more {
+    order: initial;
+    margin-top: 0;
+  }
+  #meet-team-1766 .cs-wrapper {
+    order: initial;
+  }
+}
 
 /*# sourceMappingURL=root.css.map */

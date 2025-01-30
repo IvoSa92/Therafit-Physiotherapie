@@ -1589,3 +1589,49 @@
     }
   }
 }
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #meet-team-1766 {
+    .cs-flex-wrapper {
+      .cs-flex {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      // Button Container für Mobile
+      .learn-more {
+        order: 3; // Verschiebt den Button ans Ende
+        margin-top: 2rem; // Abstand zum vorherigen Content
+      }
+    }
+
+    // Text und Liste Container
+    .cs-wrapper {
+      order: 2; // Kommt vor dem Button
+    }
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #meet-team-1766 {
+    .cs-flex-wrapper {
+      .cs-flex {
+        align-items: flex-start;
+      }
+
+      // Button zurück an ursprüngliche Position für Desktop
+      .learn-more {
+        order: initial;
+        margin-top: 0;
+      }
+    }
+
+    .cs-wrapper {
+      order: initial;
+    }
+  }
+}

@@ -573,6 +573,7 @@
   }
   #sbs-2170 .cs-content {
     width: 48vw;
+    align-items: flex-start;
   }
   #sbs-2170 .cs-floater {
     display: block;
